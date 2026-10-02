@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "recordType": "demo-user",
+  "user": {
+    "id": "demo-user-001",
+    "profile": {
+      "displayName": "אורח",
+      "email": null,
+      "phone": null,
+      "customerNumber": "NOVA-DEMO-001"
+    },
+    "subscription": {
+      "planId": "nova-premium",
+      "planName": "NOVA Premium",
+      "status": "פעיל בהדגמה",
+      "monthlyPrice": 149,
+      "includedCategories": ["בידור", "סרטים", "ילדים", "ספורט"],
+      "addOns": [
+        { "id": "sports-premium", "name": "Sports Premium", "monthlyPrice": 29 }
+      ]
+    },
+    "preferences": {
+      "language": "עברית",
+      "subtitles": "כבוי",
+      "audio": "עברית",
+      "video": "אוטומטי",
+      "playback": "רגיל",
+      "textSize": "רגיל",
+      "contrast": "רגיל",
+      "sound": "סטריאו"
+    },
+    "library": {
+      "favoriteContentIds": ["horizon", "beyond", "blue-world"],
+      "favoriteChannelIds": ["11", "12", "55"],
+      "watchProgress": [
+        { "contentId": "horizon", "percent": 34 },
+        { "contentId": "blue-world", "percent": 62 },
+        { "contentId": "live-music", "percent": 18 },
+        { "contentId": "city-stories", "percent": 45 }
+      ],
+      "recordings": [
+        { "id": "rec-1", "contentId": "horizon", "title": "קו האופק — פרק 1", "channelId": "11", "date": "19.09.2026", "duration": 48 },
+        { "id": "rec-2", "contentId": "blue-world", "title": "עולם כחול — פרק 3", "channelId": "37", "date": "18.09.2026", "duration": 52 },
+        { "id": "rec-3", "contentId": "after-hours", "title": "אחרי חצות", "channelId": "18", "date": "17.09.2026", "duration": 104 }
+      ]
+    },
+    "billing": {
+      "currency": "ILS",
+      "paymentMethod": null,
+      "invoices": [
+        {
+          "id": "2026-09",
+          "month": "ספטמבר 2026",
+          "periodStart": "01.09.2026",
+          "periodEnd": "30.09.2026",
+          "date": "01.09.2026",
+          "dueDate": "10.09.2026",
+          "paidAt": "02.09.2026",
+          "reference": "DEMO-2026-009",
+          "customerNumber": "NOVA-DEMO-001",
+          "status": "paid",
+          "currency": "ILS",
+          "items": [
+            { "name": "חבילה חודשית — NOVA Premium", "category": "recurring", "periodStart": "01.09.2026", "periodEnd": "30.09.2026", "quantity": 1, "amountBeforeTax": 126.27, "amountIncludingTax": 149 },
+            { "name": "חבילת ספורט — Sports Premium", "category": "recurring", "periodStart": "01.09.2026", "periodEnd": "30.09.2026", "quantity": 1, "amountBeforeTax": 24.58, "amountIncludingTax": 29 },
+            { "name": "דמי התקנה חד פעמיים", "category": "oneTime", "periodStart": "01.09.2026", "periodEnd": "01.09.2026", "quantity": 1, "amountBeforeTax": 16.95, "amountIncludingTax": 20 },
+            { "name": "הנחת הצטרפות", "category": "credit", "periodStart": "01.09.2026", "periodEnd": "30.09.2026", "quantity": 1, "amountBeforeTax": -33.90, "amountIncludingTax": -40 }
+          ],
+          "subtotal": 198,
+          "discounts": -40,
+          "previousBalance": 0,
+          "total": 158
+        },
+        {
+          "id": "2026-08",
+          "month": "אוגוסט 2026",
+          "periodStart": "01.08.2026",
+          "periodEnd": "31.08.2026",
+          "date": "01.08.2026",
+          "dueDate": "10.08.2026",
+          "paidAt": "03.08.2026",
+          "reference": "DEMO-2026-008",
+          "customerNumber": "NOVA-DEMO-001",
+          "status": "paid",
+          "currency": "ILS",
+          "items": [
+            { "name": "חבילה חודשית — NOVA Premium", "category": "recurring", "periodStart": "01.08.2026", "periodEnd": "31.08.2026", "quantity": 1, "amountBeforeTax": 126.27, "amountIncludingTax": 149 },
+            { "name": "חבילת ספורט — Sports Premium", "category": "recurring", "periodStart": "01.08.2026", "periodEnd": "31.08.2026", "quantity": 1, "amountBeforeTax": 24.58, "amountIncludingTax": 29 },
+            { "name": "הנחת קיץ", "category": "credit", "periodStart": "01.08.2026", "periodEnd": "31.08.2026", "quantity": 1, "amountBeforeTax": -8.47, "amountIncludingTax": -10 }
+          ],
+          "subtotal": 178,
+          "discounts": -10,
+          "previousBalance": 0,
+          "total": 168
+        },
+        {
+          "id": "2026-07",
+          "month": "יולי 2026",
+          "periodStart": "01.07.2026",
+          "periodEnd": "31.07.2026",
+          "date": "01.07.2026",
+          "dueDate": "10.07.2026",
+          "paidAt": "02.07.2026",
+          "reference": "DEMO-2026-007",
+          "customerNumber": "NOVA-DEMO-001",
+          "status": "paid",
+          "currency": "ILS",
+          "items": [
+            { "name": "חבילה חודשית — NOVA Premium", "category": "recurring", "periodStart": "01.07.2026", "periodEnd": "31.07.2026", "quantity": 1, "amountBeforeTax": 126.27, "amountIncludingTax": 149 },
+            { "name": "חבילת ספורט — Sports Premium", "category": "recurring", "periodStart": "01.07.2026", "periodEnd": "31.07.2026", "quantity": 1, "amountBeforeTax": 24.58, "amountIncludingTax": 29 }
+          ],
+          "subtotal": 178,
+          "discounts": 0,
+          "previousBalance": 0,
+          "total": 178
+        }
+      ]
+    },
+    "notifications": [
+      { "id": "new-horizon", "title": "הסדרה הבאה שלכם כבר כאן", "message": "קו האופק — כל הפרקים זמינים עכשיו ב־VOD." }
+    ]
+  }
+}

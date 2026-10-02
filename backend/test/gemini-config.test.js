@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { GoogleGenAI } from "@google/genai";
-import { geminiHttpOptions } from "./gemini-config.js";
+import { geminiHttpOptions } from "../src/ai/gemini-config.js";
+import { transcriptionModel } from "../src/ai/ai-models.js";
 
 function createMockClient(statuses) {
   let calls = 0;
@@ -28,7 +29,7 @@ function createMockClient(statuses) {
   });
   return {
     generate: () => client.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: transcriptionModel,
       contents: "test",
     }),
     calls: () => calls,

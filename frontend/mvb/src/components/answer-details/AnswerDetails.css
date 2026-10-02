@@ -1,0 +1,72 @@
+.answer-details{margin:24px 0 8px}
+.details-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.details-heading h3{margin:0;font-size:18px;font-weight:700;letter-spacing:0}
+.details-heading>span{color:#a7b1cf;font-size:11px;border:1px solid #38405b;border-radius:20px;padding:6px 10px;white-space:nowrap}
+.information-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.information-card{padding:22px;border:1px solid #394363;border-radius:16px;background:linear-gradient(150deg,#252e48,#171e31);box-shadow:0 6px 24px #00000016;min-width:0}
+.information-card h4{font-size:19px;line-height:1.4;font-weight:700;color:#f2f3ff;margin:0 0 12px;overflow-wrap:anywhere}
+.information-card p{font-size:13px;line-height:1.8;color:#b6bfd4;margin:0 0 16px;white-space:pre-line}
+.information-badge{display:inline-block;border-radius:7px;background:#8b97e624;color:#c9d1ff;font-size:10px;padding:5px 8px;margin-bottom:12px}
+.information-card dl{margin:0;display:flex;flex-direction:column;gap:10px}
+.information-card dl>div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid #aab6ff12;padding-top:9px}
+.information-card dt{color:#96a3bf;font-size:11px;flex-shrink:0}
+.information-card dd{margin:0;font-size:13px;color:#e4e9f7;text-align:left;overflow-wrap:anywhere}
+.information-card progress{width:100%;height:6px;margin:0 0 15px;border:0;border-radius:5px;overflow:hidden;background:#3a4261;accent-color:#a7b0ff}
+.information-card progress::-webkit-progress-bar{background:#3a4261}.information-card progress::-webkit-progress-value{background:#a7b0ff}
+.invoice-preview{margin-top:20px;border:1px solid #434d69;border-radius:17px;overflow:hidden;box-shadow:0 16px 40px #00000025}
+.invoice-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 18px;background:#252e43}
+.invoice-toolbar>div{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:13px}
+.document-icon{font-size:23px;color:#a5b2f6}.invoice-month{color:#a0abc3;font-size:11px}
+.invoice-toolbar button{border:1px solid #526080;border-radius:8px;color:#dde4f8;background:#303b54;font-size:11px;padding:9px 12px;line-height:1.5;white-space:nowrap}
+.invoice-toolbar button:hover{background:#3c4966}
+.invoice-statement{padding:34px 28px 24px;background:#fff;color:#24262b;font-family:Arial,sans-serif}
+.statement-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:2px solid #ececf0;padding-bottom:22px;margin-bottom:22px}
+.statement-eyebrow{font-size:9px;letter-spacing:.7px;color:#797981}
+.statement-header h3{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:30px;letter-spacing:0;margin:7px 0 5px}
+.statement-header p{margin:0;font-size:13px;color:#6f717b}
+.statement-logo{font:900 31px/1 Arial,sans-serif;letter-spacing:-2px;color:#17181b;white-space:nowrap;padding-top:6px}
+.statement-logo>span{color:#e32956}.statement-logo small{font-size:9px;letter-spacing:1px;margin-left:3px}
+.statement-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 22px;margin:0 0 23px}
+.statement-meta>div{min-width:0}.statement-meta dt{font-size:10px;color:#7b7b84;margin-bottom:4px}
+.statement-meta dd{margin:0;font-size:11px;line-height:1.5;overflow-wrap:anywhere}
+.statement-amount{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 19px;border-radius:9px;background:#f6f6f8;border:1px solid #ececf0;margin-bottom:24px}
+.statement-amount>div{display:flex;flex-direction:column;gap:6px}.statement-amount>div>span{font-size:11px;color:#6c6d77}
+.statement-amount strong{font-size:29px;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.payment-status{border:1px solid #d9d7d0;border-radius:25px;background:#f0eee8;color:#726346;font-size:10px;padding:6px 10px;white-space:nowrap}
+.payment-status.is-paid{border-color:#c1e8d3;background:#eaf7ef;color:#23754c}
+.statement-section-title{background:#6c6e75;color:#fff;font-size:12px;line-height:1.5;padding:9px 12px;margin:0;letter-spacing:0}
+.statement-table-scroll{overflow-x:auto;outline-offset:3px}
+.statement-table{border-collapse:collapse;width:100%;font-size:10px;line-height:1.5;min-width:475px}
+.statement-table th,.statement-table td{border:1px solid #dadadd;padding:8px 7px;text-align:right;vertical-align:top}
+.statement-table thead th{background:#85868c;color:white;font-size:9px;font-weight:500}
+.statement-table tbody th{font-weight:400}.statement-table td:not(:first-child){font-variant-numeric:tabular-nums;white-space:nowrap}
+.statement-table th:first-child{width:39%}.statement-table td:nth-child(3){text-align:center}
+.statement-table .charge-group th{background:#f0f0f2;font-weight:700;font-size:10px;border-bottom:1px solid #cbcbcf;padding:7px}
+.statement-table .charge-subtotal th,.statement-table .charge-subtotal td{background:#f8f8fa;font-weight:700}
+.statement-totals{margin:22px 0 28px;display:flex;flex-direction:column;gap:9px;max-width:310px;margin-right:auto}
+.statement-totals>div{display:flex;align-items:baseline;justify-content:space-between;gap:25px;font-size:11px;padding:3px 0}
+.statement-totals dt{color:#696b74}.statement-totals dd{margin:0;font-variant-numeric:tabular-nums}
+.statement-totals .statement-grand-total{border-top:2px solid #33353e;padding-top:13px;margin-top:5px;font-size:16px;font-weight:700}
+.statement-grand-total dt{color:#24262b}
+.statement-footer{border-top:1px solid #d9d9dd;padding-top:14px;display:flex;justify-content:space-between;gap:12px;font-size:9px;color:#8a8a92}
+@media(max-width:650px){.invoice-statement{padding:23px 15px 19px}.invoice-toolbar{align-items:flex-start;padding:13px}.invoice-toolbar button{font-size:10px;padding:7px 9px;white-space:normal;max-width:135px}.statement-header h3{font-size:26px}.statement-logo{font-size:26px}.statement-meta{gap:13px 12px}.statement-amount strong{font-size:25px}.statement-footer{flex-direction:column}.details-heading h3{font-size:16px}.information-card{padding:18px}}
+@media print{
+  @page{size:A4;margin:15mm}
+  body.printing-invoice{background:#fff!important}
+  body.printing-invoice *{visibility:hidden}
+  body.printing-invoice .app{display:block;margin:0;padding:0;background:#fff;overflow:visible;min-height:0}
+  body.printing-invoice .assistant-card{border:0;box-shadow:none;margin:0;padding:0;width:100%;max-width:none;background:#fff}
+  body.printing-invoice .app>:not(.assistant-card),body.printing-invoice .assistant-card>:not(.result),body.printing-invoice .result>:not(.answer-details),body.printing-invoice .answer-details>:not(.invoice-preview),body.printing-invoice .invoice-preview:not(:has(.invoice-print-target)),body.printing-invoice .invoice-toolbar{display:none!important}
+  body.printing-invoice .result,body.printing-invoice .answer-details,body.printing-invoice .invoice-preview{margin:0;padding:0;border:0;border-radius:0;box-shadow:none;overflow:visible}
+  body.printing-invoice .invoice-print-target,body.printing-invoice .invoice-print-target *{visibility:visible}
+  body.printing-invoice .invoice-print-target{position:static;width:100%;padding:0;box-shadow:none}
+  .invoice-print-target .statement-table-scroll{overflow:visible}
+  .invoice-print-target .statement-table{font-size:11px}
+  .invoice-print-target .statement-table th,.invoice-print-target .statement-table td{padding:5px 7px}
+  .invoice-print-target .statement-header{padding-bottom:14px;margin-bottom:14px}
+  .invoice-print-target .statement-meta{gap:9px 20px;margin-bottom:14px}
+  .invoice-print-target .statement-amount{padding:12px 16px;margin-bottom:16px}
+  .invoice-print-target .statement-totals{margin-top:16px;margin-bottom:16px;gap:6px}
+  .invoice-print-target tr{break-inside:avoid}
+  .invoice-print-target .statement-footer{margin-top:25px}
+}

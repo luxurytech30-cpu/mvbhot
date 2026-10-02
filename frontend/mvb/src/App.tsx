@@ -1,20 +1,25 @@
 ﻿import { useRef, useState } from "react";
 import "./App.css";
+import AnswerDetails from "./components/answer-details/AnswerDetails";
+import type { AnswerPresentation } from "./components/answer-details/AnswerDetails";
 
 const API_URL = "http://localhost:5000";
 
 type NavigationStep = {
   action: string;
   instruction: string;
+  location?: string | null;
 };
 
 type AssistantResult = {
   success: boolean;
+  type: "navigation" | "answer" | "user_data";
   transcript: string;
-  currentScreen: string;
-  targetScreen: string;
+  currentScreen: string | null;
+  targetScreen: string | null;
   steps: NavigationStep[];
   answer: string;
+  presentation?: AnswerPresentation | null;
   audio: {
     mimeType: string;
     data: string;
@@ -126,93 +131,101 @@ function App() {
 
   return (
     <div className="app">
+      <div className="ambient ambient-one" aria-hidden="true" />
+      <div className="ambient ambient-two" aria-hidden="true" />
       <div className="assistant-card">
         <div className="header">
-          <div>
-            <h1>TV AI Assistant</h1>
-            <p>ספר לי לאן אתה רוצה להגיע</p>
+          <div className="brand">
+            <span className="brand-mark" aria-hidden="true">✦</span>
+            <span className="brand-name">nova<span className="brand-dot">.</span></span>
           </div>
-          <span className="status">● Online</span>
+          <span className="status"><span className="status-dot" /> READY TO HELP</span>
         </div>
 
-        <div className="section">
-          <label>Current TV screen</label>
+        <div className="intro">
+          <div className="eyebrow"><span className="eyebrow-line" /> YOUR TV COMPANION</div>
+          <h1>Where would you like <em>to go?</em></h1>
+          <p>Ask Nova a question or tell us where you’d like to go.</p>
+        </div>
+
+        <div className="section screen-section">
+          <div className="section-heading"><span className="section-number">01</span><label htmlFor="screen-select">Your current screen</label></div>
           <select className="screen-select" value={imageName} onChange={(e) => {
             setImageName(e.target.value);
             setResult(null);
-          }}>
+          }} id="screen-select">
             {screens.map((screen) => (
               <option key={screen.value} value={screen.value}>{screen.label}</option>
             ))}
           </select>
-          <div className="selected-screen">Selected:
-            <strong>{screens.find((screen) => screen.value === imageName)?.label}</strong>
-          </div>
+          <div className="field-hint">Select the screen you’re looking at right now.</div>
         </div>
 
-        <div className="section">
-          <label>What do you want to do?</label>
+        <div className="section request-section">
+          <div className="section-heading"><span className="section-number">02</span><label htmlFor="request-message">What can Nova help with?</label></div>
           <textarea
+            id="request-message"
             placeholder="לדוגמה: אני רוצה להגיע לנטפליקס"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             disabled={audioBlob !== null}
           />
         </div>
-        <div className="or">OR</div>
+        <div className="or"><span>OR USE YOUR VOICE</span></div>
         <div className="voice-section">
           {!recording ? (
             <button className="mic-button" onClick={startRecording}>
-              <span className="mic-icon">🎤</span>
-              <span>Start talking</span>
+              <span className="mic-icon" aria-hidden="true">♩</span>
+              <span>Tap to speak</span>
             </button>
           ) : (
             <button className="mic-button recording" onClick={stopRecording}>
-              <span className="mic-icon">⏹</span>
+              <span className="mic-icon" aria-hidden="true">■</span>
               <span>Stop recording</span>
             </button>
           )}
-          {recording && <div className="recording-text">🔴 Listening...</div>}
-          {audioBlob && !recording && <div className="audio-ready">✓ Voice recording ready</div>}
+          {recording && <div className="recording-text">Listening to you...</div>}
+          {audioBlob && !recording && <div className="audio-ready">Recording ready to send</div>}
         </div>
 
         <div className="buttons">
           <button className="send-button" onClick={sendRequest} disabled={loading || recording}>
-            {loading ? "Thinking..." : "Ask Assistant"}
+            {loading ? "Nova is thinking..." : <>Ask Nova <span aria-hidden="true">↗</span></>}
           </button>
-          <button className="reset-button" onClick={reset}>Reset</button>
+          <button className="reset-button" onClick={reset}>Clear</button>
         </div>
 
         {error && <div className="error">{error}</div>}
-        {loading && <div className="loading"><div className="spinner" /><span>Analyzing your request...</span></div>}
+        {loading && <div className="loading"><div className="spinner" /><span>Preparing your answer...</span></div>}
 
         {result && (
           <div className="result">
-            <div className="result-title">Assistant</div>
+            <div className="result-title"><span className="result-sparkle">✦</span> {result.type === "navigation" ? "Your route with Nova" : "Nova’s answer"}</div>
             {result.transcript && (
               <div className="info-box"><span>You said</span><strong>{result.transcript}</strong></div>
             )}
-            <div className="screens">
+            {result.type === "navigation" && <div className="screens">
               <div><span>Current screen</span><strong>{result.currentScreen}</strong></div>
               <div className="arrow">→</div>
               <div><span>Target</span><strong>{result.targetScreen}</strong></div>
-            </div>
-            <div className="answer">{result.answer}</div>
-            <div className="steps">
-              <h3>Navigation</h3>
+            </div>}
+            <div className="answer"><span className="answer-label">NOVA’S ANSWER</span><div>{result.answer}</div></div>
+            <AnswerDetails presentation={result.presentation} />
+            {result.type === "navigation" && result.steps?.length > 0 && <div className="steps">
+              <h3>Step by step</h3>
               {result.steps?.map((step, index) => (
                 <div className="step" key={`${step.action}-${index}`}>
                   <div className="step-number">{index + 1}</div>
                   <div className="step-content">
                     <strong>{step.instruction}</strong>
-                    <span>{step.action}</span>
+                    {step.location && <span>{step.location}</span>}
                   </div>
                 </div>
               ))}
-            </div>
+            </div>}
             {result.audio?.data && (
               <button className="voice-button" onClick={() => playBase64Audio(result.audio!.data, result.audio!.mimeType)}>
-                🔊 Play answer again
+                ◖)) &nbsp; Listen again
               </button>
             )}
           </div>

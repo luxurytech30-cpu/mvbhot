@@ -1,0 +1,1406 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "name": "NOVA TV",
+    "language": "he",
+    "direction": "rtl",
+    "demo": true
+  },
+  "content": [
+    {
+      "id": "horizon",
+      "title": "קו האופק",
+      "subtitle": "כל דרך מסתירה סיפור.",
+      "description": "כשמכתב ישן מחזיר את איתי אל המדבר שבו גדל, מסע אחד משנה את כל מה שחשב שהוא יודע על המשפחה שלו. דרמת מתח ישראלית על סודות, שייכות והדרך הביתה.",
+      "year": 2026,
+      "duration": 48,
+      "category": "דרמה ישראלית",
+      "type": "series",
+      "artwork": "desert",
+      "badge": "NOVA ORIGINAL",
+      "progress": 34
+    },
+    {
+      "id": "after-hours",
+      "title": "אחרי חצות",
+      "subtitle": "כשהעיר נרדמת, הסיפור מתחיל.",
+      "description": "בלילה אחד בתל אביב, דרכיהם של שלושה זרים מצטלבות בעקבות שיחת טלפון מסתורית. מותחן סוחף שמתרחש בעיר שלא עוצרת.",
+      "year": 2026,
+      "duration": 104,
+      "category": "מתח",
+      "type": "movie",
+      "artwork": "city",
+      "badge": "חדש"
+    },
+    {
+      "id": "blue-world",
+      "title": "עולם כחול",
+      "subtitle": "לגלות את מה שמתחת לפני השטח.",
+      "description": "מסע מרהיב אל המעמקים הפחות מוכרים של האוקיינוס. סיפורים מפתיעים על החיים, הטבע והקשרים העדינים שמחזיקים את העולם שלנו.",
+      "year": 2026,
+      "duration": 52,
+      "category": "דוקו וטבע",
+      "type": "series",
+      "artwork": "ocean",
+      "badge": "4K",
+      "progress": 62
+    },
+    {
+      "id": "beyond",
+      "title": "מעבר לכוכבים",
+      "subtitle": "ההרפתקה הגדולה עוד לפנינו.",
+      "description": "צוות מחקר קטן יוצא למסע אל קצה מערכת השמש ומגלה שהדרך אל הלא נודע היא גם הדרך להבין מי אנחנו.",
+      "year": 2025,
+      "duration": 126,
+      "category": "מדע בדיוני",
+      "type": "movie",
+      "artwork": "space",
+      "badge": "מומלץ"
+    },
+    {
+      "id": "wild",
+      "title": "בין העצים",
+      "subtitle": "לפעמים צריך ללכת לאיבוד.",
+      "description": "שתי אחיות נפגשות אחרי שנים לטיול בשמורת טבע מרוחקת. בין שבילים חדשים לזיכרונות ישנים, הן לומדות להכיר זו את זו מחדש.",
+      "year": 2026,
+      "duration": 96,
+      "category": "דרמה",
+      "type": "movie",
+      "artwork": "forest"
+    },
+    {
+      "id": "little-adventures",
+      "title": "ההרפתקה של לולי",
+      "subtitle": "עולם גדול. חברים קטנים.",
+      "description": "לולי והחברים יוצאים להרפתקה צבעונית ביער קסום. סדרת ילדים על חברות, סקרנות והאומץ לנסות דברים חדשים.",
+      "year": 2026,
+      "duration": 24,
+      "category": "ילדים",
+      "type": "series",
+      "artwork": "kids",
+      "badge": "עונה חדשה"
+    },
+    {
+      "id": "live-music",
+      "title": "לילה של מוזיקה",
+      "subtitle": "הבמה שלכם, מכל מקום.",
+      "description": "ערב הופעות מיוחד שמפגיש קולות חדשים ואמנים אהובים על במה אחת. מוזיקה חיה, רגעים חד פעמיים וסיפורים מאחורי השירים.",
+      "year": 2026,
+      "duration": 88,
+      "category": "מוזיקה",
+      "type": "movie",
+      "artwork": "concert",
+      "progress": 18
+    },
+    {
+      "id": "south",
+      "title": "דרומה",
+      "subtitle": "הבית נמצא בסוף הדרך.",
+      "description": "סרט מסע ישראלי על שני חברי ילדות שמחליטים לחצות את הארץ. בדרך הם פוגשים נופים, אנשים, ואת עצמם.",
+      "year": 2025,
+      "duration": 102,
+      "category": "ישראלי",
+      "type": "movie",
+      "artwork": "desert"
+    },
+    {
+      "id": "city-stories",
+      "title": "סיפורים מהעיר",
+      "subtitle": "מאחורי כל חלון, עולם שלם.",
+      "description": "דרמה קומית על דיירי בניין אחד בעיר הגדולה, שמגלים שחברות יכולה להגיע דווקא מהשכן הכי לא צפוי.",
+      "year": 2026,
+      "duration": 42,
+      "category": "קומדיה",
+      "type": "series",
+      "artwork": "city",
+      "progress": 45
+    },
+    {
+      "id": "deep",
+      "title": "המסע הכחול",
+      "subtitle": "הרפתקה מעבר לכל דמיון.",
+      "description": "סרט טבע לכל המשפחה בעקבות צוות מדענים שמפליג אל האיים הנידחים ביותר בעולם.",
+      "year": 2025,
+      "duration": 85,
+      "category": "דוקו וטבע",
+      "type": "movie",
+      "artwork": "ocean"
+    },
+    {
+      "id": "orbit",
+      "title": "תחנה אחרונה",
+      "subtitle": "מישהו מחכה בצד השני.",
+      "description": "אות מסתורי מגיע לתחנת חלל שקטה ומשנה את חייה של החוקרת היחידה שנשארה בה. סדרת מתח מקורית.",
+      "year": 2026,
+      "duration": 45,
+      "category": "מדע בדיוני",
+      "type": "series",
+      "artwork": "space",
+      "badge": "חדש"
+    },
+    {
+      "id": "green",
+      "title": "העולם שבחוץ",
+      "subtitle": "הטבע מספר את הסיפור.",
+      "description": "סדרה תיעודית על היערות העתיקים, השמורות היפות והאנשים ששומרים עליהם לדורות הבאים.",
+      "year": 2026,
+      "duration": 50,
+      "category": "דוקו וטבע",
+      "type": "series",
+      "artwork": "forest"
+    }
+  ],
+  "channels": [
+    {
+      "id": "11",
+      "number": 11,
+      "name": "כאן 11",
+      "shortName": "כאן",
+      "color": "#28b3c5",
+      "category": "אקטואליה חדשות ושפות",
+      "current": "חדשות הערב",
+      "next": "קו האופק"
+    },
+    {
+      "id": "12",
+      "number": 12,
+      "name": "קשת 12",
+      "shortName": "12",
+      "color": "#ff4664",
+      "category": "סדרות ובידור",
+      "current": "חדשות הערב",
+      "next": "הערב הגדול"
+    },
+    {
+      "id": "13",
+      "number": 13,
+      "name": "רשת 13",
+      "shortName": "13",
+      "color": "#986ef3",
+      "category": "סדרות ובידור",
+      "current": "המהדורה המרכזית",
+      "next": "סיפורים מהעיר"
+    },
+    {
+      "id": "14",
+      "number": 14,
+      "name": "עכשיו 14",
+      "shortName": "14",
+      "color": "#537ffc",
+      "category": "אקטואליה חדשות ושפות",
+      "current": "היום שהיה",
+      "next": "שיחת לילה"
+    },
+    {
+      "id": "15",
+      "number": 15,
+      "name": "News 24",
+      "shortName": "N24",
+      "color": "#e85a61",
+      "category": "אקטואליה חדשות ושפות",
+      "current": "חדשות מסביב לעולם",
+      "next": "המבט הבינלאומי"
+    },
+    {
+      "id": "18",
+      "number": 18,
+      "name": "Cinema",
+      "shortName": "CINEMA",
+      "color": "#dca670",
+      "category": "סרטים",
+      "current": "אחרי חצות",
+      "next": "מעבר לכוכבים"
+    },
+    {
+      "id": "30",
+      "number": 30,
+      "name": "Drama",
+      "shortName": "drama",
+      "color": "#cb82b8",
+      "category": "סדרות ובידור",
+      "current": "קו האופק",
+      "next": "סיפורים מהעיר"
+    },
+    {
+      "id": "33",
+      "number": 33,
+      "name": "Makan",
+      "shortName": "مكان",
+      "color": "#eea761",
+      "category": "אקטואליה חדשות ושפות",
+      "current": "חדשות הערב",
+      "next": "תרבות מקומית"
+    },
+    {
+      "id": "37",
+      "number": 37,
+      "name": "Life",
+      "shortName": "life",
+      "color": "#8dbb81",
+      "category": "תעודה טבע ופנאי",
+      "current": "העולם שבחוץ",
+      "next": "המטבח הפתוח"
+    },
+    {
+      "id": "39",
+      "number": 39,
+      "name": "Movies",
+      "shortName": "MOVIES",
+      "color": "#cf6e62",
+      "category": "סרטים",
+      "current": "בין העצים",
+      "next": "דרומה"
+    },
+    {
+      "id": "43",
+      "number": 43,
+      "name": "History",
+      "shortName": "H",
+      "color": "#d9b364",
+      "category": "תעודה טבע ופנאי",
+      "current": "הסיפור שלנו",
+      "next": "מסע בזמן"
+    },
+    {
+      "id": "55",
+      "number": 55,
+      "name": "Sports",
+      "shortName": "SPORT",
+      "color": "#85d297",
+      "category": "ספורט",
+      "current": "מכבי — משחק העונה",
+      "next": "סיכום המחזור"
+    },
+    {
+      "id": "70",
+      "number": 70,
+      "name": "NOVA Kids",
+      "shortName": "kids",
+      "color": "#f2b750",
+      "category": "ילדים",
+      "current": "ההרפתקה של לולי",
+      "next": "חברים ביער"
+    },
+    {
+      "id": "80",
+      "number": 80,
+      "name": "NOVA Music",
+      "shortName": "music",
+      "color": "#ac83f6",
+      "category": "מוזיקה",
+      "current": "לילה של מוזיקה",
+      "next": "הפלייליסט"
+    }
+  ],
+  "programs": [
+    {
+      "id": "11-1",
+      "title": "חדשות הערב",
+      "channelId": "11",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של כאן 11. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "11-2",
+      "title": "קו האופק",
+      "channelId": "11",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "desert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "11-3",
+      "title": "עולם כחול",
+      "channelId": "11",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "ocean",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "12-1",
+      "title": "חדשות הערב",
+      "channelId": "12",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של קשת 12. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "12-2",
+      "title": "הערב הגדול",
+      "channelId": "12",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "forest",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "12-3",
+      "title": "סרט הלילה: אחרי חצות",
+      "channelId": "12",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "13-1",
+      "title": "המהדורה המרכזית",
+      "channelId": "13",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של רשת 13. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "13-2",
+      "title": "סיפורים מהעיר",
+      "channelId": "13",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "desert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "13-3",
+      "title": "עולם כחול",
+      "channelId": "13",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "ocean",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "14-1",
+      "title": "היום שהיה",
+      "channelId": "14",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של עכשיו 14. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "14-2",
+      "title": "שיחת לילה",
+      "channelId": "14",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "forest",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "14-3",
+      "title": "סרט הלילה: אחרי חצות",
+      "channelId": "14",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "15-1",
+      "title": "חדשות מסביב לעולם",
+      "channelId": "15",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של News 24. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "15-2",
+      "title": "המבט הבינלאומי",
+      "channelId": "15",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "desert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "15-3",
+      "title": "עולם כחול",
+      "channelId": "15",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "ocean",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "18-1",
+      "title": "אחרי חצות",
+      "channelId": "18",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של Cinema. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "18-2",
+      "title": "מעבר לכוכבים",
+      "channelId": "18",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "forest",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "18-3",
+      "title": "סרט הלילה: אחרי חצות",
+      "channelId": "18",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "30-1",
+      "title": "קו האופק",
+      "channelId": "30",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של Drama. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "30-2",
+      "title": "סיפורים מהעיר",
+      "channelId": "30",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "desert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "30-3",
+      "title": "עולם כחול",
+      "channelId": "30",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "ocean",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "33-1",
+      "title": "חדשות הערב",
+      "channelId": "33",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של Makan. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "33-2",
+      "title": "תרבות מקומית",
+      "channelId": "33",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "forest",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "33-3",
+      "title": "סרט הלילה: אחרי חצות",
+      "channelId": "33",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "37-1",
+      "title": "העולם שבחוץ",
+      "channelId": "37",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של Life. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "37-2",
+      "title": "המטבח הפתוח",
+      "channelId": "37",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "desert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "37-3",
+      "title": "עולם כחול",
+      "channelId": "37",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "ocean",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "39-1",
+      "title": "בין העצים",
+      "channelId": "39",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של Movies. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "39-2",
+      "title": "דרומה",
+      "channelId": "39",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "forest",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "39-3",
+      "title": "סרט הלילה: אחרי חצות",
+      "channelId": "39",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "43-1",
+      "title": "הסיפור שלנו",
+      "channelId": "43",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של History. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "43-2",
+      "title": "מסע בזמן",
+      "channelId": "43",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "desert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "43-3",
+      "title": "עולם כחול",
+      "channelId": "43",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "ocean",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "55-1",
+      "title": "מכבי — משחק העונה",
+      "channelId": "55",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של Sports. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "concert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "55-2",
+      "title": "סיכום המחזור",
+      "channelId": "55",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "forest",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "55-3",
+      "title": "סרט הלילה: אחרי חצות",
+      "channelId": "55",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "70-1",
+      "title": "ההרפתקה של לולי",
+      "channelId": "70",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של NOVA Kids. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "kids",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "70-2",
+      "title": "חברים ביער",
+      "channelId": "70",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "desert",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "70-3",
+      "title": "עולם כחול",
+      "channelId": "70",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "ocean",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "80-1",
+      "title": "לילה של מוזיקה",
+      "channelId": "80",
+      "start": "20:00",
+      "end": "21:00",
+      "description": "שידור הערב של NOVA Music. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "80-2",
+      "title": "הפלייליסט",
+      "channelId": "80",
+      "start": "21:00",
+      "end": "22:00",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "artwork": "forest",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "80-3",
+      "title": "סרט הלילה: אחרי חצות",
+      "channelId": "80",
+      "start": "22:00",
+      "end": "23:00",
+      "description": "לסיים את היום עם סיפור טוב. תוכנית מיוחדת לצפייה משותפת, זמינה גם ב־CatchUp.",
+      "artwork": "city",
+      "date": "20.09.2026"
+    }
+  ],
+  "apps": [
+    {
+      "id": "netflix",
+      "name": "NETFLIX",
+      "tagline": "סיפורים שמחברים אותנו",
+      "color": "#e50914",
+      "category": "סרטים וסדרות"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "tagline": "עולם שלם של סרטונים",
+      "color": "#ff0033",
+      "category": "וידאו"
+    },
+    {
+      "id": "disney",
+      "name": "Disney+",
+      "tagline": "הקסם מתחיל כאן",
+      "color": "#b9d9ff",
+      "category": "לכל המשפחה"
+    },
+    {
+      "id": "prime",
+      "name": "prime video",
+      "tagline": "תמיד יש עוד מה לגלות",
+      "color": "#56c6ff",
+      "category": "סרטים וסדרות"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "tagline": "הפסקול של היום שלכם",
+      "color": "#1ed760",
+      "category": "מוזיקה"
+    },
+    {
+      "id": "nova",
+      "name": "NOVA TV",
+      "tagline": "כל מה שאוהבים, במקום אחד",
+      "color": "#ff365f",
+      "category": "טלוויזיה"
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "tagline": "כל הצלילים שאתם אוהבים",
+      "color": "#c790ff",
+      "category": "מוזיקה"
+    },
+    {
+      "id": "kids",
+      "name": "Kids",
+      "tagline": "הרפתקאות לקטנטנים",
+      "color": "#ffc966",
+      "category": "ילדים"
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "tagline": "זמן לשחק ביחד",
+      "color": "#76dac2",
+      "category": "משחקים"
+    }
+  ],
+  "categories": {
+    "vod": [
+      "הכל",
+      "סרטים",
+      "סדרות",
+      "ילדים",
+      "דוקו",
+      "ישראלי",
+      "חדש",
+      "פופולרי"
+    ],
+    "catchup": [
+      "הכל",
+      "סרטים",
+      "סדרות ובידור",
+      "אקטואליה חדשות ושפות",
+      "ילדים",
+      "ספורט",
+      "מוזיקה",
+      "תעודה טבע ופנאי"
+    ]
+  },
+  "guide": {
+    "timeSlots": [
+      "20:00",
+      "20:30",
+      "21:00",
+      "21:30",
+      "22:00",
+      "22:30",
+      "23:00"
+    ]
+  },
+  "home": {
+    "featuredContentIds": [
+      "horizon",
+      "blue-world",
+      "beyond"
+    ],
+    "recommendedContentIds": [
+      "after-hours",
+      "blue-world",
+      "horizon",
+      "beyond",
+      "wild",
+      "little-adventures"
+    ],
+    "newContentIds": [
+      "orbit",
+      "little-adventures",
+      "south",
+      "city-stories",
+      "green"
+    ],
+    "musicAppIds": [
+      "spotify",
+      "music",
+      "youtube"
+    ],
+    "musicContentId": "live-music",
+    "liveChannelId": "12"
+  },
+  "discovery": {
+    "featuredCatchupProgramIds": [
+      "11-2",
+      "12-2",
+      "13-3",
+      "55-2",
+      "70-1"
+    ],
+    "familyArtworkTags": [
+      "kids",
+      "ocean",
+      "forest"
+    ],
+    "searchSuggestions": [
+      "חדשות",
+      "מכבי",
+      "סרט",
+      "ילדים"
+    ]
+  },
+  "service": {
+    "supportItems": [
+      {
+        "id": "whatsapp",
+        "label": "WhatsApp",
+        "subtitle": "נוח, פשוט ובקצב שלכם",
+        "icon": "MessageCircle",
+        "title": "תמיכה ב־WhatsApp",
+        "message": "בהדגמה זו לא נשלחת הודעה. בשירות המלא ניתן יהיה לשוחח כאן עם נציג."
+      },
+      {
+        "id": "phone",
+        "label": "שירות טלפוני",
+        "subtitle": "תמיד נעים לשמוע אתכם",
+        "icon": "Phone",
+        "title": "שירות טלפוני",
+        "message": "שעות פעילות לדוגמה: א׳–ה׳ 08:00–20:00. זהו שירות פיקטיבי ואין מספר טלפון לחיוג."
+      },
+      {
+        "id": "help",
+        "label": "מרכז העזרה",
+        "subtitle": "תשובות לשאלות שלכם",
+        "icon": "HeartHandshake",
+        "title": "איך נוכל לעזור?",
+        "message": "לניווט השתמשו בחצים. Enter לבחירה, Escape לחזרה, H למסך הבית ו־M לתפריט. כתוביות משנים דרך כפתור הכתוביות בנגן. את החשבוניות תמצאו בלשונית ״החשבונית שלי״."
+      },
+      {
+        "id": "technical",
+        "label": "תמיכה טכנית",
+        "subtitle": "נפתור את זה יחד",
+        "icon": "Wrench",
+        "title": "תמיכה טכנית",
+        "message": "בדיקת הממיר לדוגמה הושלמה: התצוגה תקינה, התוכן זמין והחיבור המקומי פעיל. הגדרות שמע ותמונה נמצאות בתפריט ההגדרות."
+      }
+    ],
+    "libraries": [
+      {
+        "name": "Movies+",
+        "text": "ערב של קולנוע",
+        "category": "סרטים"
+      },
+      {
+        "name": "Kids+",
+        "text": "הרפתקאות לכל המשפחה",
+        "category": "ילדים"
+      },
+      {
+        "name": "Drama+",
+        "text": "סיפורים שנשארים איתכם",
+        "category": "סדרות"
+      },
+      {
+        "name": "Sports+",
+        "text": "כל הרגעים הגדולים",
+        "category": "ספורט"
+      }
+    ],
+    "packageCategories": [
+      "בידור",
+      "סרטים",
+      "ילדים",
+      "ספורט"
+    ],
+    "plans": [
+      {
+        "name": "NOVA Premium",
+        "categories": [
+          "בידור",
+          "סרטים",
+          "ילדים",
+          "ספורט"
+        ]
+      },
+      {
+        "name": "Sports Premium",
+        "monthlyPriceIls": 29
+      }
+    ]
+  },
+  "settingsCategories": [
+    {
+      "id": "picture",
+      "label": "תמונה",
+      "description": "איכות צפייה ותצוגה",
+      "icon": "Monitor",
+      "direct": true,
+      "options": [
+        {
+          "id": "quality",
+          "label": "איכות תמונה",
+          "description": "בחרו את איכות התמונה המועדפת לנגן.",
+          "preference": "video",
+          "values": [
+            "אוטומטי",
+            "4K UHD",
+            "1080p HD",
+            "720p"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "label": "שמע",
+      "description": "צליל ושפת שמע",
+      "icon": "AudioLines",
+      "options": [
+        {
+          "id": "language",
+          "label": "שפת שמע",
+          "description": "השפה המועדפת לתוכן שתומך במספר שפות.",
+          "preference": "audio",
+          "values": [
+            "עברית",
+            "English"
+          ]
+        },
+        {
+          "id": "output",
+          "label": "פלט שמע",
+          "description": "התאימו את השמע למערכת שלכם.",
+          "preference": "sound",
+          "values": [
+            "סטריאו",
+            "סראונד"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "label": "שפה",
+      "description": "שפת התוכן המועדפת",
+      "icon": "Globe2",
+      "direct": true,
+      "options": [
+        {
+          "id": "language",
+          "label": "שפת תוכן",
+          "description": "בחרו את שפת התוכן המועדפת. ממשק NOVA נשאר בעברית.",
+          "preference": "language",
+          "values": [
+            "עברית",
+            "English"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subtitles",
+      "label": "כתוביות",
+      "description": "שפה והצגת כתוביות",
+      "icon": "Captions",
+      "direct": true,
+      "options": [
+        {
+          "id": "subtitles",
+          "label": "שפת כתוביות",
+          "description": "הבחירה תחול גם על נגן הצפייה.",
+          "preference": "subtitles",
+          "values": [
+            "עברית",
+            "English",
+            "כבוי"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "label": "נגישות",
+      "description": "חוויית צפייה שמתאימה לכם",
+      "icon": "PersonStanding",
+      "options": [
+        {
+          "id": "subtitles",
+          "label": "כתוביות",
+          "description": "בחרו שפה לכתוביות בנגן.",
+          "preference": "subtitles",
+          "values": [
+            "עברית",
+            "English",
+            "כבוי"
+          ]
+        },
+        {
+          "id": "text-size",
+          "label": "גודל טקסט",
+          "description": "התאימו את גודל הטקסט לנוחות הקריאה שלכם.",
+          "preference": "textSize",
+          "values": [
+            "רגיל",
+            "גדול"
+          ]
+        },
+        {
+          "id": "contrast",
+          "label": "ניגודיות",
+          "description": "ניגודיות גבוהה מדגישה את הטקסט והפקדים.",
+          "preference": "contrast",
+          "values": [
+            "רגיל",
+            "גבוהה"
+          ]
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    {
+      "id": "home",
+      "path": "/",
+      "label": "מסך הבית",
+      "icon": "House"
+    },
+    {
+      "id": "search",
+      "path": "/search",
+      "label": "חיפוש",
+      "icon": "Search"
+    },
+    {
+      "id": "channels",
+      "path": "/channels",
+      "label": "ערוצים",
+      "icon": "Tv"
+    },
+    {
+      "id": "catchup",
+      "path": "/catchup",
+      "label": "CatchUp",
+      "icon": "History"
+    },
+    {
+      "id": "vod",
+      "path": "/vod",
+      "label": "VOD",
+      "icon": "Clapperboard"
+    },
+    {
+      "id": "recordings",
+      "path": "/recordings",
+      "label": "הקלטות",
+      "icon": "CircleDot"
+    },
+    {
+      "id": "favorites",
+      "path": "/favorites",
+      "label": "מועדפים",
+      "icon": "Heart"
+    },
+    {
+      "id": "apps",
+      "path": "/apps",
+      "label": "אפליקציות",
+      "icon": "LayoutGrid"
+    },
+    {
+      "id": "guide",
+      "path": "/tv-guide",
+      "label": "לוח שידורים",
+      "icon": "CalendarDays"
+    },
+    {
+      "id": "settings",
+      "path": "/settings",
+      "label": "הגדרות",
+      "icon": "Settings"
+    },
+    {
+      "id": "service",
+      "path": "/service",
+      "label": "שירות ותמיכה",
+      "icon": "Headphones"
+    }
+  ],
+  "navigationGraph": {
+    "home": {
+      "path": "/",
+      "label": "מסך הבית",
+      "children": [
+        "search",
+        "channels",
+        "catchup",
+        "vod",
+        "recordings",
+        "favorites",
+        "apps",
+        "tvGuide",
+        "settings",
+        "service"
+      ]
+    },
+    "search": {
+      "path": "/search",
+      "label": "חיפוש",
+      "children": [
+        "channelDetails",
+        "programDetails",
+        "contentDetails"
+      ]
+    },
+    "channels": {
+      "path": "/channels",
+      "label": "ערוצים",
+      "children": [
+        "channelDetails"
+      ]
+    },
+    "channelDetails": {
+      "path": "/channels/:id",
+      "label": "פרטי ערוץ",
+      "children": [
+        "player"
+      ]
+    },
+    "catchup": {
+      "path": "/catchup",
+      "label": "CatchUp",
+      "children": [
+        "catchupCategory",
+        "catchupChannel",
+        "programDetails"
+      ]
+    },
+    "catchupCategory": {
+      "path": "/catchup?category=:category",
+      "label": "קטגוריה",
+      "children": [
+        "catchupChannel"
+      ]
+    },
+    "catchupChannel": {
+      "path": "/catchup/:channelId",
+      "label": "תוכניות הערוץ",
+      "children": [
+        "programDetails"
+      ]
+    },
+    "programDetails": {
+      "path": "/program/:id",
+      "label": "פרטי תוכנית",
+      "children": [
+        "player"
+      ]
+    },
+    "vod": {
+      "path": "/vod",
+      "label": "VOD",
+      "children": [
+        "contentDetails"
+      ]
+    },
+    "contentDetails": {
+      "path": "/content/:id",
+      "label": "פרטי תוכן",
+      "children": [
+        "player"
+      ]
+    },
+    "player": {
+      "path": "/player/:id",
+      "label": "נגן",
+      "children": [
+        "playerControls",
+        "subtitles",
+        "playerSettings"
+      ]
+    },
+    "playerControls": {
+      "path": "/player/:id",
+      "label": "פקדי ניגון",
+      "children": [
+        "subtitles",
+        "audio",
+        "playerSettings"
+      ],
+      "state": {
+        "controlsVisible": true
+      }
+    },
+    "subtitles": {
+      "path": "/player/:id?panel=subtitles",
+      "label": "כתוביות",
+      "children": [
+        "subtitleHebrew",
+        "subtitleEnglish",
+        "subtitleOff"
+      ]
+    },
+    "subtitleHebrew": {
+      "path": "/player/:id?panel=subtitles",
+      "label": "עברית",
+      "children": [],
+      "state": {
+        "subtitles": "עברית"
+      }
+    },
+    "subtitleEnglish": {
+      "path": "/player/:id?panel=subtitles",
+      "label": "English",
+      "children": [],
+      "state": {
+        "subtitles": "English"
+      }
+    },
+    "subtitleOff": {
+      "path": "/player/:id?panel=subtitles",
+      "label": "כבוי",
+      "children": [],
+      "state": {
+        "subtitles": "כבוי"
+      }
+    },
+    "playerSettings": {
+      "path": "/player/:id?panel=settings",
+      "label": "הגדרות נגן",
+      "children": [
+        "audio",
+        "video",
+        "playback"
+      ]
+    },
+    "audio": {
+      "path": "/player/:id?panel=audio",
+      "label": "שמע",
+      "children": []
+    },
+    "video": {
+      "path": "/player/:id?panel=video",
+      "label": "תמונה",
+      "children": []
+    },
+    "playback": {
+      "path": "/player/:id?panel=playback",
+      "label": "אפשרויות ניגון",
+      "children": []
+    },
+    "recordings": {
+      "path": "/recordings",
+      "label": "הקלטות",
+      "children": [
+        "recordingDetails"
+      ]
+    },
+    "recordingDetails": {
+      "path": "/recordings/:id",
+      "label": "פרטי הקלטה",
+      "children": [
+        "player"
+      ]
+    },
+    "favorites": {
+      "path": "/favorites",
+      "label": "מועדפים",
+      "children": [
+        "channelDetails",
+        "contentDetails"
+      ]
+    },
+    "apps": {
+      "path": "/apps",
+      "label": "אפליקציות",
+      "children": [
+        "appDetails"
+      ]
+    },
+    "appDetails": {
+      "path": "/apps/:id",
+      "label": "פרטי אפליקציה",
+      "children": []
+    },
+    "tvGuide": {
+      "path": "/tv-guide",
+      "label": "לוח שידורים",
+      "children": [
+        "programDetails"
+      ]
+    },
+    "settings": {
+      "path": "/settings",
+      "label": "הגדרות",
+      "children": [
+        "settingsCategory"
+      ]
+    },
+    "settingsCategory": {
+      "path": "/settings/:category",
+      "label": "קטגוריית הגדרות",
+      "children": [
+        "settingsOption"
+      ]
+    },
+    "settingsOption": {
+      "path": "/settings/:category/:option",
+      "label": "אפשרויות הגדרה",
+      "children": []
+    },
+    "service": {
+      "path": "/service",
+      "label": "שירות ותמיכה",
+      "children": [
+        "support",
+        "packages",
+        "vodLibraries",
+        "bills"
+      ]
+    },
+    "support": {
+      "path": "/service",
+      "label": "תמיכה",
+      "children": []
+    },
+    "packages": {
+      "path": "/service/packages",
+      "label": "ערוצים וחבילות",
+      "children": []
+    },
+    "vodLibraries": {
+      "path": "/service/vod",
+      "label": "ספריות VOD",
+      "children": [
+        "vod"
+      ]
+    },
+    "bills": {
+      "path": "/service/bills",
+      "label": "החשבונית שלי",
+      "children": [
+        "billDetails"
+      ]
+    },
+    "billDetails": {
+      "path": "/service/bills/:id",
+      "label": "פרטי חשבונית",
+      "children": []
+    }
+  },
+  "assets": {
+    "heroImage": "/images/horizon.png",
+    "catalogArtworkAtlas": "/images/catalog-atlas.png"
+  }
+}
