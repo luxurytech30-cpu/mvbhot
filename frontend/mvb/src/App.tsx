@@ -1,133 +1,23 @@
-﻿import { useRef, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import AnswerDetails from "./components/answer-details/AnswerDetails";
-import type { AnswerPresentation } from "./components/answer-details/AnswerDetails";
+import LiveVoice from "./components/live-voice/LiveVoice";
+import type { AssistantResult } from "./types/assistant";
+import AccountGate from "./components/account/AccountGate";
 
-const API_URL = "http://localhost:5000";
-
-type NavigationStep = {
-  action: string;
-  instruction: string;
-  location?: string | null;
-};
-
-type AssistantResult = {
-  success: boolean;
-  type: "navigation" | "answer" | "user_data";
-  transcript: string;
-  currentScreen: string | null;
-  targetScreen: string | null;
-  steps: NavigationStep[];
-  answer: string;
-  presentation?: AnswerPresentation | null;
-  audio: {
-    mimeType: string;
-    data: string;
-  } | null;
-};
-
-const screens = [
-  { label: "Home", value: "home.png" },
-  { label: "Apps", value: "apps.png" },
-  { label: "VOD", value: "vod.png" },
-  { label: "Settings", value: "settings.png" },
-  { label: "Channels", value: "channels.png" },
-];
+const API_URL = import.meta.env.VITE_API_URL || window.location.origin;
 
 function App() {
-  const [message, setMessage] = useState<string>("");
-  const [imageName, setImageName] = useState<string>("home.png");
-  const [recording, setRecording] = useState<boolean>(false);
-  const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  return (
+    <AccountGate apiUrl={API_URL}>
+      <Assistant />
+    </AccountGate>
+  );
+}
+function Assistant() {
+  const [liveActive, setLiveActive] = useState(false);
   const [result, setResult] = useState<AssistantResult | null>(null);
-  const [error, setError] = useState<string>("");
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const chunksRef = useRef<Blob[]>([]);
-
-  const startRecording = async () => {
-    try {
-      setError("");
-      setAudioBlob(null);
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const mediaRecorder = new MediaRecorder(stream);
-      mediaRecorderRef.current = mediaRecorder;
-      chunksRef.current = [];
-      mediaRecorder.ondataavailable = (event: BlobEvent) => {
-        if (event.data.size > 0) chunksRef.current.push(event.data);
-      };
-      mediaRecorder.onstop = () => {
-        const blob = new Blob(chunksRef.current, { type: mediaRecorder.mimeType });
-        setAudioBlob(blob);
-        stream.getTracks().forEach((track) => track.stop());
-      };
-      mediaRecorder.start();
-      setRecording(true);
-    } catch (err) {
-      console.error(err);
-      setError("Could not access microphone");
-    }
-  };
-
-  const stopRecording = () => {
-    if (mediaRecorderRef.current && recording) {
-      mediaRecorderRef.current.stop();
-      setRecording(false);
-    }
-  };
-
-  const playBase64Audio = (base64: string, mimeType = "audio/wav") => {
-    const byteCharacters = atob(base64);
-    const byteNumbers = new Array<number>(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-      byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-    const blob = new Blob([byteArray], { type: mimeType });
-    const url = URL.createObjectURL(blob);
-    const audio = new Audio(url);
-    audio.play().catch((err) => console.error("Audio play error:", err));
-    audio.onended = () => URL.revokeObjectURL(url);
-  };
-
-  const sendRequest = async () => {
-    try {
-      setLoading(true);
-      setError("");
-      setResult(null);
-      if (!message.trim() && !audioBlob) {
-        setError("Write a message or record your voice");
-        return;
-      }
-      const formData = new FormData();
-      formData.append("imageName", imageName);
-      if (audioBlob) formData.append("audio", audioBlob, "voice.webm");
-      else formData.append("message", message);
-      const response = await fetch(`${API_URL}/api/assistant`, { method: "POST", body: formData });
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.details || data.error || "Something went wrong");
-      }
-      const assistantResult = data as AssistantResult;
-      setResult(assistantResult);
-      if (assistantResult.audio?.data) {
-        playBase64Audio(assistantResult.audio.data, assistantResult.audio.mimeType);
-      }
-    } catch (err) {
-      console.error(err);
-      setError(err instanceof Error ? err.message : "Something went wrong");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const reset = () => {
-    setMessage("");
-    setAudioBlob(null);
-    setResult(null);
-    setError("");
-    setImageName("home.png");
-  };
+  const [error, setError] = useState("");
 
   return (
     <div className="app">
@@ -136,104 +26,104 @@ function App() {
       <div className="assistant-card">
         <div className="header">
           <div className="brand">
-            <span className="brand-mark" aria-hidden="true">✦</span>
-            <span className="brand-name">nova<span className="brand-dot">.</span></span>
+            <span className="brand-mark" aria-hidden="true">
+              ✦
+            </span>
+            <span className="brand-name">
+              nova<span className="brand-dot">.</span>
+            </span>
           </div>
-          <span className="status"><span className="status-dot" /> READY TO HELP</span>
+          <span className="status">
+            <span className="status-dot" /> {liveActive ? "LIVE CONVERSATION" : "READY TO TALK"}
+          </span>
         </div>
 
         <div className="intro">
-          <div className="eyebrow"><span className="eyebrow-line" /> YOUR TV COMPANION</div>
-          <h1>Where would you like <em>to go?</em></h1>
-          <p>Ask Nova a question or tell us where you’d like to go.</p>
+          <div className="eyebrow">
+            <span className="eyebrow-line" /> YOUR TV COMPANION
+          </div>
+          <h1>
+            Where would you like <em>to go?</em>
+          </h1>
+          <p>
+            Talk naturally with Nova. It follows the page you are viewing in NOVA TV automatically.
+          </p>
         </div>
 
-        <div className="section screen-section">
-          <div className="section-heading"><span className="section-number">01</span><label htmlFor="screen-select">Your current screen</label></div>
-          <select className="screen-select" value={imageName} onChange={(e) => {
-            setImageName(e.target.value);
-            setResult(null);
-          }} id="screen-select">
-            {screens.map((screen) => (
-              <option key={screen.value} value={screen.value}>{screen.label}</option>
-            ))}
-          </select>
-          <div className="field-hint">Select the screen you’re looking at right now.</div>
-        </div>
-
-        <div className="section request-section">
-          <div className="section-heading"><span className="section-number">02</span><label htmlFor="request-message">What can Nova help with?</label></div>
-          <textarea
-            id="request-message"
-            placeholder="לדוגמה: אני רוצה להגיע לנטפליקס"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            disabled={audioBlob !== null}
+        <div className="section live-section">
+          <div className="section-heading">
+            <span className="section-number">01</span>
+            <h2>Talk with Nova</h2>
+          </div>
+          <LiveVoice
+            apiUrl={API_URL}
+            onResult={setResult}
+            onError={setError}
+            onActive={setLiveActive}
           />
         </div>
-        <div className="or"><span>OR USE YOUR VOICE</span></div>
-        <div className="voice-section">
-          {!recording ? (
-            <button className="mic-button" onClick={startRecording}>
-              <span className="mic-icon" aria-hidden="true">♩</span>
-              <span>Tap to speak</span>
-            </button>
-          ) : (
-            <button className="mic-button recording" onClick={stopRecording}>
-              <span className="mic-icon" aria-hidden="true">■</span>
-              <span>Stop recording</span>
-            </button>
-          )}
-          {recording && <div className="recording-text">Listening to you...</div>}
-          {audioBlob && !recording && <div className="audio-ready">Recording ready to send</div>}
-        </div>
 
-        <div className="buttons">
-          <button className="send-button" onClick={sendRequest} disabled={loading || recording}>
-            {loading ? "Nova is thinking..." : <>Ask Nova <span aria-hidden="true">↗</span></>}
-          </button>
-          <button className="reset-button" onClick={reset}>Clear</button>
-        </div>
-
-        {error && <div className="error">{error}</div>}
-        {loading && <div className="loading"><div className="spinner" /><span>Preparing your answer...</span></div>}
-
-        {result && (
-          <div className="result">
-            <div className="result-title"><span className="result-sparkle">✦</span> {result.type === "navigation" ? "Your route with Nova" : "Nova’s answer"}</div>
-            {result.transcript && (
-              <div className="info-box"><span>You said</span><strong>{result.transcript}</strong></div>
-            )}
-            {result.type === "navigation" && <div className="screens">
-              <div><span>Current screen</span><strong>{result.currentScreen}</strong></div>
-              <div className="arrow">→</div>
-              <div><span>Target</span><strong>{result.targetScreen}</strong></div>
-            </div>}
-            <div className="answer"><span className="answer-label">NOVA’S ANSWER</span><div>{result.answer}</div></div>
-            <AnswerDetails presentation={result.presentation} />
-            {result.type === "navigation" && result.steps?.length > 0 && <div className="steps">
-              <h3>Step by step</h3>
-              {result.steps?.map((step, index) => (
-                <div className="step" key={`${step.action}-${index}`}>
-                  <div className="step-number">{index + 1}</div>
-                  <div className="step-content">
-                    <strong>{step.instruction}</strong>
-                    {step.location && <span>{step.location}</span>}
-                  </div>
-                </div>
-              ))}
-            </div>}
-            {result.audio?.data && (
-              <button className="voice-button" onClick={() => playBase64Audio(result.audio!.data, result.audio!.mimeType)}>
-                ◖)) &nbsp; Listen again
-              </button>
-            )}
+        {error && (
+          <div className="error" role="alert">
+            {error}
           </div>
         )}
+
+        {result &&
+          Boolean(
+            result.answer.trim() ||
+            result.steps.length > 0 ||
+            result.presentation?.cards.length ||
+            result.presentation?.invoices.length,
+          ) && (
+            <div className="result">
+              <div className="result-title">
+                <span className="result-sparkle">✦</span>{" "}
+                {result.type === "navigation" ? "Your route with Nova" : "Nova’s answer"}
+              </div>
+              {result.transcript && (
+                <div className="info-box">
+                  <span>You said</span>
+                  <strong>{result.transcript}</strong>
+                </div>
+              )}
+              {result.type === "navigation" && (
+                <div className="screens">
+                  <div>
+                    <span>Current screen</span>
+                    <strong>{result.currentScreen}</strong>
+                  </div>
+                  <div className="arrow">→</div>
+                  <div>
+                    <span>Target</span>
+                    <strong>{result.targetScreen}</strong>
+                  </div>
+                </div>
+              )}
+              <div className="answer">
+                <span className="answer-label">NOVA’S ANSWER</span>
+                <div>{result.answer}</div>
+              </div>
+              <AnswerDetails presentation={result.presentation} />
+              {result.type === "navigation" && result.steps?.length > 0 && (
+                <div className="steps">
+                  <h3>Step by step</h3>
+                  {result.steps?.map((step, index) => (
+                    <div className="step" key={`${step.action}-${index}`}>
+                      <div className="step-number">{index + 1}</div>
+                      <div className="step-content">
+                        <strong>{step.instruction}</strong>
+                        {step.location && <span>{step.location}</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
       </div>
     </div>
   );
 }
 
 export default App;
-

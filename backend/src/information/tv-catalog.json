@@ -1,0 +1,1790 @@
+{
+  "schemaVersion": 3,
+  "site": {
+    "name": "NOVA TV",
+    "language": "he",
+    "direction": "rtl",
+    "demo": true,
+    "reviewedOn": "2026-10-03",
+    "dataPolicy": "Standalone Nova catalog checked against the actual TV pages and their rendering code. No dependency on TV JSON exports.",
+    "limitations": [
+      "Local demonstration, not a commercial TV service.",
+      "TV artwork and playback are simulated; no video stream or external app launches.",
+      "Subscription prices are shared with the backend plan catalog; streaming access is not enforced by plan."
+    ],
+    "displayBadges": "Home hero displays 4K and 16+, content details display HD and 16+, player displays 4K UHD. These are fixed demonstration labels, not verified stream quality or content-specific age classifications."
+  },
+  "content": [
+    {
+      "id": "horizon",
+      "title": "קו האופק",
+      "subtitle": "כל דרך מסתירה סיפור.",
+      "description": "כשמכתב ישן מחזיר את איתי אל המדבר שבו גדל, מסע אחד משנה את כל מה שחשב שהוא יודע על המשפחה שלו. דרמת מתח ישראלית על סודות, שייכות והדרך הביתה.",
+      "year": 2026,
+      "duration": 48,
+      "category": "דרמה ישראלית",
+      "type": "series",
+      "artwork": "desert",
+      "badge": "NOVA ORIGINAL",
+      "vod": true,
+      "libraryIds": [
+        "base"
+      ]
+    },
+    {
+      "id": "after-hours",
+      "title": "אחרי חצות",
+      "subtitle": "כשהעיר נרדמת, הסיפור מתחיל.",
+      "description": "בלילה אחד בתל אביב, דרכיהם של שלושה זרים מצטלבות בעקבות שיחת טלפון מסתורית. מותחן סוחף שמתרחש בעיר שלא עוצרת.",
+      "year": 2026,
+      "duration": 104,
+      "category": "מתח",
+      "type": "movie",
+      "artwork": "city",
+      "badge": "חדש",
+      "vod": true,
+      "libraryIds": [
+        "cinema"
+      ]
+    },
+    {
+      "id": "blue-world",
+      "title": "עולם כחול",
+      "subtitle": "לגלות את מה שמתחת לפני השטח.",
+      "description": "מסע מרהיב אל המעמקים הפחות מוכרים של האוקיינוס. סיפורים מפתיעים על החיים, הטבע והקשרים העדינים שמחזיקים את העולם שלנו.",
+      "year": 2026,
+      "duration": 52,
+      "category": "דוקו וטבע",
+      "type": "series",
+      "artwork": "ocean",
+      "badge": "4K",
+      "vod": true,
+      "libraryIds": [
+        "base",
+        "documentary"
+      ]
+    },
+    {
+      "id": "beyond",
+      "title": "מעבר לכוכבים",
+      "subtitle": "ההרפתקה הגדולה עוד לפנינו.",
+      "description": "צוות מחקר קטן יוצא למסע אל קצה מערכת השמש ומגלה שהדרך אל הלא נודע היא גם הדרך להבין מי אנחנו.",
+      "year": 2025,
+      "duration": 126,
+      "category": "מדע בדיוני",
+      "type": "movie",
+      "artwork": "space",
+      "badge": "מומלץ",
+      "vod": true,
+      "libraryIds": [
+        "premiere"
+      ]
+    },
+    {
+      "id": "wild",
+      "title": "בין העצים",
+      "subtitle": "לפעמים צריך ללכת לאיבוד.",
+      "description": "שתי אחיות נפגשות אחרי שנים לטיול בשמורת טבע מרוחקת. בין שבילים חדשים לזיכרונות ישנים, הן לומדות להכיר זו את זו מחדש.",
+      "year": 2026,
+      "duration": 96,
+      "category": "דרמה",
+      "type": "movie",
+      "artwork": "forest",
+      "vod": true,
+      "libraryIds": [
+        "cinema"
+      ]
+    },
+    {
+      "id": "little-adventures",
+      "title": "ההרפתקה של לולי",
+      "subtitle": "עולם גדול. חברים קטנים.",
+      "description": "לולי והחברים יוצאים להרפתקה צבעונית ביער קסום. סדרת ילדים על חברות, סקרנות והאומץ לנסות דברים חדשים.",
+      "year": 2026,
+      "duration": 24,
+      "category": "ילדים",
+      "type": "series",
+      "artwork": "kids",
+      "badge": "עונה חדשה",
+      "vod": true,
+      "libraryIds": [
+        "kids"
+      ]
+    },
+    {
+      "id": "live-music",
+      "title": "לילה של מוזיקה",
+      "subtitle": "הבמה שלכם, מכל מקום.",
+      "description": "ערב הופעות מיוחד שמפגיש קולות חדשים ואמנים אהובים על במה אחת. מוזיקה חיה, רגעים חד פעמיים וסיפורים מאחורי השירים.",
+      "year": 2026,
+      "duration": 88,
+      "category": "מוזיקה",
+      "type": "movie",
+      "artwork": "concert",
+      "vod": true,
+      "libraryIds": [
+        "music"
+      ]
+    },
+    {
+      "id": "south",
+      "title": "דרומה",
+      "subtitle": "הבית נמצא בסוף הדרך.",
+      "description": "סרט מסע ישראלי על שני חברי ילדות שמחליטים לחצות את הארץ. בדרך הם פוגשים נופים, אנשים, ואת עצמם.",
+      "year": 2025,
+      "duration": 102,
+      "category": "ישראלי",
+      "type": "movie",
+      "artwork": "desert",
+      "vod": true,
+      "libraryIds": [
+        "cinema"
+      ]
+    },
+    {
+      "id": "city-stories",
+      "title": "סיפורים מהעיר",
+      "subtitle": "מאחורי כל חלון, עולם שלם.",
+      "description": "דרמה קומית על דיירי בניין אחד בעיר הגדולה, שמגלים שחברות יכולה להגיע דווקא מהשכן הכי לא צפוי.",
+      "year": 2026,
+      "duration": 42,
+      "category": "קומדיה",
+      "type": "series",
+      "artwork": "city",
+      "vod": true,
+      "libraryIds": [
+        "drama"
+      ]
+    },
+    {
+      "id": "deep",
+      "title": "המסע הכחול",
+      "subtitle": "הרפתקה מעבר לכל דמיון.",
+      "description": "סרט טבע לכל המשפחה בעקבות צוות מדענים שמפליג אל האיים הנידחים ביותר בעולם.",
+      "year": 2025,
+      "duration": 85,
+      "category": "דוקו וטבע",
+      "type": "movie",
+      "artwork": "ocean",
+      "vod": true,
+      "libraryIds": [
+        "documentary"
+      ]
+    },
+    {
+      "id": "orbit",
+      "title": "תחנה אחרונה",
+      "subtitle": "מישהו מחכה בצד השני.",
+      "description": "אות מסתורי מגיע לתחנת חלל שקטה ומשנה את חייה של החוקרת היחידה שנשארה בה. סדרת מתח מקורית.",
+      "year": 2026,
+      "duration": 45,
+      "category": "מדע בדיוני",
+      "type": "series",
+      "artwork": "space",
+      "badge": "חדש",
+      "vod": true,
+      "libraryIds": [
+        "premiere"
+      ]
+    },
+    {
+      "id": "green",
+      "title": "העולם שבחוץ",
+      "subtitle": "הטבע מספר את הסיפור.",
+      "description": "סדרה תיעודית על היערות העתיקים, השמורות היפות והאנשים ששומרים עליהם לדורות הבאים.",
+      "year": 2026,
+      "duration": 50,
+      "category": "דוקו וטבע",
+      "type": "series",
+      "artwork": "forest",
+      "vod": true,
+      "libraryIds": [
+        "documentary"
+      ]
+    },
+    {
+      "id": "broadcast-11-1",
+      "title": "חדשות הערב",
+      "subtitle": "",
+      "description": "שידור הערב של כאן 11. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "year": 2026,
+      "duration": 60,
+      "category": "אקטואליה חדשות ושפות",
+      "type": "program",
+      "artwork": "city",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-12-2",
+      "title": "הערב הגדול",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "סדרות ובידור",
+      "type": "program",
+      "artwork": "forest",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-13-1",
+      "title": "המהדורה המרכזית",
+      "subtitle": "",
+      "description": "שידור הערב של רשת 13. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "year": 2026,
+      "duration": 60,
+      "category": "סדרות ובידור",
+      "type": "program",
+      "artwork": "city",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-14-1",
+      "title": "היום שהיה",
+      "subtitle": "",
+      "description": "שידור הערב של עכשיו 14. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "year": 2026,
+      "duration": 60,
+      "category": "אקטואליה חדשות ושפות",
+      "type": "program",
+      "artwork": "city",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-14-2",
+      "title": "שיחת לילה",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "אקטואליה חדשות ושפות",
+      "type": "program",
+      "artwork": "forest",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-15-1",
+      "title": "חדשות מסביב לעולם",
+      "subtitle": "",
+      "description": "שידור הערב של News 24. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "year": 2026,
+      "duration": 60,
+      "category": "אקטואליה חדשות ושפות",
+      "type": "program",
+      "artwork": "city",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-15-2",
+      "title": "המבט הבינלאומי",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "אקטואליה חדשות ושפות",
+      "type": "program",
+      "artwork": "desert",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-33-2",
+      "title": "תרבות מקומית",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "אקטואליה חדשות ושפות",
+      "type": "program",
+      "artwork": "forest",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-37-2",
+      "title": "המטבח הפתוח",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "תעודה טבע ופנאי",
+      "type": "program",
+      "artwork": "desert",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-43-1",
+      "title": "הסיפור שלנו",
+      "subtitle": "",
+      "description": "שידור הערב של History. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "year": 2026,
+      "duration": 60,
+      "category": "תעודה טבע ופנאי",
+      "type": "program",
+      "artwork": "city",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-43-2",
+      "title": "מסע בזמן",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "תעודה טבע ופנאי",
+      "type": "program",
+      "artwork": "desert",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-55-1",
+      "title": "מכבי — משחק העונה",
+      "subtitle": "",
+      "description": "שידור הערב של Sports. הסיפורים, האנשים והרגעים שכדאי לראות — עכשיו אצלכם בסלון.",
+      "year": 2026,
+      "duration": 60,
+      "category": "ספורט",
+      "type": "program",
+      "artwork": "concert",
+      "vod": true,
+      "libraryIds": [
+        "sports"
+      ]
+    },
+    {
+      "id": "broadcast-55-2",
+      "title": "סיכום המחזור",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "ספורט",
+      "type": "program",
+      "artwork": "forest",
+      "vod": true,
+      "libraryIds": [
+        "sports"
+      ]
+    },
+    {
+      "id": "broadcast-70-2",
+      "title": "חברים ביער",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "ילדים",
+      "type": "program",
+      "artwork": "desert",
+      "vod": false,
+      "libraryIds": []
+    },
+    {
+      "id": "broadcast-80-2",
+      "title": "הפלייליסט",
+      "subtitle": "",
+      "description": "סיפור מרתק עם רגעים בלתי צפויים. הצטרפו לפרק חדש, עם הדמויות והסיפורים שאוהבים.",
+      "year": 2026,
+      "duration": 60,
+      "category": "מוזיקה",
+      "type": "program",
+      "artwork": "forest",
+      "vod": false,
+      "libraryIds": []
+    }
+  ],
+  "channels": [
+    {
+      "id": "11",
+      "number": 11,
+      "name": "כאן 11",
+      "shortName": "כאן",
+      "color": "#28b3c5",
+      "category": "אקטואליה חדשות ושפות",
+      "currentProgramId": "11-1",
+      "nextProgramId": "11-2"
+    },
+    {
+      "id": "12",
+      "number": 12,
+      "name": "קשת 12",
+      "shortName": "12",
+      "color": "#ff4664",
+      "category": "סדרות ובידור",
+      "currentProgramId": "12-1",
+      "nextProgramId": "12-2"
+    },
+    {
+      "id": "13",
+      "number": 13,
+      "name": "רשת 13",
+      "shortName": "13",
+      "color": "#986ef3",
+      "category": "סדרות ובידור",
+      "currentProgramId": "13-1",
+      "nextProgramId": "13-2"
+    },
+    {
+      "id": "14",
+      "number": 14,
+      "name": "עכשיו 14",
+      "shortName": "14",
+      "color": "#537ffc",
+      "category": "אקטואליה חדשות ושפות",
+      "currentProgramId": "14-1",
+      "nextProgramId": "14-2"
+    },
+    {
+      "id": "15",
+      "number": 15,
+      "name": "News 24",
+      "shortName": "N24",
+      "color": "#e85a61",
+      "category": "אקטואליה חדשות ושפות",
+      "currentProgramId": "15-1",
+      "nextProgramId": "15-2"
+    },
+    {
+      "id": "18",
+      "number": 18,
+      "name": "Cinema",
+      "shortName": "CINEMA",
+      "color": "#dca670",
+      "category": "סרטים",
+      "currentProgramId": "18-1",
+      "nextProgramId": "18-2"
+    },
+    {
+      "id": "30",
+      "number": 30,
+      "name": "Drama",
+      "shortName": "drama",
+      "color": "#cb82b8",
+      "category": "סדרות ובידור",
+      "currentProgramId": "30-1",
+      "nextProgramId": "30-2"
+    },
+    {
+      "id": "33",
+      "number": 33,
+      "name": "Makan",
+      "shortName": "مكان",
+      "color": "#eea761",
+      "category": "אקטואליה חדשות ושפות",
+      "currentProgramId": "33-1",
+      "nextProgramId": "33-2"
+    },
+    {
+      "id": "37",
+      "number": 37,
+      "name": "Life",
+      "shortName": "life",
+      "color": "#8dbb81",
+      "category": "תעודה טבע ופנאי",
+      "currentProgramId": "37-1",
+      "nextProgramId": "37-2"
+    },
+    {
+      "id": "39",
+      "number": 39,
+      "name": "Movies",
+      "shortName": "MOVIES",
+      "color": "#cf6e62",
+      "category": "סרטים",
+      "currentProgramId": "39-1",
+      "nextProgramId": "39-2"
+    },
+    {
+      "id": "43",
+      "number": 43,
+      "name": "History",
+      "shortName": "H",
+      "color": "#d9b364",
+      "category": "תעודה טבע ופנאי",
+      "currentProgramId": "43-1",
+      "nextProgramId": "43-2"
+    },
+    {
+      "id": "55",
+      "number": 55,
+      "name": "Sports",
+      "shortName": "SPORT",
+      "color": "#85d297",
+      "category": "ספורט",
+      "currentProgramId": "55-1",
+      "nextProgramId": "55-2"
+    },
+    {
+      "id": "70",
+      "number": 70,
+      "name": "NOVA Kids",
+      "shortName": "kids",
+      "color": "#f2b750",
+      "category": "ילדים",
+      "currentProgramId": "70-1",
+      "nextProgramId": "70-2"
+    },
+    {
+      "id": "80",
+      "number": 80,
+      "name": "NOVA Music",
+      "shortName": "music",
+      "color": "#ac83f6",
+      "category": "מוזיקה",
+      "currentProgramId": "80-1",
+      "nextProgramId": "80-2"
+    }
+  ],
+  "programs": [
+    {
+      "id": "11-1",
+      "contentId": "broadcast-11-1",
+      "channelId": "11",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "11-2",
+      "contentId": "horizon",
+      "channelId": "11",
+      "start": "21:00",
+      "end": "21:48",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "11-3",
+      "contentId": "blue-world",
+      "channelId": "11",
+      "start": "21:48",
+      "end": "22:40",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "12-1",
+      "contentId": "broadcast-11-1",
+      "channelId": "12",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "12-2",
+      "contentId": "broadcast-12-2",
+      "channelId": "12",
+      "start": "21:00",
+      "end": "22:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "12-3",
+      "contentId": "after-hours",
+      "channelId": "12",
+      "start": "22:00",
+      "end": "23:44",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "13-1",
+      "contentId": "broadcast-13-1",
+      "channelId": "13",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "13-2",
+      "contentId": "city-stories",
+      "channelId": "13",
+      "start": "21:00",
+      "end": "21:42",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "13-3",
+      "contentId": "blue-world",
+      "channelId": "13",
+      "start": "21:42",
+      "end": "22:34",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "14-1",
+      "contentId": "broadcast-14-1",
+      "channelId": "14",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "14-2",
+      "contentId": "broadcast-14-2",
+      "channelId": "14",
+      "start": "21:00",
+      "end": "22:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "14-3",
+      "contentId": "after-hours",
+      "channelId": "14",
+      "start": "22:00",
+      "end": "23:44",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "15-1",
+      "contentId": "broadcast-15-1",
+      "channelId": "15",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "15-2",
+      "contentId": "broadcast-15-2",
+      "channelId": "15",
+      "start": "21:00",
+      "end": "22:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "15-3",
+      "contentId": "blue-world",
+      "channelId": "15",
+      "start": "22:00",
+      "end": "22:52",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "18-1",
+      "contentId": "after-hours",
+      "channelId": "18",
+      "start": "20:00",
+      "end": "21:44",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "18-2",
+      "contentId": "beyond",
+      "channelId": "18",
+      "start": "21:44",
+      "end": "23:50",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "18-3",
+      "contentId": "after-hours",
+      "channelId": "18",
+      "start": "23:50",
+      "end": "01:34",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "04.10.2026"
+    },
+    {
+      "id": "30-1",
+      "contentId": "horizon",
+      "channelId": "30",
+      "start": "20:00",
+      "end": "20:48",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "30-2",
+      "contentId": "city-stories",
+      "channelId": "30",
+      "start": "20:48",
+      "end": "21:30",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "30-3",
+      "contentId": "blue-world",
+      "channelId": "30",
+      "start": "21:30",
+      "end": "22:22",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "33-1",
+      "contentId": "broadcast-11-1",
+      "channelId": "33",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "33-2",
+      "contentId": "broadcast-33-2",
+      "channelId": "33",
+      "start": "21:00",
+      "end": "22:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "33-3",
+      "contentId": "after-hours",
+      "channelId": "33",
+      "start": "22:00",
+      "end": "23:44",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "37-1",
+      "contentId": "green",
+      "channelId": "37",
+      "start": "20:00",
+      "end": "20:50",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "37-2",
+      "contentId": "broadcast-37-2",
+      "channelId": "37",
+      "start": "20:50",
+      "end": "21:50",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "37-3",
+      "contentId": "blue-world",
+      "channelId": "37",
+      "start": "21:50",
+      "end": "22:42",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "39-1",
+      "contentId": "wild",
+      "channelId": "39",
+      "start": "20:00",
+      "end": "21:36",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "39-2",
+      "contentId": "south",
+      "channelId": "39",
+      "start": "21:36",
+      "end": "23:18",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "39-3",
+      "contentId": "after-hours",
+      "channelId": "39",
+      "start": "23:18",
+      "end": "01:02",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "04.10.2026"
+    },
+    {
+      "id": "43-1",
+      "contentId": "broadcast-43-1",
+      "channelId": "43",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "43-2",
+      "contentId": "broadcast-43-2",
+      "channelId": "43",
+      "start": "21:00",
+      "end": "22:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "43-3",
+      "contentId": "blue-world",
+      "channelId": "43",
+      "start": "22:00",
+      "end": "22:52",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "55-1",
+      "contentId": "broadcast-55-1",
+      "channelId": "55",
+      "start": "20:00",
+      "end": "21:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "55-2",
+      "contentId": "broadcast-55-2",
+      "channelId": "55",
+      "start": "21:00",
+      "end": "22:00",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "55-3",
+      "contentId": "after-hours",
+      "channelId": "55",
+      "start": "22:00",
+      "end": "23:44",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "70-1",
+      "contentId": "little-adventures",
+      "channelId": "70",
+      "start": "20:00",
+      "end": "20:24",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "70-2",
+      "contentId": "broadcast-70-2",
+      "channelId": "70",
+      "start": "20:24",
+      "end": "21:24",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "70-3",
+      "contentId": "blue-world",
+      "channelId": "70",
+      "start": "21:24",
+      "end": "22:16",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "80-1",
+      "contentId": "live-music",
+      "channelId": "80",
+      "start": "20:00",
+      "end": "21:28",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "80-2",
+      "contentId": "broadcast-80-2",
+      "channelId": "80",
+      "start": "21:28",
+      "end": "22:28",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "03.10.2026"
+    },
+    {
+      "id": "80-3",
+      "contentId": "after-hours",
+      "channelId": "80",
+      "start": "22:28",
+      "end": "00:12",
+      "date": "03.10.2026",
+      "catchupDays": 7,
+      "endDate": "04.10.2026"
+    }
+  ],
+  "apps": [
+    {
+      "id": "netflix",
+      "name": "NETFLIX",
+      "tagline": "סיפורים שמחברים אותנו",
+      "color": "#e50914",
+      "category": "סרטים וסדרות"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "tagline": "עולם שלם של סרטונים",
+      "color": "#ff0033",
+      "category": "וידאו"
+    },
+    {
+      "id": "disney",
+      "name": "Disney+",
+      "tagline": "הקסם מתחיל כאן",
+      "color": "#b9d9ff",
+      "category": "לכל המשפחה"
+    },
+    {
+      "id": "prime",
+      "name": "prime video",
+      "tagline": "תמיד יש עוד מה לגלות",
+      "color": "#56c6ff",
+      "category": "סרטים וסדרות"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "tagline": "הפסקול של היום שלכם",
+      "color": "#1ed760",
+      "category": "מוזיקה"
+    },
+    {
+      "id": "nova",
+      "name": "NOVA TV",
+      "tagline": "כל מה שאוהבים, במקום אחד",
+      "color": "#ff365f",
+      "category": "טלוויזיה"
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "tagline": "כל הצלילים שאתם אוהבים",
+      "color": "#c790ff",
+      "category": "מוזיקה"
+    },
+    {
+      "id": "kids",
+      "name": "Kids",
+      "tagline": "הרפתקאות לקטנטנים",
+      "color": "#ffc966",
+      "category": "ילדים"
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "tagline": "זמן לשחק ביחד",
+      "color": "#76dac2",
+      "category": "משחקים"
+    }
+  ],
+  "categories": {
+    "vod": [
+      "הכל",
+      "סרטים",
+      "סדרות",
+      "ילדים",
+      "דוקו",
+      "ישראלי",
+      "חדש",
+      "פופולרי"
+    ],
+    "catchup": [
+      "הכל",
+      "סרטים",
+      "סדרות ובידור",
+      "אקטואליה חדשות ושפות",
+      "ילדים",
+      "ספורט",
+      "מוזיקה",
+      "תעודה טבע ופנאי"
+    ]
+  },
+  "guide": {
+    "timeSlots": [
+      "20:00",
+      "21:00",
+      "22:00",
+      "23:00",
+      "00:00",
+      "01:00",
+      "02:00"
+    ],
+    "date": "03.10.2026",
+    "live": false,
+    "note": "Fixed demonstration schedule. Current/next and on-air badges are UI examples, not real-time listings.",
+    "durationMinutes": 360
+  },
+  "home": {
+    "featuredContentIds": [
+      "horizon",
+      "blue-world",
+      "beyond"
+    ],
+    "recommendedContentIds": [
+      "after-hours",
+      "blue-world",
+      "horizon",
+      "beyond",
+      "wild",
+      "little-adventures"
+    ],
+    "newContentIds": [
+      "orbit",
+      "little-adventures",
+      "south",
+      "city-stories",
+      "green"
+    ],
+    "musicAppIds": [
+      "spotify",
+      "music",
+      "youtube"
+    ],
+    "musicContentId": "live-music",
+    "liveChannelId": "12",
+    "appIds": [
+      "netflix",
+      "youtube",
+      "disney",
+      "prime",
+      "spotify",
+      "nova"
+    ],
+    "continueWatchingSource": "Signed-in account library.watchProgress; never public fixed progress.",
+    "featuredSeriesMetadata": "The hero displays season 1 and 8 episodes for every featured series. This is fixed UI demo text; actual seasons and episodes are not supplied by the catalog."
+  },
+  "discovery": {
+    "featuredCatchupProgramIds": [
+      "11-2",
+      "12-2",
+      "13-3",
+      "55-2",
+      "70-1"
+    ],
+    "familyArtworkTags": [
+      "kids",
+      "ocean",
+      "forest"
+    ],
+    "searchSuggestions": [
+      "חדשות",
+      "מכבי",
+      "סרט",
+      "ילדים"
+    ],
+    "suggestedSearchContentIds": [
+      "horizon",
+      "after-hours",
+      "blue-world",
+      "beyond",
+      "wild",
+      "little-adventures"
+    ],
+    "catchupWindowDays": 7,
+    "searchBehavior": "Immediate case-insensitive substring search. Movies/series: title, description, category and movie/series type. Channels: name, number and sample current title. Programs: title. Apps are not searched.",
+    "vodFilterRules": {
+      "הכל": "All content",
+      "פופולרי": "All content; no popularity ranking",
+      "סרטים": "type=movie",
+      "סדרות": "type=series",
+      "חדש": "year=2026",
+      "other": "Content category contains the chosen label"
+    }
+  },
+  "service": {
+    "supportItems": [
+      {
+        "id": "whatsapp",
+        "label": "WhatsApp",
+        "subtitle": "נוח, פשוט ובקצב שלכם",
+        "icon": "MessageCircle",
+        "title": "תמיכה ב־WhatsApp",
+        "message": "בהדגמה זו לא נשלחת הודעה. בשירות המלא ניתן יהיה לשוחח כאן עם נציג."
+      },
+      {
+        "id": "phone",
+        "label": "שירות טלפוני",
+        "subtitle": "תמיד נעים לשמוע אתכם",
+        "icon": "Phone",
+        "title": "שירות טלפוני",
+        "message": "שעות פעילות לדוגמה: א׳–ה׳ 08:00–20:00. זהו שירות פיקטיבי ואין מספר טלפון לחיוג."
+      },
+      {
+        "id": "help",
+        "label": "מרכז העזרה",
+        "subtitle": "תשובות לשאלות שלכם",
+        "icon": "HeartHandshake",
+        "title": "איך נוכל לעזור?",
+        "message": "לניווט השתמשו בחצים. Enter לבחירה, Escape לחזרה, H למסך הבית ו־M לתפריט. כתוביות משנים דרך כפתור הכתוביות בנגן. את החשבוניות תמצאו בלשונית ״החשבונית שלי״."
+      },
+      {
+        "id": "technical",
+        "label": "תמיכה טכנית",
+        "subtitle": "נפתור את זה יחד",
+        "icon": "Wrench",
+        "title": "תמיכה טכנית",
+        "message": "בדיקת הממיר לדוגמה הושלמה: התצוגה תקינה, התוכן זמין והחיבור המקומי פעיל. הגדרות שמע ותמונה נמצאות בתפריט ההגדרות."
+      }
+    ],
+    "supportHours": "א׳–ה׳ 08:00–20:00, להמחשה בלבד",
+    "supportLimitations": "QR is decorative; WhatsApp does not send messages; phone support has no dialable number; technical checks are simulated.",
+    "subscriptionChanges": "Immediate change; unused days of the old plan are credited and remaining days of the new plan charged.",
+    "libraryAccess": "Access is evaluated from base access, the active plan, purchased monthly libraries/channels and individual content/event purchases. A channel does not automatically unlock its entire VOD library; an individual event never unlocks the entire channel.",
+    "invoiceDownload": "Downloads an HTML invoice, not a PDF. Invoice view opens a popup above the details page. Invoices belong only to the signed-in account."
+  },
+  "settingsCategories": [
+    {
+      "id": "picture",
+      "label": "תמונה",
+      "description": "איכות צפייה ותצוגה",
+      "icon": "Monitor",
+      "direct": true,
+      "options": [
+        {
+          "id": "quality",
+          "label": "איכות תמונה",
+          "description": "בחרו את איכות התמונה המועדפת לנגן.",
+          "preference": "video",
+          "values": [
+            "אוטומטי",
+            "4K UHD",
+            "1080p HD",
+            "720p"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "label": "שמע",
+      "description": "צליל ושפת שמע",
+      "icon": "AudioLines",
+      "options": [
+        {
+          "id": "language",
+          "label": "שפת שמע",
+          "description": "השפה המועדפת לתוכן שתומך במספר שפות.",
+          "preference": "audio",
+          "values": [
+            "עברית",
+            "English"
+          ]
+        },
+        {
+          "id": "output",
+          "label": "פלט שמע",
+          "description": "התאימו את השמע למערכת שלכם.",
+          "preference": "sound",
+          "values": [
+            "סטריאו",
+            "סראונד"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "label": "שפה",
+      "description": "שפת התוכן המועדפת",
+      "icon": "Globe2",
+      "direct": true,
+      "options": [
+        {
+          "id": "language",
+          "label": "שפת תוכן",
+          "description": "בחרו את שפת התוכן המועדפת. ממשק NOVA נשאר בעברית.",
+          "preference": "language",
+          "values": [
+            "עברית",
+            "English"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subtitles",
+      "label": "כתוביות",
+      "description": "שפה והצגת כתוביות",
+      "icon": "Captions",
+      "direct": true,
+      "options": [
+        {
+          "id": "subtitles",
+          "label": "שפת כתוביות",
+          "description": "הבחירה תחול גם על נגן הצפייה.",
+          "preference": "subtitles",
+          "values": [
+            "עברית",
+            "English",
+            "כבוי"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "label": "נגישות",
+      "description": "חוויית צפייה שמתאימה לכם",
+      "icon": "PersonStanding",
+      "options": [
+        {
+          "id": "subtitles",
+          "label": "כתוביות",
+          "description": "בחרו שפה לכתוביות בנגן.",
+          "preference": "subtitles",
+          "values": [
+            "עברית",
+            "English",
+            "כבוי"
+          ]
+        },
+        {
+          "id": "text-size",
+          "label": "גודל טקסט",
+          "description": "התאימו את גודל הטקסט לנוחות הקריאה שלכם.",
+          "preference": "textSize",
+          "values": [
+            "רגיל",
+            "גדול"
+          ]
+        },
+        {
+          "id": "contrast",
+          "label": "ניגודיות",
+          "description": "ניגודיות גבוהה מדגישה את הטקסט והפקדים.",
+          "preference": "contrast",
+          "values": [
+            "רגיל",
+            "גבוהה"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "network",
+      "label": "רשת",
+      "description": "חיבור ומצב הרשת",
+      "icon": "Wifi",
+      "options": [
+        {
+          "id": "status",
+          "label": "מצב חיבור",
+          "description": "פרטי הרשת של הממיר לדוגמה.",
+          "info": "מחובר · NOVA Home\nחיבור קווי · Ethernet\nמהירות חיבור לדוגמה: 100 Mbps\nכל התכנים בהדגמה זמינים באופן מקומי."
+        }
+      ]
+    },
+    {
+      "id": "account",
+      "label": "חשבון",
+      "description": "הפרופיל והמנוי שלכם",
+      "icon": "UserRound",
+      "options": [
+        {
+          "id": "profile",
+          "label": "פרטי חשבון",
+          "description": "החשבון המקומי שלכם ב־NOVA."
+        }
+      ]
+    },
+    {
+      "id": "system",
+      "label": "מערכת",
+      "description": "מידע על הממיר",
+      "icon": "Settings2",
+      "options": [
+        {
+          "id": "about",
+          "label": "אודות NOVA TV",
+          "description": "מערכת הטלוויזיה שלכם.",
+          "info": "NOVA TV · גרסה 1.0.0\nסביבת הדגמה מקומית\nמספר מכשיר: NOVA-DEMO-001\nאין צורך בחיבור לשירות חיצוני."
+        }
+      ]
+    }
+  ],
+  "playback": {
+    "demo": true,
+    "subtitles": [
+      "עברית",
+      "English",
+      "כבוי"
+    ],
+    "audioLanguages": [
+      "עברית",
+      "English"
+    ],
+    "videoQualities": [
+      "אוטומטי",
+      "4K UHD",
+      "1080p HD",
+      "720p"
+    ],
+    "speeds": {
+      "איטי": 0.75,
+      "רגיל": 1,
+      "מהיר": 1.5
+    },
+    "seekSeconds": 10,
+    "preferencesScope": "Player subtitle, audio, quality and speed selections save to the signed-in account and remain selected across pages.",
+    "watchProgress": "Saved only for VOD content, about every 10 seconds and after seeking. Live channels and program playback do not create VOD progress.",
+    "duration": "VOD uses the content duration; channel and program demos use 60 minutes.",
+    "displayLimitations": "4K/HD badges are decorative; audio/video choices do not change a real stream. Subtitle samples are a fixed demonstration line.",
+    "access": "Requires an account entitlement for the selected VOD content, channel or CatchUp program."
+  },
+  "accountFeatures": {
+    "login": "Three preset demo accounts: Basic, Family and Premium. Email and password fields; visible demo password NovaDemo123!. No registration, password reset or real payment flow.",
+    "identity": "Current profile and subscription come from the authenticated backend session, not a fixed demo profile.",
+    "personalData": [
+      "profile",
+      "subscription",
+      "favorite content and channels",
+      "recordings",
+      "watch progress",
+      "preferences",
+      "invoices",
+      "notifications",
+      "gender",
+      "purchases",
+      "access"
+    ],
+    "favorites": "Toggle content on its details page, or a channel on its details page. Favorites groups saved channels, movies and series; empty groups show guidance.",
+    "recordings": "Record a program from program details. Repeating that action does not duplicate the same recording. The demo has no recording deletion, scheduling or cancellation control.",
+    "storageBadge": "Illustrative capacity 200 hours. Displayed remaining hours = 120 - max(0, recording count - 3); this is a UI demo formula, not measured storage.",
+    "notifications": "The bell popup displays only the first account notification; the account page displays all account notifications.",
+    "persistence": "Account changes persist locally on the backend. Sessions and latest TV route are in memory; backend restart requires signing in again.",
+    "voicePermissions": "Nova reads account information and gives navigation guidance. It does not click TV controls or change accounts by voice.",
+    "playback": "Backend authorization is required before each playback; locked content stays visible. Playback remains a visual simulation."
+  },
+  "libraries": [
+    {
+      "id": "base",
+      "name": "NOVA Essentials",
+      "description": "Included for every account, without an extra charge.",
+      "contentIds": [
+        "horizon",
+        "blue-world"
+      ]
+    },
+    {
+      "id": "music",
+      "name": "NOVA Music Library",
+      "description": "Music included for every account at no extra charge.",
+      "contentIds": [
+        "live-music"
+      ]
+    },
+    {
+      "id": "drama",
+      "name": "Drama+",
+      "description": "Original drama and series.",
+      "contentIds": [
+        "city-stories"
+      ]
+    },
+    {
+      "id": "cinema",
+      "name": "Movies+",
+      "description": "Movies and Israeli cinema.",
+      "contentIds": [
+        "after-hours",
+        "wild",
+        "south"
+      ]
+    },
+    {
+      "id": "kids",
+      "name": "Kids+",
+      "description": "Family and children’s series.",
+      "contentIds": [
+        "little-adventures"
+      ]
+    },
+    {
+      "id": "documentary",
+      "name": "Discovery+",
+      "description": "Nature and documentary.",
+      "contentIds": [
+        "blue-world",
+        "deep",
+        "green"
+      ]
+    },
+    {
+      "id": "sports",
+      "name": "Sports+",
+      "description": "Sports events and highlights.",
+      "contentIds": [
+        "broadcast-55-1",
+        "broadcast-55-2"
+      ]
+    },
+    {
+      "id": "premiere",
+      "name": "Premiere+",
+      "description": "Premium premieres, available as an extra library or selected rentals.",
+      "contentIds": [
+        "beyond",
+        "orbit"
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "library-drama",
+      "name": "Drama+",
+      "kind": "library",
+      "billing": "monthly",
+      "price": 12,
+      "libraryIds": [
+        "drama"
+      ],
+      "channelIds": [],
+      "contentIds": []
+    },
+    {
+      "id": "library-cinema",
+      "name": "Movies+",
+      "kind": "library",
+      "billing": "monthly",
+      "price": 25,
+      "libraryIds": [
+        "cinema"
+      ],
+      "channelIds": [],
+      "contentIds": []
+    },
+    {
+      "id": "library-kids",
+      "name": "Kids+",
+      "kind": "library",
+      "billing": "monthly",
+      "price": 15,
+      "libraryIds": [
+        "kids"
+      ],
+      "channelIds": [],
+      "contentIds": []
+    },
+    {
+      "id": "library-documentary",
+      "name": "Discovery+",
+      "kind": "library",
+      "billing": "monthly",
+      "price": 18,
+      "libraryIds": [
+        "documentary"
+      ],
+      "channelIds": [],
+      "contentIds": []
+    },
+    {
+      "id": "library-sports",
+      "name": "Sports+",
+      "kind": "library",
+      "billing": "monthly",
+      "price": 59,
+      "libraryIds": [
+        "sports"
+      ],
+      "channelIds": [
+        "55"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "library-premiere",
+      "name": "Premiere+",
+      "kind": "library",
+      "billing": "monthly",
+      "price": 35,
+      "libraryIds": [
+        "premiere"
+      ],
+      "channelIds": [],
+      "contentIds": []
+    },
+    {
+      "id": "channel-18",
+      "name": "Cinema",
+      "kind": "channel",
+      "billing": "monthly",
+      "price": 9,
+      "libraryIds": [],
+      "channelIds": [
+        "18"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "channel-30",
+      "name": "Drama",
+      "kind": "channel",
+      "billing": "monthly",
+      "price": 9,
+      "libraryIds": [],
+      "channelIds": [
+        "30"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "channel-37",
+      "name": "Life",
+      "kind": "channel",
+      "billing": "monthly",
+      "price": 9,
+      "libraryIds": [],
+      "channelIds": [
+        "37"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "channel-39",
+      "name": "Movies",
+      "kind": "channel",
+      "billing": "monthly",
+      "price": 9,
+      "libraryIds": [],
+      "channelIds": [
+        "39"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "channel-43",
+      "name": "History",
+      "kind": "channel",
+      "billing": "monthly",
+      "price": 9,
+      "libraryIds": [],
+      "channelIds": [
+        "43"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "channel-55",
+      "name": "Sports",
+      "kind": "channel",
+      "billing": "monthly",
+      "price": 49,
+      "libraryIds": [],
+      "channelIds": [
+        "55"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "channel-70",
+      "name": "NOVA Kids",
+      "kind": "channel",
+      "billing": "monthly",
+      "price": 9,
+      "libraryIds": [],
+      "channelIds": [
+        "70"
+      ],
+      "contentIds": []
+    },
+    {
+      "id": "rental-after-hours",
+      "name": "אחרי חצות",
+      "kind": "content",
+      "billing": "oneTime",
+      "price": 19,
+      "durationHours": 48,
+      "libraryIds": [],
+      "channelIds": [],
+      "contentIds": [
+        "after-hours"
+      ]
+    },
+    {
+      "id": "rental-beyond",
+      "name": "מעבר לכוכבים",
+      "kind": "content",
+      "billing": "oneTime",
+      "price": 19,
+      "durationHours": 48,
+      "libraryIds": [],
+      "channelIds": [],
+      "contentIds": [
+        "beyond"
+      ]
+    },
+    {
+      "id": "rental-orbit",
+      "name": "תחנה אחרונה",
+      "kind": "content",
+      "billing": "oneTime",
+      "price": 19,
+      "durationHours": 48,
+      "libraryIds": [],
+      "channelIds": [],
+      "contentIds": [
+        "orbit"
+      ]
+    },
+    {
+      "id": "event-match",
+      "name": "מכבי — משחק העונה",
+      "kind": "event",
+      "billing": "oneTime",
+      "price": 25,
+      "durationHours": 168,
+      "libraryIds": [],
+      "channelIds": [],
+      "contentIds": [
+        "broadcast-55-1"
+      ]
+    }
+  ],
+  "accessPolicy": {
+    "baseChannelIds": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "33",
+      "80"
+    ],
+    "baseLibraryIds": [
+      "base",
+      "music"
+    ],
+    "allChannelsVisible": true,
+    "catchupDays": 7,
+    "oneTimeCancellation": "Unused one-time purchases can be cancelled for a full credit in the original billing month. Started playback is non-refundable in this demo.",
+    "monthlyCancellation": "Stops renewal at the end of the paid calendar month; access and the charge remain until then.",
+    "planChanges": "Immediate change; unused days of the old plan are credited and remaining days of the new plan charged.",
+    "monthlyPurchase": "First charge is prorated for the remaining days of the month, including today. Later months cost the full published price.",
+    "taxRate": 0.18,
+    "payments": "Demo charges and credits only. No real payment processor."
+  },
+  "plans": [
+    {
+      "planId": "nova-basic",
+      "planName": "NOVA Basic",
+      "monthlyPrice": 79,
+      "includedCategories": [
+        "בידור"
+      ],
+      "channelIds": [
+        "30"
+      ],
+      "libraryIds": [
+        "drama"
+      ],
+      "addOns": [],
+      "description": "Universal channels and Essentials, plus Drama channel and library."
+    },
+    {
+      "planId": "nova-family",
+      "planName": "NOVA Family",
+      "monthlyPrice": 109,
+      "includedCategories": [
+        "בידור",
+        "סרטים",
+        "ילדים"
+      ],
+      "channelIds": [
+        "30",
+        "18",
+        "39",
+        "70"
+      ],
+      "libraryIds": [
+        "drama",
+        "cinema",
+        "kids"
+      ],
+      "addOns": [],
+      "description": "Basic, plus movie channels, Cinema and Kids libraries."
+    },
+    {
+      "planId": "nova-premium",
+      "planName": "NOVA Premium",
+      "monthlyPrice": 149,
+      "includedCategories": [
+        "בידור",
+        "סרטים",
+        "ילדים",
+        "ספורט"
+      ],
+      "channelIds": [
+        "30",
+        "18",
+        "39",
+        "70",
+        "37",
+        "43",
+        "55"
+      ],
+      "libraryIds": [
+        "drama",
+        "cinema",
+        "kids",
+        "documentary",
+        "sports"
+      ],
+      "addOns": [],
+      "description": "Family, plus documentary channels, Discovery and Sports libraries. Premiere remains optional."
+    }
+  ]
+}

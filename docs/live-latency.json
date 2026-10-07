@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-03",
+  "question": "How do I open Settings from the Home screen?",
+  "model": "gemini-3.8-live-extended-thinking",
+  "thinkingLevel": "low",
+  "input": "Live API text input; excludes connection setup, microphone buffering, and speech-end detection",
+  "samplesPerVersion": 1,
+  "baseline": {
+    "version": "Live plus Gemma classification and route explanation",
+    "firstAudioMs": 1414.9823,
+    "firstAudioAfterToolFromRequestMs": 18572.3202,
+    "toolDurationMs": 5260.1125,
+    "interactionIdleFromRequestMs": 29303.4866
+  },
+  "directTools": {
+    "version": "Live plus direct get_navigation_route",
+    "firstAudioMs": 1046.3014,
+    "firstAudioAfterToolFromRequestMs": 7433.7527,
+    "toolDurationMs": 4.4733,
+    "interactionIdleFromRequestMs": 17133.3125
+  },
+  "limitations": "One sequential sample per version, not a statistical benchmark. First audio may be an interim update. Audio after a tool is a proxy for the substantive response. IDLE includes speech duration, which can differ. Provider/network load and output wording vary. Production timings include additional microphone and network delay."
+}

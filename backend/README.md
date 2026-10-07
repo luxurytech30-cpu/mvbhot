@@ -1,37 +1,78 @@
-# Nova backend
+# Shared account and Live backend
 
-Keep `.env` in the backend folder. Run `npm start` from that folder.
+Node 22+; `npm.cmd run dev`. Keep the Gemini API key in `.env`. Default model: `gemini-3.8-live`, with blocking tools. Port: 5000. `APP_ORIGINS` sets allowed frontend origins. Extended Thinking remains available by setting `GEMINI_LIVE_MODEL=gemini-3.8-live-extended-thinking` and optionally `GEMINI_LIVE_THINKING_LEVEL=low|medium|high`.
 
-## Folders
+| File or folder | Responsibility |
+| --- | --- |
+| `src/index.js` | Start the server on the configured port |
+| `src/server/create-server.js` | Connect the account HTTP routes and Live WebSocket server |
+| `src/accounts/account-routes.js` | Login/logout, account operations, CORS and TV page reports |
+| `src/accounts/account-store.js` | Password checks, sessions, latest TV context and atomic account persistence |
+| `src/accounts/account-changes.js` | Validate and apply favorites, preferences, progress, recordings and plan changes |
+| `src/accounts/account-commerce.js` | Purchase/cancel operations, plan changes, profile gender and playback authorization |
+| `src/accounts/account-access.js` | Per-account VOD/channel/library/CatchUp entitlements and purchase options |
+| `src/accounts/account-billing.js` | Monthly ledger, prorated charges, credits and generated invoices |
+| `src/accounts/demo-accounts.js` | Create the three initial demo accounts |
+| `src/accounts/demo-account-template.json` | Starting data for new demo accounts; existing accounts live in `data/accounts.json` |
+| `src/accounts/account-information.js` | Read selected account categories and resolve library labels |
+| `src/accounts/subscription-plans.js` | Shared plan names, prices and add-ons |
+| `src/live/gemini-live-config.js` | Gemini settings, voice, language instructions and tool catalog |
+| `src/live/live-websocket-server.js` | Authenticate browser connections, enforce limits and close expired calls |
+| `src/live/live-conversation.js` | Forward audio/transcripts, manage turns, interruptions and tool responses |
+| `src/live/gemini-live-connection.js` | Connect/resume Gemini with private handles and bounded retries |
+| `src/live/live-metrics.js` | Measure setup, tool and audio timing |
+| `src/tools/tool-definitions.js` | Describe the available tools and their arguments to Gemini |
+| `src/tools/assistant-tools.js` | Execute local navigation, public-data and account-data tools |
+| `src/information/public-catalog.js` and `tv-catalog.json` | Load and select public NOVA TV facts |
+| `src/information/catalog-data.js` and `catalog-validation.js` | Validate shared catalog references, resolve programs/channels and supply TV data |
+| `src/navigation/navigation-routes.js` and `navigation-graph.json` | Recognize TV URLs and calculate navigation instructions |
+| `src/presentation/information-cards.js` | Convert selected data into display cards |
+| `src/presentation/invoice-selection.js` | Select exact invoices for a question |
+| `src/presentation/answer-presentation.js` | Choose the display title, cards and invoice results |
 
-```text
-src/
-  index.js                  HTTP API and request flow
-  classify-and-answer.js    Classify each user request
-  action-timer.js           Start, completion, and duration logs
-  ai/                       Model setup and provider errors
-  audio/                    Speech transcription and generation
-  information/
-    general/                 Website data and general answers
-    private/                 User account data and personal answers
-    answer-presentation.js   Card formatting shared by both answer types
-  navigation/               Screen graph and route instructions
-test/                        Local tests with mocked model calls
-```
+## API
 
-The JSON files sit beside the code that reads them: `src/information/general/data_general_info.json`, `src/information/private/user-info.json`, and `src/navigation/graph.json`.
+| Endpoint | Purpose |
+| --- | --- |
+| `GET /api/health` | Readiness |
+| `GET /api/demo` | Public account choices, plans and shared TV catalog |
+| `POST /api/auth/login` | Sign in; set HttpOnly, SameSite cookie |
+| `GET /api/auth/session` | Current user's record |
+| `POST /api/auth/logout` | Invalidate session and close its calls |
+| `PATCH /api/account` | One validated favorite, recording, progress, preference or subscription operation |
+| `POST /api/playback` | Authorize a content/channel/program for this account and record first use of a one-time purchase |
+| `GET/PATCH /api/context` | That user's latest reported screen |
+| `WS /api/live` | Authenticated Live voice |
 
-`src/index.js` exposes `POST /api/assistant` and coordinates these actions:
+Legacy typed-question, recorded-audio, STT/TTS and second-model endpoints remain removed. Unknown endpoints return 404.
 
-1. `audio/transcribe-audio.js` uses Gemini to turn an uploaded recording into text. Typed requests skip this step.
-2. `classify-and-answer.js` uses Gemma to classify the request as navigation, general information, or a question about the demo user's own data.
-3. `information/general/answer-information.js` answers general questions from `information/general/data_general_info.json`. `information/private/answer-user-info.js` answers personal questions using only the selected section of `information/private/user-info.json`.
-4. For navigation, `navigation/find-navigation-route.js` reads `navigation/graph.json` and finds the first shortest route. It owns the exact route actions and instructions.
-5. `navigation/explain-navigation-route.js` sends that route and destination context to Gemma for a clearer written answer. If this call fails, `index.js` returns the graph's instructions.
-6. `audio/generate-speech.js` tries the TTS models in `GEMINI_TTS_MODELS` order until one returns audio. `GEMINI_TTS_VOICE_CONFIG_STYLES` supplies a matching `direct` or `prebuilt` voice format for each model. If all fail, the written answer is still returned. WAV responses are preserved; raw PCM responses are wrapped as WAV.
+Sessions expire after 12 hours; restarting signs users out. Accounts persist in ignored `backend/data/accounts.json`. This JSON store is for a single-process local demo, not a production database. Access is enforced by the backend. Payments and playback remain simulated. Current-month bills are generated from ledger charges/credits; historical bills remain unchanged. See [access and billing](../docs/access-and-billing.md) for cancellation and proration rules.
 
-`ai/ai-models.js` sets up the API client and model names. `ai/gemini-config.js` sets transient-error retries, and `ai/format-provider-error.js` formats API failures. The selected screen is sent to Gemma as an image **filename**, not image data.
+## Conversation
 
-All model names are required in `.env`: `GEMMA_MODEL`, `GEMINI_STT_MODEL`, and `GEMINI_TTS_MODELS`. Copy `.env.example` to set up a new local environment. The app reports a clear error if a required model setting is missing.
+1. Authenticate before connecting Gemini. Setup includes IDs/field names, no account values.
+2. Live answers ordinary conversation directly and selects tools for TV facts, account questions and navigation.
+3. Personal tools derive identity from the session, read the latest account and return only requested fields. The model cannot select another customer. Missing requested invoices remain unavailable.
+4. Data produces cards/routes/invoices; speech transcription supplies the written answer.
+5. Turn IDs discard delayed tool outcomes after interruption. Transcripts, input rate, transport queues, concurrent calls and snapshots are bounded.
+6. Context compression supports longer calls. Resumption reconnects the same provider conversation with a private handle and two bounded attempts. Input pauses during resumption. Without a handle the call ends with a restart message. Demo calls have a 30-minute cap.
 
-Each executed request action logs when it starts and how many milliseconds it takes, including data selection, answer generation, display preparation, TTS attempts, and sending the response. Logs carry a request ID so concurrent requests can be distinguished. Navigation actions are logged as planned steps because the assistant does not operate the TV itself.
+Hebrew is the default; only explicit requests switch language. This is a model instruction, not a hard filter.
+
+Navigation tracks the latest route reported for the user, not screenshots, focus or dialogs without route changes. Multiple TV tabs for one account share this route. Live setup includes the current page; every changed route is immediately pushed to that account's open Gemini sessions with `turnComplete: false`, without requesting speech or interrupting an answer. Changes during setup or reconnection are sent when the connection is ready. Gemini can answer current-screen questions directly; navigation tools still read the latest route for exact steps. Tools give guidance and do not operate the TV or change an account.
+
+## Checks and catalogs
+
+`npm.cmd test`; `node scripts/check-gemini-live.js`; `node scripts/check-live-tools.js` (real tool round trip with a synthetic in-memory account); `node scripts/check-live-tools.js --all-invoices` (requires all available demo invoices); `node scripts/measure-live-latency.js` (public text benchmark, not microphone/VAD latency). The tool diagnostic supports `--minimal` for a harmless echo tool and `--model=...` to compare provider models. It never reads saved accounts or writes purchases.
+
+The October 4 diagnostic reproduced an Extended Thinking response saying a system error occurred without any `toolCall`, even with one harmless echo declaration. Standard Live called the same tool; a full Hebrew October invoice lookup also succeeded. Connection setup success alone therefore does not establish tool compatibility. Standard Live uses final `turnComplete` to finish a spoken interaction; Extended Thinking continues to use explicit `interactionStatus: IDLE` so intermediate utterances do not end processing.
+
+Metrics record readiness, tool start/completion, safe tool error codes, session failure, first audio, first audio after tools and IDLE/interruption. Tool arguments and account values are not logged. Browser logs first playback. The historical [measurement](../docs/live-latency.json) is one sample, not a latency guarantee.
+
+The backend owns `information/tv-catalog.json`, shared with the TV through `/api/demo`; Nova never imports TV export files. Plans, libraries, offers and content are defined in that catalog. `accounts/subscription-plans.js` exposes its plan records. `navigation/navigation-graph.json` describes UI actions and routes separately. `node scripts/audit-tv-demo.cjs` checks the actual TV website; `NOVA_TV_URL` sets its URL. `check-commerce-browser.cjs` exercises purchase/cancel operations only against the isolated browser-test API.
+
+The public catalog excludes viewing progress because progress belongs to each saved account. Channel current/next labels and guide/program times are a dated demo snapshot, not live listings.
+
+Provider references: [audio chunking/interruption](https://ai.google.dev/gemini-api/docs/live-api/best-practices), [compression/resumption](https://ai.google.dev/gemini-api/docs/live-api/session-management).
+
+The catalog contains public facts and demo limitations; screen paths, menu actions and instructions belong only to the navigation graph. Navigation responses include destination controls, so how-to questions work even when the customer is already on the requested page. Local UI states and preference selections are not inferred from a URL.

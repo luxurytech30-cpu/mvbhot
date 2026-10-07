@@ -1,9 +1,9 @@
 # Information cards and billing statements
 
-Information answers include source-backed display cards selected for the question. Personal answers use the relevant category in `backend/src/information/private/user-info.json`; website answers use `backend/src/information/general/data_general_info.json`.
+Nova's account tools read the signed-in user's current record from the account store. Public TV tools read `backend/src/information/tv-catalog.json`.
 
-`backend/src/information/answer-presentation.js` prepares card data. `frontend/mvb/src/components/answer-details/AnswerDetails.tsx` renders the cards and statements, with styles beside it.
+`backend/src/presentation/information-cards.js` creates cards from selected source fields. `invoice-selection.js` chooses bills matching the requested month, year or reference. `answer-presentation.js` selects the title, cards and invoice records sent to the browser.
 
-Billing questions also display an RTL NOVA TV statement with line items, credits, payment status, and totals from the account file. A requested month or invoice reference selects matching records; an unspecified bill uses the latest stored statement. Missing months are reported as unavailable. Each statement has a print/save-as-PDF button.
+The frontend renders cards in `components/answer-details/AnswerDetails.tsx` and invoices in `InvoiceStatement.tsx`. Shared data shapes are defined in `src/types/assistant.ts`.
 
-Run local checks with `npm test` in `backend` and `npm run build` in `frontend/mvb`. Backend tests mock model calls and do not send account data to external services.
+A requested month or reference selects matching records; an unspecified bill uses the latest stored statement. Missing months remain unavailable. Each statement supports printing or saving as PDF. Personal data readers require an account argument and do not fall back to the demo template.
