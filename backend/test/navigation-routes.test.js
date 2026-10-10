@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { buildNavigationRoute, screenFromPath } from "../src/navigation/navigation-routes.js";
+import { buildNavigationRoute, pageControlsFor, screenFromPath } from "../src/navigation/navigation-routes.js";
 
 const graph = JSON.parse(
   fs.readFileSync(new URL("../src/navigation/navigation-graph.json", import.meta.url), "utf8"),
@@ -18,6 +18,20 @@ test("the graph has only valid fixed destinations", () => {
   }
 });
 
+test("every graph action has a separate page control and no written route instruction", () => {
+  for (const [screenId, screen] of Object.entries(graph.מסכים)) {
+    const controls = pageControlsFor(screenId);
+    for (const action of screen.פעולות || []) {
+      const control = controls.find((item) => item.id === action.פעולה);
+      assert.ok(control, `${screenId}/${action.פעולה}`);
+      assert.ok(control.label?.trim(), `${screenId}/${action.פעולה} needs a label`);
+      assert.ok(control.aliases?.length, `${screenId}/${action.פעולה} needs aliases`);
+      assert.equal(action.הוראה, undefined);
+      assert.equal(action.שלבים, undefined);
+    }
+  }
+});
+
 test("every navigable screen is reachable from home", () => {
   for (const screenId of Object.keys(graph.מסכים)) {
     if (screenId === "not_found") continue;
@@ -30,30 +44,26 @@ test("every navigable screen is reachable from home", () => {
   }
 });
 
-test("navigation gives the location before the action", () => {
-  const route = buildNavigationRoute({
-    imageName: "home.png",
-    targetScreen: "settings",
-    userIntent: "הגדרות",
-  });
+test("navigation returns a verified control with its destination", () => {
+  const route = buildNavigationRoute({ imageName: "home.png", targetScreen: "settings" });
   assert.equal(route.success, true);
   assert.equal(route.steps[0].action, "OPEN_SETTINGS");
-  assert.match(route.steps[0].location, /גלגל השיניים/);
-  assert.doesNotMatch(route.steps[0].instruction, /גלגל השיניים/);
-  assert.equal(route.steps[0].expectedResult, "הגדרות");
-  assert.match(route.finalInstruction, /גלגל השיניים/);
-  assert.doesNotMatch(route.finalInstruction, /התוצאה הצפויה|כפתור גלגל השיניים:/);
+  assert.equal(route.steps[0].control.id, "OPEN_SETTINGS");
+  assert.equal(route.steps[0].control.targetScreen, "settings");
+  assert.ok(route.steps[0].location);
 });
 
-test("navigation uses ordered substeps", () => {
-  const route = buildNavigationRoute({
-    imageName: "home.png",
-    targetScreen: "recordings",
-    userIntent: "הקלטות",
-  });
+test("compound page action identifies its menu and exact destination", () => {
+  const route = buildNavigationRoute({ imageName: "home.png", targetScreen: "recordings" });
   assert.equal(route.success, true);
   assert.equal(route.steps[0].action, "OPEN_RECORDINGS");
-  assert.match(route.steps[0].instruction, /פתחו את התפריט.*לאחר מכן.*הקלטות/);
+  assert.match(route.steps[0].control.location, /M/);
+  assert.equal(route.steps[0].control.targetScreen, "recordings");
+  assert.ok(route.steps[0].control.targetName);
+  assert.deepEqual(
+    route.steps[0].control.sequence.map((control) => control.id),
+    ["OPEN_MENU", "SELECT_RECORDINGS"],
+  );
 });
 
 test("player routes cannot use a regular screen's top bar", () => {

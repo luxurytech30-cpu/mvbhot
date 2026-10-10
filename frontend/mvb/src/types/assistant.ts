@@ -45,6 +45,11 @@ export type NavigationStep = {
   action: string;
   instruction: string;
   location?: string | null;
+  control?: {
+    id: string;
+    targetName?: string | null;
+    sequence?: { id: string; location?: string | null }[];
+  };
 };
 
 export type AssistantResult = {

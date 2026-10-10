@@ -1,8 +1,10 @@
 import {
   screenCatalog,
   screenFromImageName,
+  pageControlsFor,
   buildNavigationRoute,
 } from "../navigation/navigation-routes.js";
+import { pageInformation, requestedCatalogItem } from "../navigation/page-information.js";
 import {
   publicCategoryCatalog,
   publicInformationForCategory,
@@ -15,6 +17,12 @@ import {
 import { billingForQuestion } from "../presentation/invoice-selection.js";
 import { buildPresentation } from "../presentation/answer-presentation.js";
 import { informationCards, userCards } from "../presentation/information-cards.js";
+
+const watchTargets = {
+  content: { parent: "vod", destination: "content_details", control: "SELECT_CONTENT", collection: "items" },
+  channel: { parent: "channels", destination: "channel_details", control: "SELECT_CHANNEL", collection: "channels" },
+  program: { parent: "tv_guide", destination: "program_details", control: "SELECT_PROGRAM" },
+};
 
 // Only known, static errors may appear in logs or provider responses. Never expose
 // raw persistence/provider exceptions, account values, or tool arguments.
@@ -153,13 +161,90 @@ export function createAssistantTools(
       };
     }
     if (call.name === "get_navigation_route") {
-      if (!screenCatalog.some((item) => item.id === args.targetScreen))
+      if (args.goal === "watch" && args.itemKind && !args.itemId) {
+        result.needsClarification = true;
+        return { result, response: { lookupId, needsClarification: true,
+          clarification: args.itemKind === "channel"
+            ? "Ask which channel they want to watch."
+            : "Ask for the title they want to watch." } };
+      }
+      if (Boolean(args.itemKind) !== Boolean(args.itemId))
+        throw new Error("Unknown access target");
+      if (args.goal === "watch" && !args.itemKind) {
+        result.needsClarification = true;
+        return { result, response: {
+          lookupId,
+          needsClarification: true,
+          clarification: "Ask whether they want a VOD title or a live channel, and which title or channel. If the kind is already clear, ask only for the missing name.",
+          choices: ["VOD title", "live channel"],
+        } };
+      }
+      if (args.goal === "watch" && args.itemKind && !watchTargets[args.itemKind]) {
+        result.needsClarification = true;
+        return { result, response: {
+          lookupId,
+          needsClarification: true,
+          clarification: "Ask which VOD title, live channel, or guide program they want to watch.",
+        } };
+      }
+      let controlTarget = null;
+      if (args.goal === "open_control" && args.controlDescription && !args.targetScreen) {
+        const context = getContext();
+        const screenId = screenFromImageName(context?.imageName || imageName);
+        const page = pageInformation({
+          screenId, route: context?.path, account: getUser(), uiState: context?.uiState,
+          reported: Boolean(context), controlDescription: args.controlDescription,
+        });
+        if (page.controlMatch?.status !== "matched" || !page.controlMatch.control.targetScreen) {
+          result.needsClarification = true;
+          return { result, response: {
+            lookupId, needsClarification: true, currentScreen: page.screenId,
+            controlMatch: page.controlMatch,
+            clarification: page.controlMatch?.status === "ambiguous"
+              ? "Several documented controls fit. Ask which one the user means."
+              : "That control is not documented on this page. Ask for its name or describe what is on the page.",
+          } };
+        }
+        controlTarget = page.controlMatch.control.targetScreen;
+      }
+      const requestedItem = args.itemKind
+        ? requestedCatalogItem(args.itemKind, args.itemId)
+        : null;
+      const watchTarget = args.goal === "watch" ? watchTargets[args.itemKind] : null;
+      const targetScreen = watchTarget?.destination || controlTarget || args.targetScreen;
+      if (!targetScreen) {
+        result.needsClarification = true;
+        return { result, response: { lookupId, needsClarification: true,
+          clarification: "Ask which page or button the user means." } };
+      }
+      if (!screenCatalog.some((item) => item.id === targetScreen))
         throw new Error("Unknown destination");
+      let itemSelection = null;
+      if (watchTarget) {
+        const parentControls = pageControlsFor(watchTarget.parent, getUser());
+        const control = parentControls.find((candidate) => candidate.id === watchTarget.control);
+        if (!control || control.targetScreen !== watchTarget.destination)
+          throw new Error("Unknown access target");
+        if (watchTarget.collection) {
+          const page = pageInformation({ screenId: watchTarget.parent,
+            account: getUser(), reported: false });
+          if (!page.content[watchTarget.collection]?.some((item) => item.id === requestedItem.id))
+            throw new Error("Unknown access target");
+        }
+        itemSelection = { screenId: watchTarget.parent, control, item: requestedItem,
+          note: "This is a documented catalog match, not confirmation that the item is currently visible or selected." };
+      }
+      const context = getContext();
+      const currentScreen = screenFromImageName(context?.imageName || imageName);
+      const alreadyOnItem = watchTarget && currentScreen === targetScreen &&
+        context?.path?.split("?")[0].split("/").at(-1) === requestedItem.id;
       const route = buildNavigationRoute({
-        imageName: getContext()?.imageName || imageName,
-        targetScreen: args.targetScreen,
+        imageName: context?.imageName || imageName,
+        targetScreen,
+        viaScreen: alreadyOnItem ? null : watchTarget?.parent,
         userIntent: args.question,
         account: getUser(),
+        uiState: context?.uiState,
       });
       Object.assign(result, {
         success: route.success,
@@ -177,12 +262,28 @@ export function createAssistantTools(
           targetScreen: route.targetScreen,
           targetScreenName: route.targetScreenName,
           targetScreenDescription: route.targetScreenDescription,
+          requestedItem,
+          itemSelection,
           steps: route.steps,
           instruction: route.finalInstruction,
           destinationOptions: route.destinationOptions,
           contextLimitations: route.contextLimitations,
         },
       };
+    }
+    if (call.name === "get_page_information") {
+      const context = getContext();
+      const screenId = args.screenId ||
+        screenFromImageName(context?.imageName || imageName);
+      const information = pageInformation({
+        screenId,
+        route: args.screenId ? null : context?.path,
+        account: getUser(),
+        uiState: args.screenId ? null : context?.uiState,
+        reported: !args.screenId && Boolean(context),
+        controlDescription: args.controlDescription,
+      });
+      return { result, response: { lookupId, ...information } };
     }
     if (call.name === "get_website_information") {
       if (!publicCategoryCatalog.some((item) => item.id === args.category))
@@ -238,7 +339,7 @@ export function createAssistantTools(
           ["channels", "programs", "guide"].includes(args.category)
             ? "This is a dated demo schedule, not live TV listings. Do not say a program is airing now unless a live source confirms it. "
             : "") +
-          "Stored demo data; missing values are unavailable. Answer only the question using the relevant fields. Do not claim that the account was changed.",
+          "Stored account data; missing values are unavailable. Answer only the question using the relevant fields. Do not claim that the account was changed.",
       },
     };
   };

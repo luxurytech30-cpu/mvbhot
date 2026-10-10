@@ -1,0 +1,2621 @@
+{
+  "global": [
+    {
+      "id": "HOME",
+      "location": "מקלדת או שלט",
+      "note": "אם שדה החיפוש ממוקד, צאו ממנו תחילה בחץ למטה; הקשת H בתוך השדה מקלידה אות.",
+      "expectedResult": "מסך הבית",
+      "shortcut": "H",
+      "label": "מסך הבית",
+      "aliases": [
+        "home",
+        "מסך הבית"
+      ]
+    },
+    {
+      "id": "OPEN_MENU",
+      "location": "מקש M; במסכים רגילים גם כפתור התפריט בסרגל העליון",
+      "note": "כשהחיפוש ממוקד, צאו תחילה מהשדה בחץ למטה. בזמן שחלונית אחרת פתוחה, סגרו אותה לפני פתיחת התפריט.",
+      "expectedResult": "התפריט הראשי",
+      "shortcut": "M",
+      "label": "תפריט",
+      "aliases": [
+        "open menu",
+        "התפריט הראשי",
+        "menu",
+        "hamburger",
+        "three lines",
+        "תפריט"
+      ],
+      "icon": "menu",
+      "position": "top-left"
+    },
+    {
+      "id": "BACK",
+      "location": "מקש Esc; גם Backspace כשלא מקלידים",
+      "note": "בחלונית הגדרות נגן מקוננת חוזרים קודם לחלונית ההגדרות. כשפקדי הנגן מוסתרים, Esc מציג אותם. בדף הבית אין מעבר נוסף.",
+      "shortcut": "Esc",
+      "label": "back",
+      "aliases": [
+        "back"
+      ]
+    },
+    {
+      "id": "TOP_HOME",
+      "location": "לוגו NOVA TV או לשונית ״מסך הבית״ בסרגל העליון",
+      "expectedResult": "מסך הבית",
+      "label": "מסך הבית",
+      "aliases": [
+        "top home",
+        "מסך הבית"
+      ]
+    },
+    {
+      "id": "TOP_CHANNELS",
+      "location": "לשונית ״ערוצים״ בסרגל העליון",
+      "expectedResult": "ערוצים",
+      "label": "ערוצים",
+      "aliases": [
+        "top channels",
+        "ערוצים"
+      ]
+    },
+    {
+      "id": "TOP_VOD",
+      "location": "לשונית VOD בסרגל העליון",
+      "expectedResult": "VOD",
+      "label": "VOD",
+      "aliases": [
+        "top vod",
+        "VOD"
+      ]
+    },
+    {
+      "id": "TOP_CATCHUP",
+      "location": "לשונית CatchUp בסרגל העליון",
+      "expectedResult": "CatchUp",
+      "label": "CatchUp",
+      "aliases": [
+        "top catchup",
+        "CatchUp"
+      ]
+    },
+    {
+      "id": "TOP_APPS",
+      "location": "לשונית ״אפליקציות״ בסרגל העליון",
+      "expectedResult": "אפליקציות",
+      "label": "אפליקציות",
+      "aliases": [
+        "top apps",
+        "אפליקציות"
+      ]
+    },
+    {
+      "id": "TOP_SEARCH",
+      "location": "לשונית ״חיפוש״ בסרגל העליון",
+      "expectedResult": "חיפוש",
+      "label": "חיפוש",
+      "aliases": [
+        "top search",
+        "חיפוש"
+      ]
+    },
+    {
+      "id": "TOP_SETTINGS",
+      "location": "כפתור גלגל השיניים בסרגל העליון",
+      "expectedResult": "הגדרות",
+      "label": "הגדרות",
+      "aliases": [
+        "top settings",
+        "הגדרות",
+        "gear",
+        "cog",
+        "settings",
+        "גלגל שיניים"
+      ],
+      "icon": "gear",
+      "position": "top-left"
+    },
+    {
+      "id": "OPEN_PROFILE",
+      "location": "כפתור האזור האישי בפינה העליונה של סרגל הניווט",
+      "expectedResult": "עמוד האזור האישי",
+      "label": "האזור האישי",
+      "aliases": [
+        "open profile",
+        "האזור האישי",
+        "person",
+        "human",
+        "user",
+        "avatar",
+        "profile",
+        "account",
+        "person icon",
+        "human button",
+        "left person",
+        "איש",
+        "אדם",
+        "פרופיל",
+        "אזור אישי"
+      ],
+      "icon": "person",
+      "position": "top-left",
+      "visibilityNote": "Shown in the top bar on wider screens; the TV may hide it on narrow screens."
+    },
+    {
+      "id": "OPEN_NOTIFICATIONS",
+      "location": "כפתור הפעמון בפינה העליונה",
+      "expectedResult": "חלונית התראות",
+      "label": "התראות",
+      "aliases": [
+        "open notifications",
+        "חלונית התראות",
+        "bell",
+        "notification",
+        "notifications",
+        "פעמון",
+        "התראות"
+      ],
+      "icon": "bell",
+      "position": "top-left"
+    },
+    {
+      "id": "RAIL_SELECT_HOME",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "מסך הבית",
+      "label": "מסך הבית",
+      "aliases": [
+        "rail select home",
+        "מסך הבית"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_CHANNELS",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "ערוצים",
+      "label": "ערוצים",
+      "aliases": [
+        "rail select channels",
+        "ערוצים"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_CATCHUP",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "CatchUp",
+      "label": "CatchUp",
+      "aliases": [
+        "rail select catchup",
+        "CatchUp"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_VOD",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "VOD",
+      "label": "VOD",
+      "aliases": [
+        "rail select vod",
+        "VOD"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_RECORDINGS",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "הקלטות",
+      "label": "הקלטות",
+      "aliases": [
+        "rail select recordings",
+        "הקלטות"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_FAVORITES",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "מועדפים",
+      "label": "מועדפים",
+      "aliases": [
+        "rail select favorites",
+        "מועדפים"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_APPLICATIONS",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "אפליקציות",
+      "label": "אפליקציות",
+      "aliases": [
+        "rail select applications",
+        "אפליקציות"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_TV_GUIDE",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "לוח שידורים",
+      "label": "לוח שידורים",
+      "aliases": [
+        "rail select tv guide",
+        "לוח שידורים"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_SETTINGS",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "הגדרות",
+      "label": "הגדרות",
+      "aliases": [
+        "rail select settings",
+        "הגדרות"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_SERVICE",
+      "location": "סרגל הגישה המהירה בצד",
+      "expectedResult": "שירות ותמיכה",
+      "label": "שירות ותמיכה",
+      "aliases": [
+        "rail select service",
+        "שירות ותמיכה"
+      ]
+    },
+    {
+      "id": "RAIL_SELECT_ACCOUNT",
+      "location": "פריט האזור האישי בסרגל הצד",
+      "expectedResult": "עמוד האזור האישי",
+      "label": "האזור האישי",
+      "aliases": [
+        "rail select account",
+        "האזור האישי"
+      ]
+    }
+  ],
+  "screens": {
+    "home": [
+      {
+        "id": "OPEN_SEARCH",
+        "location": "לשונית חיפוש בסרגל העליון",
+        "expectedResult": "חיפוש",
+        "label": "חיפוש",
+        "aliases": [
+          "open search",
+          "חיפוש"
+        ]
+      },
+      {
+        "id": "OPEN_CHANNELS",
+        "location": "לשונית ערוצים בסרגל העליון",
+        "expectedResult": "ערוצים",
+        "label": "ערוצים",
+        "aliases": [
+          "open channels",
+          "ערוצים"
+        ]
+      },
+      {
+        "id": "OPEN_CATCHUP",
+        "location": "לשונית CatchUp בסרגל העליון",
+        "expectedResult": "CatchUp",
+        "label": "CatchUp",
+        "aliases": [
+          "open catchup",
+          "CatchUp"
+        ]
+      },
+      {
+        "id": "OPEN_VOD",
+        "location": "לשונית VOD בסרגל העליון",
+        "expectedResult": "VOD",
+        "label": "VOD",
+        "aliases": [
+          "open vod",
+          "VOD"
+        ]
+      },
+      {
+        "id": "OPEN_RECORDINGS",
+        "location": "כפתור תפריט בסרגל העליון או מקש M",
+        "expectedResult": "הקלטות",
+        "label": "הקלטות",
+        "aliases": [
+          "open recordings",
+          "הקלטות"
+        ]
+      },
+      {
+        "id": "OPEN_FAVORITES",
+        "location": "כפתור תפריט בסרגל העליון או מקש M",
+        "expectedResult": "מועדפים",
+        "label": "מועדפים",
+        "aliases": [
+          "open favorites",
+          "מועדפים"
+        ]
+      },
+      {
+        "id": "OPEN_APPS",
+        "location": "לשונית אפליקציות בסרגל העליון",
+        "expectedResult": "אפליקציות",
+        "label": "אפליקציות",
+        "aliases": [
+          "open apps",
+          "אפליקציות"
+        ]
+      },
+      {
+        "id": "OPEN_TV_GUIDE",
+        "location": "כפתור תפריט בסרגל העליון או מקש M",
+        "expectedResult": "לוח שידורים",
+        "label": "לוח שידורים",
+        "aliases": [
+          "open tv guide",
+          "לוח שידורים"
+        ]
+      },
+      {
+        "id": "OPEN_SETTINGS",
+        "location": "כפתור גלגל השיניים בפינה העליונה",
+        "expectedResult": "הגדרות",
+        "label": "הגדרות",
+        "aliases": [
+          "open settings",
+          "הגדרות"
+        ]
+      },
+      {
+        "id": "OPEN_SERVICE",
+        "location": "כפתור תפריט בסרגל העליון או מקש M",
+        "expectedResult": "שירות ותמיכה",
+        "label": "שירות ותמיכה",
+        "aliases": [
+          "open service",
+          "שירות ותמיכה"
+        ]
+      },
+      {
+        "id": "OPEN_FEATURE_DETAILS",
+        "location": "כפתור ״פרטים נוספים״ בהמלצה הראשית",
+        "expectedResult": "פרטי תוכן",
+        "label": "פרטי תוכן",
+        "aliases": [
+          "open feature details",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "PLAY_FEATURE",
+        "location": "כפתור ״לצפייה עכשיו״ בהמלצה הראשית",
+        "expectedResult": "נגן תוכן VOD",
+        "label": "נגן תוכן VOD",
+        "aliases": [
+          "play feature",
+          "נגן תוכן VOD"
+        ]
+      },
+      {
+        "id": "OPEN_LIVE_CHANNEL",
+        "location": "אריח ״עכשיו בשידור״ בתחתית ההמלצה",
+        "expectedResult": "פרטי ערוץ",
+        "label": "פרטי ערוץ",
+        "aliases": [
+          "open live channel",
+          "פרטי ערוץ"
+        ]
+      },
+      {
+        "id": "OPEN_CONTENT_CARD",
+        "location": "שורות התוכן מתחת להמלצה",
+        "expectedResult": "פרטי תוכן",
+        "label": "פרטי תוכן",
+        "aliases": [
+          "open content card",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "OPEN_APP_CARD",
+        "location": "שורת האפליקציות",
+        "expectedResult": "פרטי אפליקציה",
+        "label": "פרטי אפליקציה",
+        "aliases": [
+          "open app card",
+          "פרטי אפליקציה"
+        ]
+      },
+      {
+        "id": "SELECT_FEATURED_SLIDE",
+        "location": "שלוש נקודות ההמלצה בתחתית התמונה הראשית",
+        "expectedResult": "מסך הבית",
+        "label": "select featured slide",
+        "aliases": [
+          "select featured slide",
+          "מסך הבית"
+        ]
+      },
+      {
+        "id": "OPEN_ALL_APPS",
+        "location": "כפתור ״לכל התכנים״ מעל שורת האפליקציות",
+        "expectedResult": "אפליקציות",
+        "label": "אפליקציות",
+        "aliases": [
+          "open all apps",
+          "אפליקציות"
+        ]
+      },
+      {
+        "id": "OPEN_ALL_VOD",
+        "location": "כפתור ״לכל התכנים״ מעל שורת ״מומלץ עבורכם״",
+        "expectedResult": "VOD",
+        "label": "VOD",
+        "aliases": [
+          "open all vod",
+          "VOD"
+        ]
+      },
+      {
+        "id": "OPEN_NEW_VOD",
+        "location": "כפתור ״לכל התכנים״ מעל שורת ״חדש ב־NOVA״",
+        "expectedResult": "קטגוריית VOD",
+        "label": "קטגוריית VOD",
+        "aliases": [
+          "open new vod",
+          "קטגוריית VOD"
+        ]
+      },
+      {
+        "id": "OPEN_FAVORITES_ROW",
+        "location": "כפתור ״לכל התכנים״ מעל שורת ״ממשיכים מאיפה שעצרתם״",
+        "expectedResult": "מועדפים",
+        "label": "מועדפים",
+        "aliases": [
+          "open favorites row",
+          "מועדפים"
+        ]
+      },
+      {
+        "id": "OPEN_PERSONAL_AREA",
+        "location": "כפתור האזור האישי בסרגל העליון",
+        "expectedResult": "עמוד האזור האישי",
+        "label": "האזור האישי",
+        "aliases": [
+          "open personal area",
+          "האזור האישי",
+          "person",
+          "human",
+          "user",
+          "avatar",
+          "profile",
+          "account",
+          "person icon",
+          "human button",
+          "איש",
+          "אדם",
+          "פרופיל",
+          "אזור אישי"
+        ],
+        "icon": "person",
+        "position": "top-left",
+        "visibilityNote": "Shown in the top bar on wider screens; the TV may hide it on narrow screens."
+      }
+    ],
+    "side_menu": [
+      {
+        "id": "SELECT_HOME",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "מסך הבית",
+        "label": "מסך הבית",
+        "aliases": [
+          "select home",
+          "מסך הבית"
+        ]
+      },
+      {
+        "id": "SELECT_SEARCH",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "חיפוש",
+        "label": "חיפוש",
+        "aliases": [
+          "select search",
+          "חיפוש"
+        ]
+      },
+      {
+        "id": "SELECT_CHANNELS",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "ערוצים",
+        "label": "ערוצים",
+        "aliases": [
+          "select channels",
+          "ערוצים"
+        ]
+      },
+      {
+        "id": "SELECT_CATCHUP",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "CatchUp",
+        "label": "CatchUp",
+        "aliases": [
+          "select catchup",
+          "CatchUp"
+        ]
+      },
+      {
+        "id": "SELECT_VOD",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "VOD",
+        "label": "VOD",
+        "aliases": [
+          "select vod",
+          "VOD"
+        ]
+      },
+      {
+        "id": "SELECT_RECORDINGS",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "הקלטות",
+        "label": "הקלטות",
+        "aliases": [
+          "select recordings",
+          "הקלטות"
+        ]
+      },
+      {
+        "id": "SELECT_FAVORITES",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "מועדפים",
+        "label": "מועדפים",
+        "aliases": [
+          "select favorites",
+          "מועדפים"
+        ]
+      },
+      {
+        "id": "SELECT_APPLICATIONS",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "אפליקציות",
+        "label": "אפליקציות",
+        "aliases": [
+          "select applications",
+          "אפליקציות"
+        ]
+      },
+      {
+        "id": "SELECT_TV_GUIDE",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "לוח שידורים",
+        "label": "לוח שידורים",
+        "aliases": [
+          "select tv guide",
+          "לוח שידורים"
+        ]
+      },
+      {
+        "id": "SELECT_SETTINGS",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "הגדרות",
+        "label": "הגדרות",
+        "aliases": [
+          "select settings",
+          "הגדרות"
+        ]
+      },
+      {
+        "id": "SELECT_SERVICE",
+        "location": "רשימת הפריטים בחלונית התפריט",
+        "expectedResult": "שירות ותמיכה",
+        "label": "שירות ותמיכה",
+        "aliases": [
+          "select service",
+          "שירות ותמיכה"
+        ]
+      },
+      {
+        "id": "SELECT_ACCOUNT",
+        "location": "רשימת הפריטים בתפריט הראשי",
+        "expectedResult": "עמוד האזור האישי",
+        "label": "האזור האישי",
+        "aliases": [
+          "select account",
+          "האזור האישי"
+        ]
+      },
+      {
+        "id": "CLOSE_MENU",
+        "location": "כפתור הסגירה בראש התפריט או מקש Esc",
+        "expectedResult": "המסך שהיה פתוח מתחת לחלונית",
+        "label": "close menu",
+        "aliases": [
+          "close menu"
+        ]
+      }
+    ],
+    "search": [
+      {
+        "id": "SEARCH_CONTENT",
+        "location": "שדה ״חיפוש תוכן״ בצד המסך",
+        "expectedResult": "תוצאות חיפוש",
+        "label": "תוצאות חיפוש",
+        "aliases": [
+          "search content",
+          "תוצאות חיפוש"
+        ]
+      },
+      {
+        "id": "SELECT_SUGGESTED_CONTENT",
+        "location": "כרטיסי ״אולי חיפשתם״",
+        "expectedResult": "פרטי תוכן",
+        "label": "פרטי תוכן",
+        "aliases": [
+          "select suggested content",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "SELECT_SEARCH_SUGGESTION",
+        "location": "שורת ״מחפשים עכשיו״ בצד המסך",
+        "expectedResult": "תוצאות חיפוש",
+        "label": "תוצאות חיפוש",
+        "aliases": [
+          "select search suggestion",
+          "תוצאות חיפוש"
+        ]
+      },
+      {
+        "id": "CHANGE_KEYBOARD_LANGUAGE",
+        "location": "כפתור ABC או אבג ליד המקלדת שעל המסך",
+        "expectedResult": "חיפוש",
+        "label": "change keyboard language",
+        "aliases": [
+          "change keyboard language",
+          "חיפוש"
+        ]
+      },
+      {
+        "id": "KEYBOARD_SPACE",
+        "location": "כפתור רווח מתחת למקלדת שעל המסך",
+        "expectedResult": "חיפוש",
+        "label": "keyboard space",
+        "aliases": [
+          "keyboard space",
+          "חיפוש"
+        ]
+      },
+      {
+        "id": "KEYBOARD_DELETE",
+        "location": "כפתור מחיקת אות מתחת למקלדת שעל המסך",
+        "expectedResult": "חיפוש",
+        "label": "keyboard delete",
+        "aliases": [
+          "keyboard delete",
+          "חיפוש"
+        ]
+      },
+      {
+        "id": "CLEAR_SEARCH",
+        "location": "כפתור ניקוי החיפוש מתחת למקלדת",
+        "expectedResult": "חיפוש",
+        "label": "clear search",
+        "aliases": [
+          "clear search",
+          "חיפוש"
+        ]
+      }
+    ],
+    "search_results": [
+      {
+        "id": "EDIT_QUERY",
+        "location": "שדה החיפוש והמקלדת שעל המסך",
+        "expectedResult": "תוצאות חיפוש",
+        "label": "edit query",
+        "aliases": [
+          "edit query",
+          "תוצאות חיפוש"
+        ]
+      },
+      {
+        "id": "SELECT_CHANNEL_RESULT",
+        "location": "שורת התוצאות ״ערוצים״",
+        "condition": "מופיעות תוצאות ערוצים",
+        "expectedResult": "פרטי ערוץ",
+        "label": "פרטי ערוץ",
+        "aliases": [
+          "select channel result",
+          "פרטי ערוץ"
+        ]
+      },
+      {
+        "id": "SELECT_PROGRAM_RESULT",
+        "location": "שורת התוצאות ״תוכניות״",
+        "condition": "מופיעות תוצאות תוכניות",
+        "expectedResult": "פרטי תוכנית",
+        "label": "פרטי תוכנית",
+        "aliases": [
+          "select program result",
+          "פרטי תוכנית"
+        ]
+      },
+      {
+        "id": "SELECT_CONTENT_RESULT",
+        "location": "שורת התוצאות ״סרטים״ או ״סדרות״",
+        "condition": "מופיעות תוצאות תוכן",
+        "expectedResult": "פרטי תוכן",
+        "label": "פרטי תוכן",
+        "aliases": [
+          "select content result",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "CLEAR_SEARCH",
+        "location": "כפתור ״ניקוי החיפוש״ ליד המקלדת שעל המסך",
+        "expectedResult": "חיפוש",
+        "label": "חיפוש",
+        "aliases": [
+          "clear search",
+          "חיפוש"
+        ]
+      },
+      {
+        "id": "KEYBOARD_SPACE",
+        "location": "כפתור רווח מתחת למקלדת שעל המסך",
+        "expectedResult": "תוצאות חיפוש",
+        "label": "keyboard space",
+        "aliases": [
+          "keyboard space",
+          "תוצאות חיפוש"
+        ]
+      },
+      {
+        "id": "KEYBOARD_DELETE",
+        "location": "כפתור מחיקת אות מתחת למקלדת שעל המסך",
+        "expectedResult": "תוצאות חיפוש",
+        "label": "keyboard delete",
+        "aliases": [
+          "keyboard delete",
+          "תוצאות חיפוש"
+        ]
+      },
+      {
+        "id": "CHANGE_KEYBOARD_LANGUAGE",
+        "location": "כפתור ABC או אבג ליד המקלדת",
+        "expectedResult": "תוצאות חיפוש",
+        "label": "change keyboard language",
+        "aliases": [
+          "change keyboard language",
+          "תוצאות חיפוש"
+        ]
+      }
+    ],
+    "channels": [
+      {
+        "id": "SELECT_CHANNEL",
+        "location": "רשת כרטיסי הערוצים",
+        "expectedResult": "פרטי ערוץ",
+        "label": "כרטיס ערוץ",
+        "aliases": [
+          "select channel",
+          "פרטי ערוץ",
+          "channel card",
+          "channel tile"
+        ]
+      }
+    ],
+    "channel_details": [
+      {
+        "id": "WATCH_CHANNEL",
+        "location": "כפתור ״צפייה בשידור חי״ באזור התוכנית הנוכחית",
+        "expectedResult": "נגן ערוץ חי",
+        "condition": "דורש גישה בחשבון; אחרת נפתח מסך נעילה עם אפשרויות רכישה, ללא ניגון.",
+        "label": "נגן ערוץ חי",
+        "aliases": [
+          "watch channel",
+          "נגן ערוץ חי"
+        ]
+      },
+      {
+        "id": "TOGGLE_FAVORITE",
+        "location": "כפתור הלב מתחת לתוכנית הנוכחית",
+        "expectedResult": "פרטי ערוץ",
+        "label": "toggle favorite",
+        "aliases": [
+          "toggle favorite",
+          "פרטי ערוץ"
+        ]
+      },
+      {
+        "id": "BUY_LOCKED_ACCESS",
+        "location": "אזור ״נעול בחשבון שלכם״, אם אין גישה לתוכן",
+        "expectedResult": "הגישה נפתחת לפי הרכישה; אירוע יחיד אינו פותח את כל הערוץ",
+        "label": "buy locked access",
+        "aliases": [
+          "buy locked access",
+          "פרטי ערוץ"
+        ]
+      },
+      {
+        "id": "OPEN_LOCKED_PLAYBACK",
+        "location": "Watch button when account access is locked",
+        "expectedResult": "Locked playback access screen",
+        "label": "גישה לתוכן נעול",
+        "aliases": [
+          "open locked playback",
+          "גישה לתוכן נעול"
+        ]
+      }
+    ],
+    "catchup": [
+      {
+        "id": "SELECT_WEEKLY_PROGRAM",
+        "location": "שורת ״הגדולים של השבוע״",
+        "expectedResult": "פרטי תוכנית",
+        "label": "פרטי תוכנית",
+        "aliases": [
+          "select weekly program",
+          "פרטי תוכנית"
+        ]
+      },
+      {
+        "id": "SELECT_CATCHUP_CATEGORY",
+        "location": "שורת לשוניות הקטגוריות מעל כרטיסי הערוצים",
+        "expectedResult": "קטגוריית CatchUp",
+        "label": "קטגוריית CatchUp",
+        "aliases": [
+          "select catchup category",
+          "קטגוריית CatchUp"
+        ]
+      },
+      {
+        "id": "SELECT_CATCHUP_CHANNEL",
+        "location": "רשת ״הערוצים שלכם ב־CatchUp״",
+        "expectedResult": "תוכניות ערוץ ב־CatchUp",
+        "label": "תוכניות ערוץ ב־CatchUp",
+        "aliases": [
+          "select catchup channel",
+          "תוכניות ערוץ ב־CatchUp"
+        ]
+      }
+    ],
+    "catchup_category": [
+      {
+        "id": "SELECT_CHANNEL",
+        "location": "רשת הערוצים שמתחת ללשוניות הקטגוריות",
+        "expectedResult": "תוכניות ערוץ ב־CatchUp",
+        "label": "כרטיס ערוץ",
+        "aliases": [
+          "select channel",
+          "תוכניות ערוץ ב־CatchUp",
+          "channel card",
+          "channel tile"
+        ]
+      },
+      {
+        "id": "SELECT_WEEKLY_PROGRAM",
+        "location": "שורת ״הגדולים של השבוע״ מעל הקטגוריות",
+        "expectedResult": "פרטי תוכנית",
+        "label": "פרטי תוכנית",
+        "aliases": [
+          "select weekly program",
+          "פרטי תוכנית"
+        ]
+      },
+      {
+        "id": "SHOW_ALL",
+        "location": "לשונית ״הכל״ בשורת הקטגוריות",
+        "expectedResult": "CatchUp",
+        "label": "CatchUp",
+        "aliases": [
+          "show all",
+          "CatchUp"
+        ]
+      }
+    ],
+    "catchup_channel": [
+      {
+        "id": "SELECT_PROGRAM",
+        "location": "רשימת התוכניות של הערוץ",
+        "expectedResult": "פרטי תוכנית",
+        "label": "תוכנית",
+        "aliases": [
+          "select program",
+          "פרטי תוכנית",
+          "program",
+          "show",
+          "programme"
+        ]
+      }
+    ],
+    "vod": [
+      {
+        "id": "SELECT_VOD_CATEGORY",
+        "location": "לשוניות הקטגוריות מתחת לכותרת VOD",
+        "expectedResult": "קטגוריית VOD",
+        "label": "קטגוריית VOD",
+        "aliases": [
+          "select vod category",
+          "קטגוריית VOD"
+        ]
+      },
+      {
+        "id": "SELECT_CONTENT",
+        "location": "שורות הסרטים והסדרות",
+        "expectedResult": "פרטי תוכן",
+        "label": "כרטיס תוכן",
+        "aliases": [
+          "select content",
+          "פרטי תוכן",
+          "content card",
+          "movie card",
+          "series card",
+          "title card"
+        ]
+      }
+    ],
+    "vod_category": [
+      {
+        "id": "SELECT_CONTENT",
+        "location": "שורת התכנים המסוננים",
+        "expectedResult": "פרטי תוכן",
+        "label": "כרטיס תוכן",
+        "aliases": [
+          "select content",
+          "פרטי תוכן",
+          "content card",
+          "movie card",
+          "series card",
+          "title card"
+        ]
+      },
+      {
+        "id": "SHOW_ALL",
+        "location": "לשונית ״הכל״ בשורת הקטגוריות",
+        "expectedResult": "VOD",
+        "label": "VOD",
+        "aliases": [
+          "show all",
+          "VOD"
+        ]
+      }
+    ],
+    "content_details": [
+      {
+        "id": "PLAY_CONTENT",
+        "location": "כפתור ״לצפייה עכשיו״ מתחת לתיאור",
+        "expectedResult": "נגן תוכן VOD",
+        "condition": "דורש גישה בחשבון; אחרת נפתח מסך נעילה עם אפשרויות רכישה, ללא ניגון.",
+        "label": "נגן תוכן VOD",
+        "aliases": [
+          "play content",
+          "נגן תוכן VOD"
+        ]
+      },
+      {
+        "id": "ADD_TO_FAVORITES",
+        "location": "כפתור הלב מתחת לתיאור",
+        "expectedResult": "פרטי תוכן",
+        "label": "add to favorites",
+        "aliases": [
+          "add to favorites",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "SELECT_RELATED",
+        "location": "שורת ״אולי תאהבו גם״ בתחתית הדף",
+        "expectedResult": "פרטי תוכן",
+        "label": "select related",
+        "aliases": [
+          "select related",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "BUY_LOCKED_ACCESS",
+        "location": "אזור ״נעול בחשבון שלכם״, אם אין גישה לתוכן",
+        "expectedResult": "הגישה נפתחת לפי הרכישה; אירוע יחיד אינו פותח את כל הערוץ",
+        "label": "buy locked access",
+        "aliases": [
+          "buy locked access",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "OPEN_LOCKED_PLAYBACK",
+        "location": "Watch button when account access is locked",
+        "expectedResult": "Locked playback access screen",
+        "label": "גישה לתוכן נעול",
+        "aliases": [
+          "open locked playback",
+          "גישה לתוכן נעול"
+        ]
+      }
+    ],
+    "recordings": [
+      {
+        "id": "SELECT_RECORDING",
+        "location": "רשת כרטיסי ההקלטות",
+        "expectedResult": "פרטי הקלטה",
+        "label": "פרטי הקלטה",
+        "aliases": [
+          "select recording",
+          "פרטי הקלטה"
+        ]
+      }
+    ],
+    "recording_details": [
+      {
+        "id": "PLAY_RECORDING",
+        "location": "כפתור ״צפייה בהקלטה״ באזור פרטי ההקלטה",
+        "expectedResult": "נגן הקלטה",
+        "label": "נגן הקלטה",
+        "aliases": [
+          "play recording",
+          "נגן הקלטה"
+        ]
+      }
+    ],
+    "favorites": [
+      {
+        "id": "SELECT_FAVORITE_CHANNEL",
+        "location": "שורת ״הערוצים האהובים עליכם״",
+        "condition": "יש ערוצים שסומנו כמועדפים",
+        "expectedResult": "פרטי ערוץ",
+        "label": "פרטי ערוץ",
+        "aliases": [
+          "select favorite channel",
+          "פרטי ערוץ"
+        ]
+      },
+      {
+        "id": "SELECT_FAVORITE_CONTENT",
+        "location": "שורת ״הסרטים שלכם״ או ״הסדרות שלכם״",
+        "condition": "יש תכנים שסומנו כמועדפים",
+        "expectedResult": "פרטי תוכן",
+        "label": "פרטי תוכן",
+        "aliases": [
+          "select favorite content",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "OPEN_ALL_CHANNELS",
+        "location": "כפתור ״לכל התכנים״ מעל שורת הערוצים האהובים",
+        "expectedResult": "ערוצים",
+        "label": "ערוצים",
+        "aliases": [
+          "open all channels",
+          "ערוצים"
+        ]
+      },
+      {
+        "id": "OPEN_ALL_VOD",
+        "location": "כפתור ״לכל התכנים״ מעל שורת הסרטים או הסדרות",
+        "expectedResult": "VOD",
+        "label": "VOD",
+        "aliases": [
+          "open all vod",
+          "VOD"
+        ]
+      }
+    ],
+    "applications": [
+      {
+        "id": "SELECT_APP",
+        "location": "רשת כרטיסי האפליקציות",
+        "expectedResult": "פרטי אפליקציה",
+        "label": "כרטיס אפליקציה",
+        "aliases": [
+          "select app",
+          "פרטי אפליקציה",
+          "app card",
+          "application card"
+        ]
+      }
+    ],
+    "application_details": [
+      {
+        "id": "RETURN_TO_APPLICATIONS",
+        "location": "כפתור ״לכל האפליקציות״ בתחתית הדף",
+        "expectedResult": "אפליקציות",
+        "label": "אפליקציות",
+        "aliases": [
+          "return to applications",
+          "אפליקציות"
+        ]
+      }
+    ],
+    "tv_guide": [
+      {
+        "id": "MOVE_UP",
+        "location": "רשת התוכניות",
+        "expectedResult": "לוח שידורים",
+        "label": "move up",
+        "aliases": [
+          "move up",
+          "לוח שידורים"
+        ]
+      },
+      {
+        "id": "MOVE_DOWN",
+        "location": "רשת התוכניות",
+        "expectedResult": "לוח שידורים",
+        "label": "move down",
+        "aliases": [
+          "move down",
+          "לוח שידורים"
+        ]
+      },
+      {
+        "id": "MOVE_LEFT",
+        "location": "רשת התוכניות מימין לשמאל",
+        "expectedResult": "לוח שידורים",
+        "label": "move left",
+        "aliases": [
+          "move left",
+          "לוח שידורים"
+        ]
+      },
+      {
+        "id": "MOVE_RIGHT",
+        "location": "רשת התוכניות מימין לשמאל",
+        "expectedResult": "לוח שידורים",
+        "label": "move right",
+        "aliases": [
+          "move right",
+          "לוח שידורים"
+        ]
+      },
+      {
+        "id": "SELECT_PROGRAM",
+        "location": "תא התוכנית הממוקד ברשת",
+        "expectedResult": "פרטי תוכנית",
+        "label": "תוכנית",
+        "aliases": [
+          "select program",
+          "פרטי תוכנית",
+          "program",
+          "show",
+          "programme"
+        ]
+      }
+    ],
+    "program_details": [
+      {
+        "id": "WATCH_PROGRAM",
+        "location": "כפתור ״צפייה בתוכנית״ באזור פרטי התוכנית",
+        "expectedResult": "נגן תוכנית",
+        "condition": "דורש גישה בחשבון; אחרת נפתח מסך נעילה עם אפשרויות רכישה, ללא ניגון.",
+        "label": "נגן תוכנית",
+        "aliases": [
+          "watch program",
+          "נגן תוכנית"
+        ]
+      },
+      {
+        "id": "RECORD_PROGRAM",
+        "location": "כפתור ״הקלטת התוכנית״ לצד כפתור הצפייה",
+        "expectedResult": "פרטי תוכנית",
+        "label": "record program",
+        "aliases": [
+          "record program",
+          "פרטי תוכנית"
+        ]
+      },
+      {
+        "id": "BUY_LOCKED_ACCESS",
+        "location": "אזור ״נעול בחשבון שלכם״, אם אין גישה לתוכן",
+        "expectedResult": "הגישה נפתחת לפי הרכישה; אירוע יחיד אינו פותח את כל הערוץ",
+        "label": "buy locked access",
+        "aliases": [
+          "buy locked access",
+          "פרטי תוכנית"
+        ]
+      },
+      {
+        "id": "OPEN_LOCKED_PLAYBACK",
+        "location": "Watch button when account access is locked",
+        "expectedResult": "Locked playback access screen",
+        "label": "גישה לתוכן נעול",
+        "aliases": [
+          "open locked playback",
+          "גישה לתוכן נעול"
+        ]
+      }
+    ],
+    "live_player": [
+      {
+        "id": "OPEN_PLAYER_CONTROLS",
+        "location": "בקרי הנגן המוצגים כבר בפתיחה",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "open player controls",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "BACK_FROM_PLAYER",
+        "location": "כפתור ״חזרה״ בראש הנגן",
+        "condition": "בפתיחה ישירה של כתובת הנגן חוזרים לבית",
+        "expectedResult": "המסך שממנו הופעל הנגן",
+        "label": "back from player",
+        "aliases": [
+          "back from player"
+        ]
+      },
+      {
+        "id": "BUY_LOCKED_ACCESS",
+        "location": "אזור ״נעול בחשבון שלכם״, אם אין גישה לתוכן",
+        "expectedResult": "הגישה נפתחת לפי הרכישה; אירוע יחיד אינו פותח את כל הערוץ",
+        "label": "buy locked access",
+        "aliases": [
+          "buy locked access",
+          "נגן ערוץ חי"
+        ]
+      }
+    ],
+    "vod_player": [
+      {
+        "id": "OPEN_PLAYER_CONTROLS",
+        "location": "בקרי הנגן המוצגים כבר בפתיחה",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "open player controls",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "BACK_FROM_PLAYER",
+        "location": "כפתור ״חזרה״ בראש הנגן",
+        "condition": "בפתיחה ישירה של כתובת הנגן חוזרים לבית",
+        "expectedResult": "המסך שממנו הופעל הנגן",
+        "label": "back from player",
+        "aliases": [
+          "back from player"
+        ]
+      },
+      {
+        "id": "BUY_LOCKED_ACCESS",
+        "location": "אזור ״נעול בחשבון שלכם״, אם אין גישה לתוכן",
+        "expectedResult": "הגישה נפתחת לפי הרכישה; אירוע יחיד אינו פותח את כל הערוץ",
+        "label": "buy locked access",
+        "aliases": [
+          "buy locked access",
+          "נגן תוכן VOD"
+        ]
+      }
+    ],
+    "program_player": [
+      {
+        "id": "OPEN_PLAYER_CONTROLS",
+        "location": "בקרי הנגן המוצגים כבר בפתיחה",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "open player controls",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "BACK_FROM_PLAYER",
+        "location": "כפתור ״חזרה״ בראש הנגן",
+        "condition": "בפתיחה ישירה של כתובת הנגן חוזרים לבית",
+        "expectedResult": "המסך שממנו הופעל הנגן",
+        "label": "back from player",
+        "aliases": [
+          "back from player"
+        ]
+      },
+      {
+        "id": "BUY_LOCKED_ACCESS",
+        "location": "אזור ״נעול בחשבון שלכם״, אם אין גישה לתוכן",
+        "expectedResult": "הגישה נפתחת לפי הרכישה; אירוע יחיד אינו פותח את כל הערוץ",
+        "label": "buy locked access",
+        "aliases": [
+          "buy locked access",
+          "נגן תוכנית"
+        ]
+      }
+    ],
+    "recording_player": [
+      {
+        "id": "OPEN_PLAYER_CONTROLS",
+        "location": "בקרי הנגן המוצגים כבר בפתיחה",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "open player controls",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "BACK_FROM_PLAYER",
+        "location": "כפתור ״חזרה״ בראש הנגן",
+        "condition": "בפתיחה ישירה של כתובת הנגן חוזרים לבית",
+        "expectedResult": "המסך שממנו הופעל הנגן",
+        "label": "back from player",
+        "aliases": [
+          "back from player"
+        ]
+      }
+    ],
+    "player_controls": [
+      {
+        "id": "OPEN_SUBTITLES",
+        "location": "כפתור ״כתוביות״ בשורת אפשרויות הנגן",
+        "expectedResult": "חלונית כתוביות",
+        "label": "חלונית כתוביות",
+        "aliases": [
+          "open subtitles",
+          "חלונית כתוביות"
+        ]
+      },
+      {
+        "id": "OPEN_AUDIO",
+        "location": "כפתור ״שמע״ בשורת אפשרויות הנגן",
+        "expectedResult": "חלונית שמע בנגן",
+        "label": "חלונית שמע בנגן",
+        "aliases": [
+          "open audio",
+          "חלונית שמע בנגן"
+        ]
+      },
+      {
+        "id": "OPEN_PLAYER_SETTINGS",
+        "location": "כפתור ״הגדרות״ בשורת אפשרויות הנגן",
+        "expectedResult": "הגדרות נגן",
+        "label": "הגדרות נגן",
+        "aliases": [
+          "open player settings",
+          "הגדרות נגן"
+        ]
+      },
+      {
+        "id": "HIDE_CONTROLS",
+        "location": "כפתור ״הסתרת פקדים״ בקצה שורת האפשרויות",
+        "expectedResult": "בקרי נגן מוסתרים",
+        "label": "בקרי נגן מוסתרים",
+        "aliases": [
+          "hide controls",
+          "בקרי נגן מוסתרים"
+        ]
+      },
+      {
+        "id": "TOGGLE_PLAYBACK",
+        "location": "כפתור ההשהיה או הניגון במרכז הבקרים",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "toggle playback",
+        "aliases": [
+          "toggle playback",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "SEEK",
+        "location": "פס ההתקדמות או כפתורי 10 שניות",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "seek",
+        "aliases": [
+          "seek",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "REWIND_TEN_SECONDS",
+        "location": "כפתור אחורה 10 שניות בבקרי הנגן",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "rewind ten seconds",
+        "aliases": [
+          "rewind ten seconds",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "FORWARD_TEN_SECONDS",
+        "location": "כפתור קדימה 10 שניות בבקרי הנגן",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "forward ten seconds",
+        "aliases": [
+          "forward ten seconds",
+          "בקרי נגן גלויים"
+        ]
+      }
+    ],
+    "player_controls_hidden": [
+      {
+        "id": "SHOW_CONTROLS",
+        "location": "תמונת הנגן לאחר הסתרת הפקדים",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "show controls",
+          "בקרי נגן גלויים"
+        ]
+      }
+    ],
+    "subtitles": [
+      {
+        "id": "SELECT_HEBREW_SUBTITLES",
+        "location": "רשימת האפשרויות בחלונית כתוביות",
+        "expectedResult": "כתוביות בעברית נבחרו",
+        "label": "כתוביות בעברית נבחרו",
+        "aliases": [
+          "select hebrew subtitles",
+          "כתוביות בעברית נבחרו"
+        ]
+      },
+      {
+        "id": "SELECT_ENGLISH_SUBTITLES",
+        "location": "רשימת האפשרויות בחלונית כתוביות",
+        "expectedResult": "כתוביות באנגלית נבחרו",
+        "label": "כתוביות באנגלית נבחרו",
+        "aliases": [
+          "select english subtitles",
+          "כתוביות באנגלית נבחרו"
+        ]
+      },
+      {
+        "id": "DISABLE_SUBTITLES",
+        "location": "רשימת האפשרויות בחלונית כתוביות",
+        "expectedResult": "כתוביות כבויות",
+        "label": "כתוביות כבויות",
+        "aliases": [
+          "disable subtitles",
+          "כתוביות כבויות"
+        ]
+      },
+      {
+        "id": "CLOSE_SUBTITLES",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "close subtitles",
+          "בקרי נגן גלויים"
+        ]
+      }
+    ],
+    "subtitles_hebrew": [
+      {
+        "id": "CLOSE_SUBTITLES",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "close subtitles",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "SELECT_ENGLISH_SUBTITLES",
+        "location": "רשימת האפשרויות באותה חלונית כתוביות",
+        "expectedResult": "כתוביות באנגלית נבחרו",
+        "label": "כתוביות באנגלית נבחרו",
+        "aliases": [
+          "select english subtitles",
+          "כתוביות באנגלית נבחרו"
+        ]
+      },
+      {
+        "id": "DISABLE_SUBTITLES",
+        "location": "רשימת האפשרויות באותה חלונית כתוביות",
+        "expectedResult": "כתוביות כבויות",
+        "label": "כתוביות כבויות",
+        "aliases": [
+          "disable subtitles",
+          "כתוביות כבויות"
+        ]
+      }
+    ],
+    "subtitles_english": [
+      {
+        "id": "CLOSE_SUBTITLES",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "close subtitles",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "SELECT_HEBREW_SUBTITLES",
+        "location": "רשימת האפשרויות באותה חלונית כתוביות",
+        "expectedResult": "כתוביות בעברית נבחרו",
+        "label": "כתוביות בעברית נבחרו",
+        "aliases": [
+          "select hebrew subtitles",
+          "כתוביות בעברית נבחרו"
+        ]
+      },
+      {
+        "id": "DISABLE_SUBTITLES",
+        "location": "רשימת האפשרויות באותה חלונית כתוביות",
+        "expectedResult": "כתוביות כבויות",
+        "label": "כתוביות כבויות",
+        "aliases": [
+          "disable subtitles",
+          "כתוביות כבויות"
+        ]
+      }
+    ],
+    "subtitles_off": [
+      {
+        "id": "CLOSE_SUBTITLES",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "close subtitles",
+          "בקרי נגן גלויים"
+        ]
+      },
+      {
+        "id": "SELECT_HEBREW_SUBTITLES",
+        "location": "רשימת האפשרויות באותה חלונית כתוביות",
+        "expectedResult": "כתוביות בעברית נבחרו",
+        "label": "כתוביות בעברית נבחרו",
+        "aliases": [
+          "select hebrew subtitles",
+          "כתוביות בעברית נבחרו"
+        ]
+      },
+      {
+        "id": "SELECT_ENGLISH_SUBTITLES",
+        "location": "רשימת האפשרויות באותה חלונית כתוביות",
+        "expectedResult": "כתוביות באנגלית נבחרו",
+        "label": "כתוביות באנגלית נבחרו",
+        "aliases": [
+          "select english subtitles",
+          "כתוביות באנגלית נבחרו"
+        ]
+      }
+    ],
+    "audio_options": [
+      {
+        "id": "SELECT_AUDIO",
+        "location": "רשימת השפות בחלונית שמע",
+        "expectedResult": "חלונית שמע בנגן",
+        "choices": [
+          "עברית",
+          "English"
+        ],
+        "label": "select audio",
+        "aliases": [
+          "select audio",
+          "חלונית שמע בנגן"
+        ]
+      },
+      {
+        "id": "CLOSE_AUDIO",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "condition": "היעד החלופי חל כאשר הכתובת כוללת from=settings",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "close audio",
+          "בקרי נגן גלויים"
+        ]
+      }
+    ],
+    "player_settings": [
+      {
+        "id": "OPEN_AUDIO",
+        "location": "פריט ״שמע״ בחלונית הגדרות הנגן",
+        "expectedResult": "חלונית שמע בנגן",
+        "label": "שפת שמע מתוך הגדרות נגן",
+        "aliases": [
+          "open audio",
+          "שפת שמע מתוך הגדרות נגן"
+        ]
+      },
+      {
+        "id": "OPEN_VIDEO",
+        "location": "פריט ״תמונה״ בחלונית הגדרות הנגן",
+        "expectedResult": "חלונית איכות וידאו",
+        "label": "חלונית איכות וידאו",
+        "aliases": [
+          "open video",
+          "חלונית איכות וידאו"
+        ]
+      },
+      {
+        "id": "OPEN_PLAYBACK",
+        "location": "פריט ״אפשרויות ניגון״ בחלונית הגדרות הנגן",
+        "expectedResult": "חלונית מהירות ניגון",
+        "label": "חלונית מהירות ניגון",
+        "aliases": [
+          "open playback",
+          "חלונית מהירות ניגון"
+        ]
+      },
+      {
+        "id": "CLOSE_SETTINGS",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "בקרי נגן גלויים",
+        "label": "בקרי נגן גלויים",
+        "aliases": [
+          "close settings",
+          "בקרי נגן גלויים"
+        ]
+      }
+    ],
+    "video_options": [
+      {
+        "id": "SELECT_OPTION",
+        "location": "רשימת האפשרויות בחלונית איכות התמונה",
+        "expectedResult": "חלונית איכות וידאו",
+        "choices": [
+          "אוטומטי",
+          "4K UHD",
+          "1080p HD",
+          "720p"
+        ],
+        "label": "select option",
+        "aliases": [
+          "select option",
+          "חלונית איכות וידאו"
+        ]
+      },
+      {
+        "id": "BACK_TO_PLAYER_SETTINGS",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "הגדרות נגן",
+        "label": "הגדרות נגן",
+        "aliases": [
+          "back to player settings",
+          "הגדרות נגן"
+        ]
+      }
+    ],
+    "playback_options": [
+      {
+        "id": "SELECT_OPTION",
+        "location": "רשימת האפשרויות בחלונית מהירות הניגון",
+        "expectedResult": "חלונית מהירות ניגון",
+        "choices": [
+          "איטי",
+          "רגיל",
+          "מהיר"
+        ],
+        "label": "select option",
+        "aliases": [
+          "select option",
+          "חלונית מהירות ניגון"
+        ]
+      },
+      {
+        "id": "BACK_TO_PLAYER_SETTINGS",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "הגדרות נגן",
+        "label": "הגדרות נגן",
+        "aliases": [
+          "back to player settings",
+          "הגדרות נגן"
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "id": "OPEN_PICTURE_SETTINGS",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "איכות תמונה",
+        "label": "איכות תמונה",
+        "aliases": [
+          "open picture settings",
+          "איכות תמונה"
+        ]
+      },
+      {
+        "id": "OPEN_SOUND_SETTINGS",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "הגדרות שמע",
+        "label": "הגדרות שמע",
+        "aliases": [
+          "open sound settings",
+          "הגדרות שמע"
+        ]
+      },
+      {
+        "id": "OPEN_LANGUAGE_SETTINGS",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "שפת תוכן",
+        "label": "שפת תוכן",
+        "aliases": [
+          "open language settings",
+          "שפת תוכן"
+        ]
+      },
+      {
+        "id": "OPEN_SUBTITLE_SETTINGS",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "שפת כתוביות",
+        "label": "שפת כתוביות",
+        "aliases": [
+          "open subtitle settings",
+          "שפת כתוביות"
+        ]
+      },
+      {
+        "id": "OPEN_ACCESSIBILITY",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "נגישות",
+        "label": "נגישות",
+        "aliases": [
+          "open accessibility",
+          "נגישות"
+        ]
+      },
+      {
+        "id": "OPEN_NETWORK",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "הגדרות רשת",
+        "label": "הגדרות רשת",
+        "aliases": [
+          "open network",
+          "הגדרות רשת"
+        ]
+      },
+      {
+        "id": "OPEN_ACCOUNT",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "חשבון",
+        "label": "חשבון",
+        "aliases": [
+          "open account",
+          "חשבון"
+        ]
+      },
+      {
+        "id": "OPEN_SYSTEM",
+        "location": "רשת כרטיסי הקטגוריות",
+        "expectedResult": "מערכת",
+        "label": "מערכת",
+        "aliases": [
+          "open system",
+          "מערכת"
+        ]
+      }
+    ],
+    "settings_picture": [
+      {
+        "id": "SET_VIDEO_QUALITY",
+        "location": "רשימת איכויות התמונה",
+        "expectedResult": "איכות תמונה",
+        "choices": [
+          "אוטומטי",
+          "4K UHD",
+          "1080p HD",
+          "720p"
+        ],
+        "label": "set video quality",
+        "aliases": [
+          "set video quality",
+          "איכות תמונה"
+        ]
+      }
+    ],
+    "settings_sound": [
+      {
+        "id": "OPEN_AUDIO_LANGUAGE",
+        "location": "רשימת אפשרויות שמע",
+        "expectedResult": "שפת שמע",
+        "label": "שפת שמע",
+        "aliases": [
+          "open audio language",
+          "שפת שמע"
+        ]
+      },
+      {
+        "id": "OPEN_AUDIO_OUTPUT",
+        "location": "רשימת אפשרויות שמע",
+        "expectedResult": "פלט שמע",
+        "label": "פלט שמע",
+        "aliases": [
+          "open audio output",
+          "פלט שמע"
+        ]
+      }
+    ],
+    "settings_sound_language": [
+      {
+        "id": "SET_VALUE",
+        "location": "רשימת הבחירות של שפת שמע",
+        "expectedResult": "שפת שמע",
+        "choices": [
+          "עברית",
+          "English"
+        ],
+        "label": "set value",
+        "aliases": [
+          "set value",
+          "שפת שמע"
+        ]
+      }
+    ],
+    "settings_sound_output": [
+      {
+        "id": "SET_VALUE",
+        "location": "רשימת הבחירות של פלט שמע",
+        "expectedResult": "פלט שמע",
+        "choices": [
+          "סטריאו",
+          "סראונד"
+        ],
+        "label": "set value",
+        "aliases": [
+          "set value",
+          "פלט שמע"
+        ]
+      }
+    ],
+    "settings_language": [
+      {
+        "id": "SET_HEBREW",
+        "location": "רשימת שפות התוכן",
+        "expectedResult": "עברית נבחרה כשפת תוכן",
+        "choices": [
+          "עברית",
+          "English"
+        ],
+        "label": "עברית נבחרה כשפת תוכן",
+        "aliases": [
+          "set hebrew",
+          "עברית נבחרה כשפת תוכן"
+        ]
+      },
+      {
+        "id": "SET_ENGLISH",
+        "location": "רשימת שפות התוכן",
+        "expectedResult": "English נבחרה כשפת תוכן",
+        "choices": [
+          "עברית",
+          "English"
+        ],
+        "label": "English נבחרה כשפת תוכן",
+        "aliases": [
+          "set english",
+          "English נבחרה כשפת תוכן"
+        ]
+      }
+    ],
+    "settings_language_hebrew": [
+      {
+        "id": "CHANGE_LANGUAGE_AGAIN",
+        "location": "רשימת שפות התוכן באותו דף",
+        "expectedResult": "שפת תוכן",
+        "label": "שפת תוכן",
+        "aliases": [
+          "change language again",
+          "שפת תוכן"
+        ]
+      }
+    ],
+    "settings_language_english": [
+      {
+        "id": "CHANGE_LANGUAGE_AGAIN",
+        "location": "רשימת שפות התוכן באותו דף",
+        "expectedResult": "שפת תוכן",
+        "label": "שפת תוכן",
+        "aliases": [
+          "change language again",
+          "שפת תוכן"
+        ]
+      }
+    ],
+    "settings_subtitles": [
+      {
+        "id": "SET_SUBTITLES",
+        "location": "רשימת שפות הכתוביות",
+        "expectedResult": "שפת כתוביות",
+        "choices": [
+          "עברית",
+          "English",
+          "כבוי"
+        ],
+        "label": "set subtitles",
+        "aliases": [
+          "set subtitles",
+          "שפת כתוביות"
+        ]
+      }
+    ],
+    "settings_accessibility": [
+      {
+        "id": "OPEN_SUBTITLES",
+        "location": "רשימת אפשרויות הנגישות",
+        "expectedResult": "כתוביות בנגישות",
+        "label": "כתוביות בנגישות",
+        "aliases": [
+          "open subtitles",
+          "כתוביות בנגישות"
+        ]
+      },
+      {
+        "id": "OPEN_TEXT_SIZE",
+        "location": "רשימת אפשרויות הנגישות",
+        "expectedResult": "גודל טקסט",
+        "label": "גודל טקסט",
+        "aliases": [
+          "open text size",
+          "גודל טקסט"
+        ]
+      },
+      {
+        "id": "OPEN_CONTRAST",
+        "location": "רשימת אפשרויות הנגישות",
+        "expectedResult": "ניגודיות",
+        "label": "ניגודיות",
+        "aliases": [
+          "open contrast",
+          "ניגודיות"
+        ]
+      }
+    ],
+    "settings_accessibility_subtitles": [
+      {
+        "id": "SET_VALUE",
+        "location": "רשימת הבחירות של שפת כתוביות",
+        "expectedResult": "כתוביות בנגישות",
+        "choices": [
+          "עברית",
+          "English",
+          "כבוי"
+        ],
+        "label": "set value",
+        "aliases": [
+          "set value",
+          "כתוביות בנגישות"
+        ]
+      }
+    ],
+    "settings_text_size": [
+      {
+        "id": "SET_VALUE",
+        "location": "רשימת הבחירות של גודל טקסט",
+        "expectedResult": "גודל טקסט",
+        "choices": [
+          "רגיל",
+          "גדול"
+        ],
+        "label": "set value",
+        "aliases": [
+          "set value",
+          "גודל טקסט"
+        ]
+      }
+    ],
+    "settings_contrast": [
+      {
+        "id": "SET_VALUE",
+        "location": "רשימת הבחירות של ניגודיות",
+        "expectedResult": "ניגודיות",
+        "choices": [
+          "רגיל",
+          "גבוהה"
+        ],
+        "label": "set value",
+        "aliases": [
+          "set value",
+          "ניגודיות"
+        ]
+      }
+    ],
+    "settings_network": [
+      {
+        "id": "OPEN_CONNECTION_STATUS",
+        "location": "רשימת אפשרויות הרשת",
+        "expectedResult": "מצב חיבור",
+        "label": "מצב חיבור",
+        "aliases": [
+          "open connection status",
+          "מצב חיבור"
+        ]
+      }
+    ],
+    "settings_network_status": [
+      {
+        "id": "RETURN_TO_CATEGORY",
+        "location": "כפתור החזרה בתחתית פרטי ההגדרה",
+        "expectedResult": "הגדרות רשת",
+        "label": "הגדרות רשת",
+        "aliases": [
+          "return to category",
+          "הגדרות רשת"
+        ]
+      }
+    ],
+    "settings_account": [
+      {
+        "id": "OPEN_PROFILE_DETAILS",
+        "location": "רשימת אפשרויות החשבון",
+        "expectedResult": "פרטי חשבון",
+        "label": "פרטי חשבון",
+        "aliases": [
+          "open profile details",
+          "פרטי חשבון"
+        ]
+      }
+    ],
+    "settings_account_profile": [
+      {
+        "id": "RETURN_TO_CATEGORY",
+        "location": "כפתור החזרה בתחתית פרטי ההגדרה",
+        "expectedResult": "חשבון",
+        "label": "חשבון",
+        "aliases": [
+          "return to category",
+          "חשבון"
+        ]
+      }
+    ],
+    "settings_system": [
+      {
+        "id": "OPEN_ABOUT",
+        "location": "רשימת אפשרויות המערכת",
+        "expectedResult": "אודות NOVA TV",
+        "label": "אודות NOVA TV",
+        "aliases": [
+          "open about",
+          "אודות NOVA TV"
+        ]
+      }
+    ],
+    "settings_system_about": [
+      {
+        "id": "RETURN_TO_CATEGORY",
+        "location": "כפתור החזרה בתחתית פרטי ההגדרה",
+        "expectedResult": "מערכת",
+        "label": "מערכת",
+        "aliases": [
+          "return to category",
+          "מערכת"
+        ]
+      }
+    ],
+    "service": [
+      {
+        "id": "OPEN_SUPPORT",
+        "location": "לשונית ״תמיכה״ בסרגל הלשוניות",
+        "expectedResult": "שירות ותמיכה",
+        "label": "open support",
+        "aliases": [
+          "open support",
+          "שירות ותמיכה"
+        ]
+      },
+      {
+        "id": "OPEN_PACKAGES",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ערוצים וחבילות",
+        "label": "ערוצים וחבילות",
+        "aliases": [
+          "open packages",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "OPEN_VOD_LIBRARIES",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ספריות VOD",
+        "label": "ספריות VOD",
+        "aliases": [
+          "open vod libraries",
+          "ספריות VOD"
+        ]
+      },
+      {
+        "id": "OPEN_BILLS",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "החשבונית שלי",
+        "label": "החשבונית שלי",
+        "aliases": [
+          "open bills",
+          "החשבונית שלי"
+        ]
+      },
+      {
+        "id": "OPEN_SUPPORT_CARD",
+        "location": "ארבעת כרטיסי התמיכה מתחת לאזור WhatsApp",
+        "expectedResult": "חלונית פרטי תמיכה",
+        "label": "חלונית פרטי תמיכה",
+        "aliases": [
+          "open support card",
+          "חלונית פרטי תמיכה"
+        ]
+      }
+    ],
+    "support_dialog": [
+      {
+        "id": "CLOSE_SUPPORT",
+        "location": "כפתור ״תודה, הבנתי״ או סגירה בחלונית",
+        "expectedResult": "שירות ותמיכה",
+        "label": "שירות ותמיכה",
+        "aliases": [
+          "close support",
+          "שירות ותמיכה"
+        ]
+      }
+    ],
+    "packages": [
+      {
+        "id": "OPEN_BILL_FROM_PACKAGE",
+        "location": "כפתור ״לחשבון החודש ולפירוט חיובים״ בסוף העמוד",
+        "expectedResult": "החשבונית שלי",
+        "label": "החשבונית שלי",
+        "aliases": [
+          "open bill from package",
+          "החשבונית שלי"
+        ]
+      },
+      {
+        "id": "OPEN_SUPPORT_TAB",
+        "location": "לשונית ״תמיכה״ בשורת לשוניות השירות",
+        "expectedResult": "שירות ותמיכה",
+        "label": "שירות ותמיכה",
+        "aliases": [
+          "open support tab",
+          "שירות ותמיכה"
+        ]
+      },
+      {
+        "id": "OPEN_VOD_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ספריות VOD",
+        "label": "ספריות VOD",
+        "aliases": [
+          "open vod tab",
+          "ספריות VOD"
+        ]
+      },
+      {
+        "id": "OPEN_BILLS_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "החשבונית שלי",
+        "label": "החשבונית שלי",
+        "aliases": [
+          "open bills tab",
+          "החשבונית שלי"
+        ]
+      },
+      {
+        "id": "SELECT_SUBSCRIPTION",
+        "location": "כפתור ״בחירת חבילה / חידוש״ בכרטיס החבילה",
+        "expectedResult": "חבילה מעודכנת לאחר אישור המשתמש",
+        "condition": "החבילה הנוכחית מושבתת לבחירה; אין חיוב אמיתי.",
+        "label": "select subscription",
+        "aliases": [
+          "select subscription",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "CANCEL_PURCHASE",
+        "location": "אזור ״הרכישות שלכם״",
+        "expectedResult": "ביטול חידוש בסוף החודש או זיכוי רכישה שלא נצפתה",
+        "label": "cancel purchase",
+        "aliases": [
+          "cancel purchase",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "BUY_EXTRA",
+        "location": "כרטיס תוספת עם מחיר חודשי",
+        "expectedResult": "הרכישה מתווספת לחשבון והגישה מתעדכנת",
+        "label": "buy extra",
+        "aliases": [
+          "buy extra",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "CANCEL_PLAN",
+        "location": "כפתור ״ביטול חידוש המנוי״",
+        "expectedResult": "חידוש המנוי בוטל",
+        "label": "cancel plan",
+        "aliases": [
+          "cancel plan",
+          "ערוצים וחבילות"
+        ]
+      }
+    ],
+    "vod_libraries": [
+      {
+        "id": "OPEN_SUPPORT_TAB",
+        "location": "לשונית ״תמיכה״ בשורת לשוניות השירות",
+        "expectedResult": "שירות ותמיכה",
+        "label": "שירות ותמיכה",
+        "aliases": [
+          "open support tab",
+          "שירות ותמיכה"
+        ]
+      },
+      {
+        "id": "OPEN_PACKAGES_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ערוצים וחבילות",
+        "label": "ערוצים וחבילות",
+        "aliases": [
+          "open packages tab",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "OPEN_BILLS_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "החשבונית שלי",
+        "label": "החשבונית שלי",
+        "aliases": [
+          "open bills tab",
+          "החשבונית שלי"
+        ]
+      },
+      {
+        "id": "SELECT_VOD_LIBRARY",
+        "location": "כפתור ״לצפייה בספרייה״ בכרטיס הספרייה",
+        "expectedResult": "ספריית VOD מסוננת",
+        "label": "ספריית VOD מסוננת",
+        "aliases": [
+          "select vod library",
+          "ספריית VOD מסוננת"
+        ]
+      },
+      {
+        "id": "CANCEL_PURCHASE",
+        "location": "אזור ״הרכישות שלכם״",
+        "expectedResult": "ביטול חידוש בסוף החודש או זיכוי רכישה שלא נצפתה",
+        "label": "cancel purchase",
+        "aliases": [
+          "cancel purchase",
+          "ספריות VOD"
+        ]
+      },
+      {
+        "id": "BUY_EXTRA",
+        "location": "כרטיס תוספת עם מחיר חודשי",
+        "expectedResult": "הרכישה מתווספת לחשבון והגישה מתעדכנת",
+        "label": "buy extra",
+        "aliases": [
+          "buy extra",
+          "ספריות VOD"
+        ]
+      }
+    ],
+    "bills": [
+      {
+        "id": "SELECT_BILL",
+        "location": "רשימת החשבוניות לפי חודש",
+        "expectedResult": "פירוט חשבונית",
+        "label": "פירוט חשבונית",
+        "aliases": [
+          "select bill",
+          "פירוט חשבונית"
+        ]
+      },
+      {
+        "id": "OPEN_SUPPORT_TAB",
+        "location": "לשונית ״תמיכה״ בשורת לשוניות השירות",
+        "expectedResult": "שירות ותמיכה",
+        "label": "שירות ותמיכה",
+        "aliases": [
+          "open support tab",
+          "שירות ותמיכה"
+        ]
+      },
+      {
+        "id": "OPEN_PACKAGES_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ערוצים וחבילות",
+        "label": "ערוצים וחבילות",
+        "aliases": [
+          "open packages tab",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "OPEN_VOD_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ספריות VOD",
+        "label": "ספריות VOD",
+        "aliases": [
+          "open vod tab",
+          "ספריות VOD"
+        ]
+      }
+    ],
+    "bill_details": [
+      {
+        "id": "VIEW_INVOICE",
+        "location": "כפתור ״צפייה בחשבונית״ באזור הפעולות",
+        "expectedResult": "חלונית צפייה בחשבונית",
+        "label": "חלונית צפייה בחשבונית",
+        "aliases": [
+          "view invoice",
+          "חלונית צפייה בחשבונית"
+        ]
+      },
+      {
+        "id": "DOWNLOAD_INVOICE",
+        "location": "כפתור ״הורדת חשבונית״ באזור הפעולות",
+        "expectedResult": "פירוט חשבונית",
+        "label": "download invoice",
+        "aliases": [
+          "download invoice",
+          "פירוט חשבונית"
+        ]
+      },
+      {
+        "id": "OPEN_SUPPORT_TAB",
+        "location": "לשונית ״תמיכה״ בשורת לשוניות השירות",
+        "expectedResult": "שירות ותמיכה",
+        "label": "שירות ותמיכה",
+        "aliases": [
+          "open support tab",
+          "שירות ותמיכה"
+        ]
+      },
+      {
+        "id": "OPEN_PACKAGES_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ערוצים וחבילות",
+        "label": "ערוצים וחבילות",
+        "aliases": [
+          "open packages tab",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "OPEN_VOD_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "ספריות VOD",
+        "label": "ספריות VOD",
+        "aliases": [
+          "open vod tab",
+          "ספריות VOD"
+        ]
+      },
+      {
+        "id": "OPEN_BILLS_TAB",
+        "location": "שורת לשוניות השירות מתחת לכותרת",
+        "expectedResult": "החשבונית שלי",
+        "label": "החשבונית שלי",
+        "aliases": [
+          "open bills tab",
+          "החשבונית שלי"
+        ]
+      }
+    ],
+    "invoice_view": [
+      {
+        "id": "DOWNLOAD_INVOICE",
+        "location": "כפתור ״הורדת חשבונית״ בחלונית",
+        "expectedResult": "חלונית צפייה בחשבונית",
+        "label": "download invoice",
+        "aliases": [
+          "download invoice",
+          "חלונית צפייה בחשבונית"
+        ]
+      },
+      {
+        "id": "CLOSE_INVOICE",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "expectedResult": "פירוט חשבונית",
+        "label": "פירוט חשבונית",
+        "aliases": [
+          "close invoice",
+          "פירוט חשבונית"
+        ]
+      }
+    ],
+    "notifications_dialog": [
+      {
+        "id": "CLOSE_NOTIFICATIONS",
+        "location": "כפתור ״הבנתי, תודה״ או סגירה בחלונית",
+        "expectedResult": "המסך שהיה פתוח מתחת לחלונית",
+        "label": "close notifications",
+        "aliases": [
+          "close notifications"
+        ]
+      }
+    ],
+    "not_found": [
+      {
+        "id": "GO_HOME",
+        "location": "כפתור ״למסך הבית״ במרכז דף השגיאה",
+        "expectedResult": "מסך הבית",
+        "label": "מסך הבית",
+        "aliases": [
+          "go home",
+          "מסך הבית"
+        ]
+      }
+    ],
+    "account": [
+      {
+        "id": "OPEN_PACKAGES",
+        "location": "קישור ״ערוצים וחבילות״ באזור מנוי וחיובים",
+        "expectedResult": "ערוצים וחבילות",
+        "label": "ערוצים וחבילות",
+        "aliases": [
+          "open packages",
+          "ערוצים וחבילות"
+        ]
+      },
+      {
+        "id": "OPEN_FAVORITES",
+        "location": "קישור ״לכל המועדפים״ באזור המועדפים",
+        "expectedResult": "עמוד המועדפים",
+        "label": "מועדפים",
+        "aliases": [
+          "open favorites",
+          "מועדפים"
+        ]
+      },
+      {
+        "id": "OPEN_SETTINGS",
+        "location": "קישור ״שינוי העדפות״ באזור העדפות צפייה",
+        "expectedResult": "עמוד ההגדרות",
+        "label": "הגדרות",
+        "aliases": [
+          "open settings",
+          "הגדרות"
+        ]
+      },
+      {
+        "id": "OPEN_BILLS",
+        "location": "קישור ״לכל החשבוניות״ באזור החשבוניות",
+        "expectedResult": "רשימת החשבוניות",
+        "label": "החשבונית שלי",
+        "aliases": [
+          "open bills",
+          "החשבונית שלי"
+        ]
+      },
+      {
+        "id": "OPEN_INVOICE",
+        "location": "שורת חשבונית באזור החשבוניות",
+        "expectedResult": "פירוט חשבונית",
+        "label": "פירוט חשבונית",
+        "aliases": [
+          "open invoice",
+          "פירוט חשבונית"
+        ]
+      },
+      {
+        "id": "OPEN_CONTENT",
+        "location": "פריט תוכן באזור המועדפים או ממשיכים לצפות",
+        "expectedResult": "עמוד פרטי התוכן",
+        "label": "פרטי תוכן",
+        "aliases": [
+          "open content",
+          "פרטי תוכן"
+        ]
+      },
+      {
+        "id": "OPEN_CHANNEL",
+        "location": "ערוץ באזור המועדפים",
+        "expectedResult": "עמוד הערוץ",
+        "label": "פרטי ערוץ",
+        "aliases": [
+          "open channel",
+          "פרטי ערוץ"
+        ]
+      },
+      {
+        "id": "OPEN_RECORDING",
+        "location": "הקלטה באזור צפייה והקלטות",
+        "expectedResult": "עמוד ההקלטה",
+        "label": "פרטי הקלטה",
+        "aliases": [
+          "open recording",
+          "פרטי הקלטה"
+        ]
+      },
+      {
+        "id": "SIGN_OUT",
+        "location": "כפתור התנתקות / החלפת חשבון בראש האזור האישי",
+        "expectedResult": "מסך כניסה לחשבון; הנתונים נשארים שמורים.",
+        "label": "כניסה לחשבון",
+        "aliases": [
+          "sign out",
+          "כניסה לחשבון"
+        ]
+      },
+      {
+        "id": "CHANGE_GENDER",
+        "location": "תיבת ״מגדר״ באזור פרטי הפרופיל",
+        "expectedResult": "מגדר מעודכן",
+        "label": "change gender",
+        "aliases": [
+          "change gender",
+          "האזור האישי"
+        ]
+      }
+    ],
+    "audio_options_from_settings": [
+      {
+        "id": "SELECT_AUDIO",
+        "location": "רשימת השפות בחלונית שמע",
+        "expectedResult": "חלונית שמע בנגן",
+        "choices": [
+          "עברית",
+          "English"
+        ],
+        "label": "select audio",
+        "aliases": [
+          "select audio",
+          "שפת שמע מתוך הגדרות נגן"
+        ]
+      },
+      {
+        "id": "CLOSE_AUDIO",
+        "location": "כפתור הסגירה בחלונית או מקש Esc",
+        "condition": "היעד החלופי חל כאשר הכתובת כוללת from=settings",
+        "expectedResult": "הגדרות נגן",
+        "label": "הגדרות נגן",
+        "aliases": [
+          "close audio",
+          "הגדרות נגן"
+        ]
+      }
+    ],
+    "login": [
+      {
+        "id": "CHOOSE_DEMO_ACCOUNT",
+        "location": "שלושת כרטיסי חשבונות ההדגמה",
+        "expectedResult": "כניסה לחשבון",
+        "label": "choose demo account",
+        "aliases": [
+          "choose demo account",
+          "כניסה לחשבון"
+        ]
+      },
+      {
+        "id": "SIGN_IN",
+        "location": "שדות דוא״ל וסיסמה וכפתור כניסה לצפייה",
+        "expectedResult": "הדף שהתבקש נפתח; בכניסה רגילה לכתובת הראשית נפתח מסך הבית.",
+        "label": "מסך הבית",
+        "aliases": [
+          "sign in",
+          "מסך הבית"
+        ]
+      },
+      {
+        "id": "RETRY_CONNECTION",
+        "location": "כפתור ניסיון נוסף כאשר מוצגת שגיאת שרת",
+        "expectedResult": "כניסה לחשבון",
+        "condition": "הכפתור מופיע רק אחרי שגיאת שרת.",
+        "label": "retry connection",
+        "aliases": [
+          "retry connection",
+          "כניסה לחשבון"
+        ]
+      }
+    ],
+    "vod_library": [
+      {
+        "id": "SELECT_LIBRARY_CONTENT",
+        "location": "כרטיסי התוכן בספרייה",
+        "expectedResult": "פרטי תוכן",
+        "label": "פרטי תוכן",
+        "aliases": [
+          "select library content",
+          "פרטי תוכן"
+        ]
+      }
+    ],
+    "playback_access": [
+      {
+        "id": "BUY_LOCKED_ACCESS",
+        "location": "אזור ״נעול בחשבון שלכם״, אם אין גישה לתוכן",
+        "expectedResult": "הגישה נפתחת לפי הרכישה; אירוע יחיד אינו פותח את כל הערוץ",
+        "label": "buy locked access",
+        "aliases": [
+          "buy locked access",
+          "גישה לתוכן נעול"
+        ]
+      }
+    ]
+  }
+}

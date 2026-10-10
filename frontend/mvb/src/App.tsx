@@ -113,7 +113,7 @@ function Assistant() {
                       <div className="step-number">{index + 1}</div>
                       <div className="step-content">
                         <strong>{step.instruction}</strong>
-                        {step.location && <span>{step.location}</span>}
+                        {step.control?.targetName && <span>Opens {step.control.targetName}</span>}
                       </div>
                     </div>
                   ))}

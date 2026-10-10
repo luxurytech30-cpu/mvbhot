@@ -7,8 +7,8 @@ const categoryDescriptions = {
   offers: "Optional channel/library monthly purchases and one-time title/event prices",
   plans: "Plans with exact included channel IDs and VOD library IDs",
   accessPolicy: "Universal access, cancellation rules and prorated demo billing",
-  site: "NOVA TV identity and demo language",
-  content: "Movies and series, titles, descriptions, genres, and availability in the demo catalog",
+  site: "NOVA TV identity and language",
+  content: "Movies and series, titles, descriptions, genres, and availability in the catalog",
   channels:
     "TV channels, channel numbers, and sample current or next program labels from the demo snapshot, not a live schedule",
   programs:
@@ -20,9 +20,9 @@ const categoryDescriptions = {
   discovery: "Featured CatchUp programs and search suggestions",
   service: "Support, packages, plans, and VOD libraries",
   settingsCategories: "Picture, audio, language, subtitles, and accessibility settings",
-  playback: "Demo player behavior, subtitles, audio languages, quality, speed and progress saving",
+  playback: "Player behavior, subtitles, audio languages, quality, speed and progress saving",
   accountFeatures:
-    "Demo login, account features, favorites, recordings, storage and limitations; no personal values",
+    "Login, account features, favorites, recordings, storage and limitations; no personal values",
 };
 
 const informationCategoryIds = Object.keys(data).filter(

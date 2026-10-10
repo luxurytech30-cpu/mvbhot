@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const graph = JSON.parse(fs.readFileSync(path.join(directory, "navigation-graph.json"), "utf8"));
+const pageControls = JSON.parse(fs.readFileSync(path.join(directory, "page-controls.json"), "utf8"));
 const screens = graph.מסכים;
 const globalActions = graph.פעולות_גלובליות;
 const imageScreenAliases = { apps: "applications" };
@@ -64,8 +65,60 @@ function availableGlobalActions(screenId) {
   });
 }
 
-function actionInstruction(action) {
-  return action.שלבים?.length ? action.שלבים.join(" לאחר מכן, ") : action.הוראה;
+const F = {
+  system: "\u05de\u05e2\u05e8\u05db\u05ea",
+  id: "\u05e4\u05e2\u05d5\u05dc\u05d4",
+  target: "\u05d9\u05e2\u05d3",
+  name: "\u05e9\u05dd",
+  description: "\u05ea\u05d9\u05d0\u05d5\u05e8",
+  actions: "\u05e4\u05e2\u05d5\u05dc\u05d5\u05ea",
+  contextLimitations: "\u05de\u05d2\u05d1\u05dc\u05d5\u05ea_\u05d4\u05e7\u05e9\u05e8",
+};
+
+function controlFor(screenId, actionId, isGlobal = false) {
+  const controls = isGlobal ? pageControls.global : pageControls.screens[screenId] || [];
+  const control = controls.find((item) => item.id === actionId);
+  if (!control) throw new Error(`Missing page control: ${screenId}/${actionId}`);
+  return control;
+}
+
+function detailedControl(screenId, action, isGlobal = false) {
+  const targetScreen = action[F.target] || null;
+  const control = {
+    ...controlFor(screenId, action[F.id], isGlobal),
+    targetScreen,
+    targetName: screens[targetScreen]?.[F.name] || null,
+  };
+  // Some legacy graph edges combine opening the menu with selecting its item.
+  // Expose the two actual controls without adding written instructions to the graph.
+  const menuItem = (screens.side_menu[F.actions] || []).find(
+    (item) => item[F.target] === targetScreen,
+  );
+  if (!isGlobal && screenId !== "side_menu" && menuItem &&
+      control.location?.includes("\u05ea\u05e4\u05e8\u05d9\u05d8")) {
+    control.sequence = [
+      { ...controlFor(screenId, "OPEN_MENU", true), targetScreen: "side_menu" },
+      { ...controlFor("side_menu", menuItem[F.id]), targetScreen,
+        targetName: screens[targetScreen]?.[F.name] || null },
+    ];
+  }
+  return control;
+}
+
+export function pageControlsFor(screenId, account) {
+  if (!screens[screenId]) throw new Error("Unknown destination");
+  const local = (screens[screenId][F.actions] || [])
+    .filter((action) => actionAvailable(action, account))
+    .map((action) => detailedControl(screenId, action));
+  const common = availableGlobalActions(screenId)
+    .filter((action) => actionAvailable(action, account))
+    .map((action) => detailedControl(screenId, action, true));
+  return [...local, ...common];
+}
+
+function actionInstruction(control) {
+  return control.sequence?.map((item) => item.location || item.id).join(" → ") ||
+    control.location || control.id;
 }
 
 export const screenCatalog = Object.entries(screens).map(([id, screen]) => ({
@@ -113,51 +166,55 @@ function findShortestPath(start, target, account) {
   return null;
 }
 
-export function buildNavigationRoute({ imageName, targetScreen, userIntent, account }) {
-  const currentScreen = screenFromImageName(imageName);
+export function buildNavigationRoute({ imageName, targetScreen, viaScreen, userIntent, account, uiState }) {
+  const currentScreen = uiState?.dialog === "notifications"
+    ? "notifications_dialog"
+    : uiState?.menuOpen
+      ? "side_menu"
+      : screenFromImageName(imageName);
   const destination = screens[targetScreen] ? targetScreen : null;
-  const path = destination ? findShortestPath(currentScreen, destination, account) : null;
-  const steps =
-    path?.map(({ from, to, action }, index) => ({
+  const firstLeg = viaScreen ? findShortestPath(currentScreen, viaScreen, account) : [];
+  const secondLeg = destination && firstLeg
+    ? findShortestPath(viaScreen || currentScreen, destination, account)
+    : null;
+  const route = secondLeg ? [...firstLeg, ...secondLeg] : null;
+  const steps = route?.map(({ from, to, action }, index) => {
+    const isGlobal = globalActions.includes(action);
+    const control = detailedControl(from, action, isGlobal);
+    return {
       step: index + 1,
       fromScreen: from,
-      action: action.פעולה,
-      location: action.מיקום || null,
-      instructions: action.שלבים || [action.הוראה],
-      instruction: actionInstruction(action),
-      condition: action.תנאי || null,
-      expectedResult: action.תוצאה || screens[to].שם,
+      action: action[F.id],
+      control,
+      location: control.location || null,
+      instructions: [actionInstruction(control)],
+      instruction: actionInstruction(control),
+      condition: control.condition || null,
+      expectedResult: control.expectedResult || screens[to][F.name],
       toScreen: to,
-    })) || [];
-  const finalInstruction = path
-    ? steps.length
-      ? `כדי להגיע אל ${screens[destination].שם}, ${steps.map((step) => `${step.location ? `חפשו את ${step.location}. ` : ""}${step.instruction}`).join(" ")}`
-      : `אתה כבר נמצא במסך ${screens[currentScreen].שם}.`
-    : "לא מצאתי בגרף הניווט מסלול ליעד המבוקש.";
-
+    };
+  }) || [];
+  const destinationOptions = destination
+    ? pageControlsFor(destination, account).map((control) => ({
+        action: control.id,
+        control,
+        location: control.location || null,
+        choices: control.choices,
+        condition: control.condition,
+        targetScreen: control.targetScreen,
+        expectedResult: control.expectedResult,
+      }))
+    : [];
   return {
     currentScreen,
-    currentScreenReason: `שם הקובץ ${imageName} תואם למסך ${screens[currentScreen].שם}.`,
     userIntent,
     targetScreen: destination,
-    targetScreenName: destination ? screens[destination].שם : null,
-    targetScreenDescription: destination ? screens[destination].תיאור : null,
-    contextLimitations: graph.מערכת.מגבלות_הקשר,
-    destinationOptions: destination
-      ? (screens[destination].פעולות || [])
-          .filter((action) => actionAvailable(action, account))
-          .map((action) => ({
-            action: action.פעולה,
-            location: action.מיקום || null,
-            instruction: actionInstruction(action),
-            choices: action.אפשרויות,
-            condition: action.תנאי,
-            targetScreen: action.יעד,
-            expectedResult: action.תוצאה,
-          }))
-      : [],
+    targetScreenName: destination ? screens[destination][F.name] : null,
+    targetScreenDescription: destination ? screens[destination][F.description] : null,
+    contextLimitations: graph[F.system][F.contextLimitations],
+    destinationOptions,
     steps,
-    finalInstruction,
-    success: Boolean(path),
+    finalInstruction: route ? steps.map((step) => step.instruction).join(". ") : "",
+    success: Boolean(route),
   };
 }

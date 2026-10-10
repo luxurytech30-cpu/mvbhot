@@ -7,6 +7,7 @@ import { demoAccountTemplate } from "../src/accounts/demo-accounts.js";
 import { accountInformationForCategory } from "../src/accounts/account-information.js";
 import { publicInformationForCategory } from "../src/information/public-catalog.js";
 import { buildNavigationRoute } from "../src/navigation/navigation-routes.js";
+import { tvScreenContext } from "../src/live/tv-screen-context.js";
 
 const call = (name, args, id = "lookup") => ({ name, args, id });
 
@@ -26,6 +27,86 @@ test("direct navigation returns the exact graph route", () => {
   assert.deepEqual(output.result.steps, route.steps);
   assert.equal(output.response.instruction, route.finalInstruction);
   assert.equal(output.result.answer, ""); // Written answers come from Gemini's spoken transcription.
+});
+
+test("page information returns named catalog items and reported menu controls", () => {
+  const context = {
+    imageName: "vod.png",
+    path: "/vod",
+    uiState: { menuOpen: false, dialog: null },
+  };
+  const execute = createAssistantTools("home.png", {
+    getUser: () => demoAccountTemplate,
+    getContext: () => context,
+  });
+  const page = execute(call("get_page_information", { question: "What is on this page?" })).response;
+  assert.equal(page.screenId, "vod");
+  assert.ok(page.content.items.some((item) => item.id === "horizon" && item.name));
+  assert.ok(page.controls.some((control) => control.id === "SELECT_CONTENT"));
+
+  context.uiState.menuOpen = true;
+  const menu = execute(call("get_page_information", { question: "What is open?" })).response;
+  assert.equal(menu.screenId, "side_menu");
+  assert.ok(menu.controls.some((control) => control.id === "SELECT_VOD"));
+  assert.equal(JSON.parse(tvScreenContext(context)).uiState.menuOpen, true);
+});
+
+test("documented person button is found from its icon and position", () => {
+  const execute = createAssistantTools("home.png");
+  const page = execute(call("get_page_information", {
+    question: "Where is the human button on the left?",
+    controlDescription: "human button on the left",
+  })).response;
+  assert.equal(page.controlMatch.status, "matched");
+  assert.equal(page.controls.length, 1);
+  assert.equal(page.controls[0].icon, "person");
+  assert.equal(page.controls[0].position, "top-left");
+  assert.equal(page.controls[0].targetScreen, "account");
+  const route = execute(call("get_navigation_route", {
+    question: "Open the human button on the left",
+    goal: "open_control",
+    controlDescription: "human button on the left",
+  })).response;
+  assert.equal(route.targetScreen, "account");
+});
+
+test("vague watch goals ask before routing, while an exact title uses its catalog control", () => {
+  const execute = createAssistantTools("home.png");
+  const vague = execute(call("get_navigation_route", {
+    question: "I want to watch something", goal: "watch",
+  }));
+  assert.equal(vague.response.needsClarification, true);
+  assert.deepEqual(vague.result.steps, []);
+  const vodWithoutTitle = execute(call("get_navigation_route", {
+    question: "I want a movie", goal: "watch", itemKind: "content",
+  }));
+  assert.equal(vodWithoutTitle.response.needsClarification, true);
+  const named = execute(call("get_navigation_route", {
+    question: "Watch Horizon", goal: "watch", itemKind: "content", itemId: "horizon",
+  })).response;
+  assert.equal(named.requestedItem.id, "horizon");
+  assert.equal(named.itemSelection.screenId, "vod");
+  assert.equal(named.itemSelection.control.id, "SELECT_CONTENT");
+  assert.ok(named.steps.some((step) => step.toScreen === "vod"));
+  assert.equal(named.steps.at(-1).action, "SELECT_CONTENT");
+});
+
+test("navigation validates and returns an exact requested title", () => {
+  const execute = createAssistantTools("home.png");
+  const response = execute(call("get_navigation_route", {
+    question: "Watch the horizon title",
+    targetScreen: "content_details",
+    itemKind: "content",
+    itemId: "horizon",
+  })).response;
+  assert.equal(response.requestedItem.id, "horizon");
+  assert.ok(response.requestedItem.name);
+  assert.throws(() => execute(call("get_navigation_route", {
+    question: "Watch missing title",
+    targetScreen: "content_details",
+    itemKind: "content",
+    itemId: "missing",
+  })), /Unknown access target/);
 });
 
 test("navigation returns actual controls even when already on the destination page", () => {

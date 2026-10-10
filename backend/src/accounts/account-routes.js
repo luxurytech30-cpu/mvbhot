@@ -116,16 +116,22 @@ export function createAccountApi(store, { onLogout = () => {} } = {}) {
       if (request.method === "PATCH" && path === "/api/context") {
         if (!request.headers["content-type"]?.startsWith("application/json"))
           return reply(response, 415, { error: "JSON is required" });
-        const { path: tvPath } = await body(request);
+        const { path: tvPath, uiState } = await body(request);
         let screen;
         try {
           screen = screenFromPath(tvPath);
         } catch {
           return reply(response, 400, { error: "Unknown TV screen" });
         }
+        if (uiState !== undefined && (
+          !uiState || typeof uiState !== "object" || Array.isArray(uiState) ||
+          typeof uiState.menuOpen !== "boolean" ||
+          ![null, "notifications"].includes(uiState.dialog)
+        )) return reply(response, 400, { error: "Invalid TV state" });
         store.setContext(session.userId, {
           path: tvPath,
           imageName: `${screen}.png`,
+          uiState: uiState || { menuOpen: false, dialog: null },
         });
         return reply(response, 200, { ok: true });
       }
